@@ -76,11 +76,6 @@ export default function LoadingScreen({
           </div>
         </div>
 
-        {/* Loading Text */}
-        <div className="text-white/70 text-sm font-sans tracking-wider">
-          ...
-        </div>
-
         {/* Progress Percentage */}
         <div className="text-lime-accent text-xs font-mono mt-2 font-bold">
           {Math.round(progress)}%
