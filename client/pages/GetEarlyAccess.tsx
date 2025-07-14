@@ -188,15 +188,15 @@ export default function GetEarlyAccess() {
                             d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
                           />
                         </svg>
-                        <div className="text-white/70 mb-1">
+                        <div className="text-white/70 mb-1 font-sans">
                           <span>Drop your CV here or </span>
                           <span className="text-lime-accent">browse files</span>
                         </div>
-                        <div className="text-sm text-nav-text/50">
+                        <div className="text-sm text-nav-text/50 font-sans">
                           PDF files only, max 10MB
                         </div>
                         {formData.cv && (
-                          <div className="mt-2 text-sm text-lime-accent">
+                          <div className="mt-2 text-sm text-lime-accent font-sans">
                             Selected: {formData.cv.name}
                           </div>
                         )}
