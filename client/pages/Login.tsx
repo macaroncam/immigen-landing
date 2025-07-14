@@ -55,7 +55,7 @@ export default function Login() {
     <PageWrapper>
       <div className="min-h-screen relative overflow-hidden">
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 via-blue-500/20 to-cyan-400/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-400/5 via-blue-500/5 to-cyan-400/5"></div>
 
         {/* Floating Background Elements */}
         {showFloatingElements && (
