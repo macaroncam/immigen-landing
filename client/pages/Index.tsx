@@ -34,7 +34,7 @@ export default function Index() {
         <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
 
         {/* Floating Background Elements */}
-        <FloatingElements />
+        {showFloatingElements && <FloatingElements />}
 
         {/* Navigation */}
         <Navbar />
