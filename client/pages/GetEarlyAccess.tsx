@@ -285,11 +285,11 @@ export default function GetEarlyAccess() {
                     {/* Content with improved typography */}
                     <div className="space-y-6">
                       <h2 className="font-sans text-3xl font-bold text-white leading-tight">
-                        Live Petition Preview
+                        Live Petition Sandbox
                       </h2>
                       <div className="w-16 h-1 bg-gradient-to-r from-lime-accent to-green-400 mx-auto rounded-full"></div>
                       <p className="font-sans text-lg font-medium text-lime-accent/80 tracking-wide">
-                        See your profile transformed in real time
+                        Preview your immigration journey
                       </p>
                       <p className="font-sans text-base text-white/70 leading-relaxed max-w-sm mx-auto">
                         Submit your form to see a live preview of your petition
@@ -305,14 +305,6 @@ export default function GetEarlyAccess() {
                       </span>
                     </div>
 
-                    {/* Preview placeholder */}
-                    <div className="mt-8 p-4 border border-dashed border-white/20 rounded-xl bg-white/5">
-                      <div className="space-y-2">
-                        <div className="h-2 bg-white/10 rounded animate-pulse"></div>
-                        <div className="h-2 bg-white/10 rounded animate-pulse w-3/4"></div>
-                        <div className="h-2 bg-white/10 rounded animate-pulse w-1/2"></div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
