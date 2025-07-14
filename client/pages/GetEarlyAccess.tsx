@@ -83,7 +83,7 @@ export default function GetEarlyAccess() {
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
                         required
                       />
                     </div>
