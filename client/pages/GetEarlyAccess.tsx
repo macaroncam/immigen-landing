@@ -76,7 +76,7 @@ export default function GetEarlyAccess() {
                   </div>
                   <div className="relative z-10">
                     {/* Form Header */}
-                    <div className="text-center mb-12">
+                    <div className="text-center mb-9">
                       <h1 className="font-sans text-3xl lg:text-4xl font-bold text-white mb-6">
                         Let's get you approved.
                       </h1>
