@@ -1,285 +1,266 @@
+import { useState } from "react";
+
 export default function PricingSection() {
+  const [selectedPlan, setSelectedPlan] = useState<
+    "free" | "individual" | "enterprise"
+  >("individual");
+  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">(
+    "monthly",
+  );
+
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-20">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-sans text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-6">
-            Get started now,
-            <br />
-            pick a plan later
+          <h2 className="font-sans text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Pricing
           </h2>
-          <p className="font-sans text-lg text-white/60 max-w-2xl mx-auto leading-relaxed">
-            Ac vulputate ullamcorper malesuada cursus laoreet proin et augue a
-            id scelerisque cursus pharetra quis facilisis vel ullamcorper
-            sodales
+          <p className="font-sans text-lg text-white/60 max-w-2xl mx-auto leading-relaxed mb-8">
+            Get started for Free. Upgrade to increase limits.
           </p>
+
+          {/* Billing Toggle */}
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <span
+              className={`font-sans text-sm ${billingCycle === "monthly" ? "text-white" : "text-white/60"}`}
+            >
+              Monthly
+            </span>
+            <button
+              onClick={() =>
+                setBillingCycle(
+                  billingCycle === "monthly" ? "yearly" : "monthly",
+                )
+              }
+              className="relative w-12 h-6 bg-white/20 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-lime-accent focus:ring-offset-2 focus:ring-offset-black"
+            >
+              <div
+                className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full transition-transform ${
+                  billingCycle === "yearly" ? "transform translate-x-6" : ""
+                }`}
+              />
+            </button>
+            <span
+              className={`font-sans text-sm ${billingCycle === "yearly" ? "text-white" : "text-white/60"}`}
+            >
+              Yearly
+              <span className="ml-1 px-2 py-0.5 bg-lime-accent/20 text-lime-accent text-xs rounded">
+                -25%
+              </span>
+            </span>
+          </div>
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {/* Basic Plan */}
-          <div className="bg-gray-900/50 border border-white/10 rounded-2xl p-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Free Plan */}
+          <div
+            className={`cursor-pointer transition-all duration-300 rounded-xl p-8 ${
+              selectedPlan === "free"
+                ? "bg-white/10 border-2 border-white/30 scale-105"
+                : "bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20"
+            }`}
+            onClick={() => setSelectedPlan("free")}
+          >
             <div className="mb-8">
-              <h3 className="font-sans text-xl font-medium text-white mb-2">
-                Basic
+              <h3 className="font-sans text-2xl font-bold text-white mb-2">
+                Free
               </h3>
-              <p className="font-sans text-sm text-white/60 mb-6">
-                Ac vulputate ullamcorper malesuada cursus laoreet proin et.
-              </p>
-              <div className="font-sans text-3xl font-normal text-white mb-6">
-                500 AI Credits
+              <div className="font-sans text-5xl font-bold text-white mb-2">
+                $0
               </div>
-              <button className="w-full bg-transparent border border-white/20 text-white font-sans font-medium py-3 px-4 rounded-lg hover:bg-white/5 transition-colors">
-                Get started
+              <p className="font-sans text-sm text-white/60 mb-6">
+                per month, no credit card required
+              </p>
+              <button
+                className={`w-full font-sans font-medium py-3 px-4 rounded-lg transition-all ${
+                  selectedPlan === "free"
+                    ? "bg-lime-accent text-black hover:bg-lime-accent/90"
+                    : "bg-transparent border border-white/30 text-white hover:bg-white/5"
+                }`}
+              >
+                Download True IDE
               </button>
             </div>
 
-            <div>
-              <p className="font-sans text-sm font-medium text-white mb-4">
-                This plan includes:
+            <div className="border-t border-white/10 pt-6">
+              <p className="font-sans text-sm font-medium text-white/60 mb-4 text-center">
+                what you will get
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center text-sm text-white/80">
-                  <svg
-                    className="w-4 h-4 text-lime-accent mr-3 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Basic case analysis
+                  <span className="text-lime-accent mr-3">•</span>
+                  <span>
+                    <strong>10 Fast requests</strong> and{" "}
+                    <strong>50 Slow requests</strong> of Premium models / month
+                  </span>
                 </li>
                 <li className="flex items-center text-sm text-white/80">
-                  <svg
-                    className="w-4 h-4 text-lime-accent mr-3 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Document review
+                  <span className="text-lime-accent mr-3">•</span>
+                  <span>
+                    <strong>1000 Requests</strong> of Advanced models / month
+                  </span>
                 </li>
                 <li className="flex items-center text-sm text-white/80">
-                  <svg
-                    className="w-4 h-4 text-lime-accent mr-3 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Basic recommendations
+                  <span className="text-lime-accent mr-3">•</span>
+                  Unlimited Standard requests
                 </li>
                 <li className="flex items-center text-sm text-white/80">
-                  <svg
-                    className="w-4 h-4 text-lime-accent mr-3 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Email support
+                  <span className="text-lime-accent mr-3">•</span>
+                  True IDE: Smart code completion and contextual assistance
                 </li>
               </ul>
-            </div>
-
-            <div className="mt-8">
-              <button className="w-full bg-transparent border border-white/20 text-white font-sans font-medium py-3 px-4 rounded-lg hover:bg-white/5 transition-colors">
-                Get started
-              </button>
             </div>
           </div>
 
-          {/* Elite Plan - Featured */}
-          <div className="bg-gradient-to-b from-lime-accent/10 to-green-500/10 border border-lime-accent/30 rounded-2xl p-8 relative">
+          {/* Individual Plan - Featured */}
+          <div
+            className={`cursor-pointer transition-all duration-300 rounded-xl p-8 relative ${
+              selectedPlan === "individual"
+                ? "bg-gradient-to-br from-red-600/20 to-orange-600/20 border-2 border-red-500/50 scale-105"
+                : "bg-gradient-to-br from-red-600/10 to-orange-600/10 border border-red-500/30 hover:bg-gradient-to-br hover:from-red-600/20 hover:to-orange-600/20 hover:border-red-500/50"
+            }`}
+            onClick={() => setSelectedPlan("individual")}
+          >
             <div className="mb-8">
-              <h3 className="font-sans text-xl font-medium text-white mb-2">
-                Elite
+              <h3 className="font-sans text-2xl font-bold text-white mb-2">
+                Individual
               </h3>
-              <p className="font-sans text-sm text-white/60 mb-6">
-                Ac vulputate ullamcorper malesuada cursus laoreet proin et.
-              </p>
-              <div className="font-sans text-3xl font-normal text-white mb-6">
-                2,500 AI Credits
+              <div className="flex items-baseline mb-2">
+                <span className="font-sans text-5xl font-bold text-white">
+                  ${billingCycle === "monthly" ? "3" : "2"}
+                </span>
+                {billingCycle === "monthly" && (
+                  <span className="ml-2 px-2 py-1 bg-red-500/20 text-red-300 text-xs rounded">
+                    1st-Month Discount
+                  </span>
+                )}
               </div>
-              <button className="w-full bg-white text-black font-sans font-medium py-3 px-4 rounded-lg hover:bg-white/90 transition-colors">
+              <p className="font-sans text-sm text-white/60 mb-6">
+                ${billingCycle === "monthly" ? "10" : "8"} from the second
+                month, billed {billingCycle}.
+              </p>
+              <button
+                className={`w-full font-sans font-medium py-3 px-4 rounded-lg transition-all ${
+                  selectedPlan === "individual"
+                    ? "bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600"
+                    : "bg-transparent border border-white/30 text-white hover:bg-white/5"
+                }`}
+              >
                 Get started
               </button>
             </div>
 
-            <div>
-              <p className="font-sans text-sm font-medium text-white mb-4">
-                This plan includes:
+            {/* Payment icons */}
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <div className="w-8 h-5 bg-blue-600 rounded flex items-center justify-center">
+                <span className="text-white text-xs font-bold">V</span>
+              </div>
+              <div className="w-8 h-5 bg-orange-500 rounded flex items-center justify-center">
+                <span className="text-white text-xs font-bold">M</span>
+              </div>
+              <div className="w-8 h-5 bg-blue-500 rounded flex items-center justify-center">
+                <span className="text-white text-xs font-bold">AE</span>
+              </div>
+              <div className="w-8 h-5 bg-yellow-400 rounded flex items-center justify-center">
+                <span className="text-black text-xs font-bold">D</span>
+              </div>
+              <div className="w-8 h-5 bg-green-600 rounded flex items-center justify-center">
+                <span className="text-white text-xs font-bold">U</span>
+              </div>
+            </div>
+
+            <div className="border-t border-white/10 pt-6">
+              <p className="font-sans text-sm font-medium text-white/60 mb-4 text-center">
+                what you will get
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center text-sm text-white/80">
-                  <svg
-                    className="w-4 h-4 text-lime-accent mr-3 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  All in Basic plus
+                  <span className="text-lime-accent mr-3">•</span>
+                  <span>
+                    <strong>600 Fast requests</strong> and unlimited Slow
+                    requests of Premium models / month
+                  </span>
                 </li>
                 <li className="flex items-center text-sm text-white/80">
-                  <svg
-                    className="w-4 h-4 text-lime-accent mr-3 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Advanced case strategy
+                  <span className="text-lime-accent mr-3">•</span>
+                  <span>
+                    <strong>Unlimited Requests</strong> of Advanced models
+                  </span>
                 </li>
                 <li className="flex items-center text-sm text-white/80">
-                  <svg
-                    className="w-4 h-4 text-lime-accent mr-3 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Evidence optimization
+                  <span className="text-lime-accent mr-3">•</span>
+                  Unlimited Standard requests
                 </li>
                 <li className="flex items-center text-sm text-white/80">
-                  <svg
-                    className="w-4 h-4 text-lime-accent mr-3 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Priority support
+                  <span className="text-lime-accent mr-3">•</span>
+                  True IDE: Smart code completion and contextual assistance
+                </li>
+                <li className="flex items-center text-sm text-white/80">
+                  <span className="text-lime-accent mr-3">•</span>
+                  Priority support and early access to new features
                 </li>
               </ul>
-            </div>
-
-            <div className="mt-8">
-              <button className="w-full bg-white text-black font-sans font-medium py-3 px-4 rounded-lg hover:bg-white/90 transition-colors">
-                Get started
-              </button>
             </div>
           </div>
+        </div>
 
-          {/* Pro Plan */}
-          <div className="bg-gray-900/50 border border-white/10 rounded-2xl p-8">
-            <div className="mb-8">
-              <h3 className="font-sans text-xl font-medium text-white mb-2">
-                Pro
+        {/* Enterprise Section */}
+        <div className="max-w-3xl mx-auto mt-16">
+          <div
+            className={`cursor-pointer transition-all duration-300 rounded-xl p-8 ${
+              selectedPlan === "enterprise"
+                ? "bg-white/10 border-2 border-white/30 scale-105"
+                : "bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20"
+            }`}
+            onClick={() => setSelectedPlan("enterprise")}
+          >
+            <div className="text-center">
+              <h3 className="font-sans text-2xl font-bold text-white mb-4">
+                Enterprise
               </h3>
-              <p className="font-sans text-sm text-white/60 mb-6">
-                Ac vulputate ullamcorper malesuada cursus laoreet proin et.
+              <p className="font-sans text-lg text-white/60 mb-6">
+                Custom solutions for teams and organizations with advanced
+                immigration needs.
               </p>
-              <div className="font-sans text-3xl font-normal text-white mb-6">
-                10,000 AI Credits
+              <button
+                className={`font-sans font-medium py-3 px-8 rounded-lg transition-all ${
+                  selectedPlan === "enterprise"
+                    ? "bg-lime-accent text-black hover:bg-lime-accent/90"
+                    : "bg-transparent border border-white/30 text-white hover:bg-white/5"
+                }`}
+              >
+                Contact Sales
+              </button>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-white/10">
+              <div className="text-center">
+                <h4 className="font-sans font-semibold text-white mb-2">
+                  Unlimited Usage
+                </h4>
+                <p className="font-sans text-sm text-white/60">
+                  No limits on requests or processing
+                </p>
               </div>
-              <button className="w-full bg-transparent border border-white/20 text-white font-sans font-medium py-3 px-4 rounded-lg hover:bg-white/5 transition-colors">
-                Get started
-              </button>
-            </div>
-
-            <div>
-              <p className="font-sans text-sm font-medium text-white mb-4">
-                This plan includes:
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-center text-sm text-white/80">
-                  <svg
-                    className="w-4 h-4 text-lime-accent mr-3 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  All in Elite plus
-                </li>
-                <li className="flex items-center text-sm text-white/80">
-                  <svg
-                    className="w-4 h-4 text-lime-accent mr-3 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Complete petition drafts
-                </li>
-                <li className="flex items-center text-sm text-white/80">
-                  <svg
-                    className="w-4 h-4 text-lime-accent mr-3 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Expert review
-                </li>
-                <li className="flex items-center text-sm text-white/80">
-                  <svg
-                    className="w-4 h-4 text-lime-accent mr-3 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  24/7 chat support
-                </li>
-              </ul>
-            </div>
-
-            <div className="mt-8">
-              <button className="w-full bg-transparent border border-white/20 text-white font-sans font-medium py-3 px-4 rounded-lg hover:bg-white/5 transition-colors">
-                Get started
-              </button>
+              <div className="text-center">
+                <h4 className="font-sans font-semibold text-white mb-2">
+                  Dedicated Support
+                </h4>
+                <p className="font-sans text-sm text-white/60">
+                  24/7 priority support with dedicated account manager
+                </p>
+              </div>
+              <div className="text-center">
+                <h4 className="font-sans font-semibold text-white mb-2">
+                  Custom Integration
+                </h4>
+                <p className="font-sans text-sm text-white/60">
+                  API access and custom workflow integration
+                </p>
+              </div>
             </div>
           </div>
         </div>
