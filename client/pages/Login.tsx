@@ -35,7 +35,7 @@ export default function Login() {
         <img
           src="https://cdn.builder.io/api/v1/image/assets%2Fdc9bec237a7c4c8db3eebedfa5bf8146%2F0e0321c9ef0545d9a464fe2ada49b089?format=webp&width=800"
           alt="Gradient background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-30"
         />
       </div>
 
