@@ -29,7 +29,7 @@ export default function Index() {
           <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">
             end-to-end AI
           </span>
-          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">
+          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7.5xl">
             immigration platform
           </span>
         </h1>
