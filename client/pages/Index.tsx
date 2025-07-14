@@ -7,8 +7,8 @@ export default function Index() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/82a8f3b685498c3e3a535921b2c807a0d1478441?width=2984"
-          alt="Background gradient"
+          src="https://cdn.builder.io/api/v1/image/assets%2Fdc9bec237a7c4c8db3eebedfa5bf8146%2Faad0f23363294e01a1f8e09bee89d4e3?format=webp&width=800"
+          alt="Starry space background"
           className="w-full h-full object-cover"
         />
       </div>
@@ -17,32 +17,36 @@ export default function Index() {
       <FloatingElements />
 
       {/* Navigation */}
-      <nav className="absolute top-0 left-0 right-0 z-20 px-4 sm:px-6 lg:px-20 border-b border-white">
-        <Navbar />
-      </nav>
+      <Navbar />
 
       {/* Hero Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center pt-32">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center pt-30">
         {/* Main Headline */}
-        <h1 className="font-instrument font-semibold text-white leading-none mb-6">
+        <h1 className="font-inter-tight font-semibold text-white leading-none tracking-tighter mb-6">
           <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">
-            The first
+            The First
           </span>
           <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">
-            end-to-end AI
+            End-to-End AI
           </span>
           <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">
-            immigration platform
+            Immigration Platform
           </span>
         </h1>
 
         {/* Subheadline */}
-        <p className="font-instrument font-semibold text-white/90 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl mb-8 max-w-4xl">
-          start to finish, no lawyers required.
-        </p>
+        <div className="mb-5 max-w-4xl leading-tight">
+          <p className="font-sans font-normal text-white/90 text-sm sm:text-base md:text-lg lg:text-xl mb-1">
+            Immigen makes immigration effortless for bold talent and borderless
+            teams.
+          </p>
+          <p className="font-sans font-normal text-white/90 text-sm sm:text-base md:text-lg lg:text-xl">
+            No lawyers, no friction, endless possibilities.
+          </p>
+        </div>
 
         {/* CTA Button */}
-        <button className="flex items-center gap-2 bg-lime-accent text-black font-instrument font-bold text-sm sm:text-base px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity">
+        <button className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm sm:text-base px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity">
           Get Early Access
           <svg
             width="19"

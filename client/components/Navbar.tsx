@@ -4,7 +4,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-20 px-4 sm:px-6 lg:px-20">
+    <nav className="absolute top-0 left-0 right-0 z-20 px-4 sm:px-6 lg:px-20 border-b border-white/10">
       <div className="flex items-center justify-between h-[90px] max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex-shrink-0 flex items-center h-full -mt-5">
@@ -18,31 +18,31 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center space-x-8">
           <a
             href="#"
-            className="text-nav-text font-instrument font-bold text-sm hover:text-white transition-colors"
+            className="text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
           >
             About Us
           </a>
           <a
             href="#"
-            className="text-nav-text font-instrument font-bold text-sm hover:text-white transition-colors"
+            className="text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
           >
             Product
           </a>
           <a
             href="#"
-            className="text-nav-text font-instrument font-bold text-sm hover:text-white transition-colors"
+            className="text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
           >
             Pricing
           </a>
           <a
             href="#"
-            className="text-nav-text font-instrument font-bold text-sm hover:text-white transition-colors"
+            className="text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
           >
             Customers
           </a>
           <a
             href="#"
-            className="text-nav-text font-instrument font-bold text-sm hover:text-white transition-colors"
+            className="text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
           >
             Contact Us
           </a>
@@ -50,7 +50,7 @@ export default function Navbar() {
 
         {/* Desktop Right Side */}
         <div className="hidden lg:flex items-center space-x-6">
-          <button className="flex items-center gap-2 bg-lime-accent text-black font-instrument font-bold text-sm px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity">
+          <button className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity">
             Get Early Access
             <svg
               width="19"
@@ -68,7 +68,7 @@ export default function Navbar() {
           </button>
           <a
             href="#"
-            className="text-nav-text font-instrument font-bold text-sm hover:text-white transition-colors"
+            className="text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
           >
             Log In
           </a>
@@ -113,41 +113,41 @@ export default function Navbar() {
           <div className="px-4 py-6 space-y-4">
             <a
               href="#"
-              className="block text-nav-text font-instrument font-bold text-sm hover:text-white transition-colors"
+              className="block text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
             >
               About Us
             </a>
             <a
               href="#"
-              className="block text-nav-text font-instrument font-bold text-sm hover:text-white transition-colors"
+              className="block text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
             >
               Pricing
             </a>
             <a
               href="#"
-              className="block text-nav-text font-instrument font-bold text-sm hover:text-white transition-colors"
+              className="block text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
             >
               Customers
             </a>
             <a
               href="#"
-              className="block text-nav-text font-instrument font-bold text-sm hover:text-white transition-colors"
+              className="block text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
             >
               Resources
             </a>
             <a
               href="#"
-              className="block text-nav-text font-instrument font-bold text-sm hover:text-white transition-colors"
+              className="block text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
             >
               Contact Us
             </a>
             <a
               href="#"
-              className="block text-nav-text font-instrument font-bold text-sm hover:text-white transition-colors"
+              className="block text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
             >
               Log In
             </a>
-            <button className="flex items-center gap-2 bg-lime-accent text-black font-instrument font-bold text-sm px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity mt-4">
+            <button className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity mt-4">
               Get Early Access
               <svg
                 width="19"
