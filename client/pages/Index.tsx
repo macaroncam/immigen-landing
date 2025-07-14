@@ -23,13 +23,13 @@ export default function Index() {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center pt-30">
         {/* Main Headline */}
         <h1 className="font-inter-tight font-semibold leading-none tracking-tighter mb-6">
-          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
+          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl animate-gradient-shift">
             The First
           </span>
-          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
+          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl animate-gradient-shift">
             End-to-End AI
           </span>
-          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
+          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl animate-gradient-shift">
             Immigration Platform
           </span>
         </h1>
