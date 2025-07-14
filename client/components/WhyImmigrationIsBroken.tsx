@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import FloatingElements from "./FloatingElements";
 
 export default function WhyImmigrationIsBroken() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [showFloatingElements, setShowFloatingElements] = useState(false);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [costCounter, setCostCounter] = useState(0);
+  const [pageCounter, setPageCounter] = useState(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -12,10 +13,38 @@ export default function WhyImmigrationIsBroken() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-            // Delay FloatingElements to match loading pattern
+
+            // Animate cost counter
             setTimeout(() => {
-              setShowFloatingElements(true);
+              let current = 0;
+              const target = 15000;
+              const increment = target / 50;
+              const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                  setCostCounter(target);
+                  clearInterval(timer);
+                } else {
+                  setCostCounter(Math.floor(current));
+                }
+              }, 30);
             }, 500);
+
+            // Animate page counter
+            setTimeout(() => {
+              let current = 0;
+              const target = 60;
+              const increment = target / 30;
+              const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                  setPageCounter(target);
+                  clearInterval(timer);
+                } else {
+                  setPageCounter(Math.floor(current));
+                }
+              }, 50);
+            }, 700);
           }
         });
       },
@@ -36,26 +65,10 @@ export default function WhyImmigrationIsBroken() {
   }, []);
 
   return (
-    <div ref={sectionRef} className="relative min-h-screen overflow-hidden">
-      {/* Same Background as Hero */}
-      <div className="absolute inset-0">
-        <img
-          src="/starry-background.gif"
-          alt="Starry space background"
-          className="w-full h-full object-cover"
-        />
-      </div>
-
-      {/* Tech Gradient Overlay - Same as Hero */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-900/8 via-emerald-900/4 to-lime-900/6"></div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-green-500/3 to-lime-500/5"></div>
-      <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
-
-      {/* Floating Background Elements */}
-      {showFloatingElements && (
-        <FloatingElements key="floating-broken-section" />
-      )}
-
+    <div
+      ref={sectionRef}
+      className="relative min-h-screen overflow-hidden bg-black"
+    >
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-16">
         <div className="max-w-4xl mx-auto">
