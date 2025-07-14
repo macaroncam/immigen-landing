@@ -14,9 +14,9 @@ export default function Index() {
       </div>
 
       {/* Tech Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-purple-900/5 to-cyan-900/10"></div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-blue-500/5 to-purple-500/10"></div>
-      <div className="absolute inset-0 bg-gradient-to-bl from-cyan-400/5 via-transparent to-blue-600/8"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-green-900/8 via-emerald-900/4 to-lime-900/6"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-green-500/3 to-lime-500/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
 
       {/* Floating Background Elements */}
       <FloatingElements />
