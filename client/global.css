@@ -295,6 +295,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
   }
 }
