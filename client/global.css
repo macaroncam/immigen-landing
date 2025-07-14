@@ -303,5 +303,8 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     letter-spacing: 0.05em;
+    overflow: visible;
+    padding-bottom: 0.1em;
+    margin-bottom: 0.1em;
   }
 }
