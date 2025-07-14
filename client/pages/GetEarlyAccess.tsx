@@ -76,11 +76,11 @@ export default function GetEarlyAccess() {
                   </div>
                   <div className="relative z-10">
                     {/* Form Header */}
-                    <div className="text-center mb-20">
+                    <div className="text-center mb-12">
                       <h1 className="font-sans text-3xl lg:text-4xl font-bold text-white mb-6">
                         Let's get you approved.
                       </h1>
-                      <p className="font-sans text-lg text-white/90 leading-relaxed max-w-md mx-auto mb-8">
+                      <p className="font-sans font-medium text-lg text-white/90 leading-relaxed max-w-md mx-auto mb-8">
                         Join self-starters & global firms in pioneering the
                         immigration revolution with Immigen. Reserve your spot
                         on our early access list today.
