@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import FloatingElements from "../components/FloatingElements";
 import PageWrapper from "../components/PageWrapper";
@@ -304,7 +305,6 @@ export default function GetEarlyAccess() {
                         Waiting for form submission
                       </span>
                     </div>
-
                   </div>
                 </div>
               </div>
