@@ -151,7 +151,10 @@ export default function Navbar() {
             >
               Log In
             </a>
-            <button className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity mt-4">
+            <Link
+              to="/get-early-access"
+              className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity mt-4"
+            >
               Get Early Access
               <svg
                 width="19"
@@ -166,7 +169,7 @@ export default function Navbar() {
                   fill="black"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       )}
