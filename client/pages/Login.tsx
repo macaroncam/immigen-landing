@@ -156,7 +156,7 @@ export default function Login() {
                 <form onSubmit={handleSubmit} className="space-y-8">
                   {/* Email Field */}
                   <div>
-                    <label className="block text-sm font-sans text-white/70 mb-3">
+                    <label className="block text-base font-sans text-white/70 mb-4">
                       Email address
                     </label>
                     <input
@@ -164,7 +164,7 @@ export default function Login() {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-white/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
+                      className="w-full px-6 py-4 bg-transparent border border-lime-accent/30 rounded-xl text-white placeholder-white/50 focus:border-lime-accent focus:outline-none transition-colors font-sans text-base"
                       placeholder="Enter your email"
                       required
                     />
@@ -172,7 +172,7 @@ export default function Login() {
 
                   {/* Password Field */}
                   <div>
-                    <label className="block text-sm font-sans text-white/70 mb-3">
+                    <label className="block text-base font-sans text-white/70 mb-4">
                       Password
                     </label>
                     <input
@@ -180,7 +180,7 @@ export default function Login() {
                       name="password"
                       value={formData.password}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-white/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
+                      className="w-full px-6 py-4 bg-transparent border border-lime-accent/30 rounded-xl text-white placeholder-white/50 focus:border-lime-accent focus:outline-none transition-colors font-sans text-base"
                       placeholder="Enter your password"
                       required
                     />
