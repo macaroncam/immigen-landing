@@ -6,7 +6,7 @@ export default function Navbar() {
 
   return (
     <nav className="absolute top-0 left-0 right-0 z-20 px-4 sm:px-6 lg:px-20 border-b border-white/10">
-            <div className="grid grid-cols-3 items-center h-[90px] max-w-7xl mx-auto">
+      <div className="grid grid-cols-3 items-center h-[90px] max-w-7xl mx-auto">
         {/* Logo - Left */}
         <div className="flex items-center h-full -mt-5">
           <div className="font-zen-tokyo text-5xl sm:text-6xl lg:text-6xl leading-none">
@@ -15,7 +15,7 @@ export default function Navbar() {
           </div>
         </div>
 
-                {/* Desktop Navigation - Center */}
+        {/* Desktop Navigation - Center */}
         <div className="hidden lg:flex items-center justify-center space-x-4">
           <a
             href="#"
@@ -51,7 +51,10 @@ export default function Navbar() {
 
         {/* Desktop Right Side - Right */}
         <div className="hidden lg:flex items-center justify-end space-x-6">
-                    <Link to="/get-early-access" className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity">
+          <Link
+            to="/get-early-access"
+            className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity"
+          >
             Get Early Access
             <svg
               width="19"
@@ -66,7 +69,7 @@ export default function Navbar() {
                 fill="black"
               />
             </svg>
-          </button>
+          </Link>
           <a
             href="#"
             className="text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
