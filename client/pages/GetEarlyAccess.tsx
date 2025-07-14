@@ -289,7 +289,7 @@ export default function GetEarlyAccess() {
                       </h2>
                       <div className="w-16 h-1 bg-gradient-to-r from-lime-accent to-green-400 mx-auto rounded-full"></div>
                       <p className="font-sans text-lg font-medium text-lime-accent/80 tracking-wide">
-                        Preview your immigration journey
+                        Test your case. Visualize your immigration journey.
                       </p>
                       <p className="font-sans text-base text-white/70 leading-relaxed max-w-sm mx-auto">
                         Submit your form to see a live preview of your petition
