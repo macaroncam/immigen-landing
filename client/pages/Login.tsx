@@ -87,17 +87,17 @@ export default function Login() {
               </div>
               <div className="relative z-10">
                 {/* Header */}
-                <div className="text-center mb-8">
-                  <h1 className="font-sans text-3xl lg:text-4xl font-bold text-white mb-4">
+                <div className="text-center mb-12">
+                  <h1 className="font-sans text-4xl lg:text-5xl font-bold text-white mb-6">
                     Welcome back
                   </h1>
-                  <p className="font-sans font-medium text-lg text-white/80 leading-relaxed">
+                  <p className="font-sans font-medium text-xl text-white/80 leading-relaxed max-w-lg mx-auto">
                     Sign in to your account to continue your immigration journey
                   </p>
                 </div>
 
                 {/* Social Login Buttons */}
-                <div className="space-y-4 mb-8">
+                <div className="space-y-6 mb-12">
                   {/* Google Login */}
                   <button
                     onClick={handleGoogleLogin}
