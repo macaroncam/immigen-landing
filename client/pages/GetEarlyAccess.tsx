@@ -261,32 +261,58 @@ export default function GetEarlyAccess() {
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-white via-lime-accent to-white opacity-30 p-[1px]">
                     <div className="w-full h-full bg-black/80 backdrop-blur-sm rounded-3xl"></div>
                   </div>
-                  <div className="relative z-10">
-                    {/* Icon */}
-                    <svg
-                      className="w-20 h-20 mb-8 text-white/30"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                      />
-                    </svg>
+                  <div className="relative z-10 space-y-8">
+                    {/* Enhanced Icon with glow effect */}
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-lime-accent/20 rounded-full blur-xl animate-pulse"></div>
+                      <div className="relative bg-gradient-to-br from-lime-accent/20 to-green-500/20 p-6 rounded-2xl border border-lime-accent/30">
+                        <svg
+                          className="w-16 h-16 text-lime-accent mx-auto"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
 
-                    {/* Content */}
-                    <h2 className="font-sans text-2xl font-bold text-white mb-3">
-                      Live Petition Preview
-                    </h2>
-                    <p className="font-sans text-base text-blue-300 mb-4">
-                      See your profile transformed in real time
-                    </p>
-                    <p className="font-sans text-base text-white/60 leading-relaxed max-w-sm">
-                      Submit your form to see a live preview of your petition
-                    </p>
+                    {/* Content with improved typography */}
+                    <div className="space-y-6">
+                      <h2 className="font-sans text-3xl font-bold text-white leading-tight">
+                        Live Petition Preview
+                      </h2>
+                      <div className="w-16 h-1 bg-gradient-to-r from-lime-accent to-green-400 mx-auto rounded-full"></div>
+                      <p className="font-sans text-lg font-medium text-lime-accent/80 tracking-wide">
+                        See your profile transformed in real time
+                      </p>
+                      <p className="font-sans text-base text-white/70 leading-relaxed max-w-sm mx-auto">
+                        Submit your form to see a live preview of your petition
+                        optimized by our AI system
+                      </p>
+                    </div>
+
+                    {/* Status indicator */}
+                    <div className="flex items-center justify-center space-x-2 text-sm text-white/50">
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                      <span className="font-sans">
+                        Waiting for form submission
+                      </span>
+                    </div>
+
+                    {/* Preview placeholder */}
+                    <div className="mt-8 p-4 border border-dashed border-white/20 rounded-xl bg-white/5">
+                      <div className="space-y-2">
+                        <div className="h-2 bg-white/10 rounded animate-pulse"></div>
+                        <div className="h-2 bg-white/10 rounded animate-pulse w-3/4"></div>
+                        <div className="h-2 bg-white/10 rounded animate-pulse w-1/2"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
