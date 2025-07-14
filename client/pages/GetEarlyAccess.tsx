@@ -73,9 +73,9 @@ export default function GetEarlyAccess() {
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Fields */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-instrument text-nav-text/50 mb-2">
+                      <label className="block text-sm font-sans text-nav-text/50 mb-3">
                         First name*
                       </label>
                       <input
