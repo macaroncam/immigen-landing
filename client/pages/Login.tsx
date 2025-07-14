@@ -231,8 +231,8 @@ export default function Login() {
                 </form>
 
                 {/* Sign Up Link */}
-                <div className="text-center mt-8">
-                  <p className="text-sm font-sans text-white/60">
+                <div className="text-center mt-12">
+                  <p className="text-base font-sans text-white/60">
                     Don't have an account?{" "}
                     <Link
                       to="/get-early-access"
