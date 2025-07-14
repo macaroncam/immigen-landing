@@ -6,15 +6,19 @@ import PageWrapper from "../components/PageWrapper";
 
 export default function Index() {
   const [showFloatingElements, setShowFloatingElements] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
+    // Reset FloatingElements state on route change
+    setShowFloatingElements(false);
+
     // Delay FloatingElements rendering to prevent initial lag
     const timer = setTimeout(() => {
       setShowFloatingElements(true);
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [location.pathname]);
 
   return (
     <PageWrapper>
