@@ -59,11 +59,11 @@ export default function GetEarlyAccess() {
             <div className="order-2 xl:order-1">
               <div className="bg-transparent border-2 border-lime-accent rounded-3xl p-8 lg:p-12">
                 {/* Form Header */}
-                <div className="text-center mb-8">
-                  <h1 className="font-instrument text-3xl lg:text-4xl font-bold text-white mb-4">
+                <div className="text-center mb-12">
+                  <h1 className="font-sans text-3xl lg:text-4xl font-bold text-white mb-6">
                     Let's get you approved.
                   </h1>
-                  <p className="font-instrument text-lg text-white/90 leading-relaxed max-w-md mx-auto">
+                  <p className="font-sans text-lg text-white/90 leading-relaxed max-w-md mx-auto mb-8">
                     Join self-starters & global firms in pioneering the
                     immigration revolution with Immigen. Reserve your spot on
                     our early access list today.
