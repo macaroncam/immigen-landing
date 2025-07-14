@@ -121,8 +121,8 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Why Immigration Is Broken Section */}
-      <WhyImmigrationIsBroken />
+      {/* Pricing Section */}
+      <PricingSection />
     </PageWrapper>
   );
 }
