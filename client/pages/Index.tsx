@@ -36,9 +36,12 @@ export default function Index() {
 
         {/* Subheadline */}
         <div className="mb-5 max-w-4xl leading-tight">
-          <p className="mt-4 mb-6 font-sans text-base text-[#F5F5F5] sm:px-0 font-medium leading-normal lg:mb-[22px] lg:text-lg md:w-12/13 lg:max-w-xl text-center mx-auto text-balance">
+          <p className="font-sans font-normal text-white/90 text-sm sm:text-base md:text-lg lg:text-xl mb-1">
             Immigen makes immigration effortless for bold talent and borderless
-            teams. No lawyers, no friction, endless possibilities.
+            teams.
+          </p>
+          <p className="font-sans font-normal text-white/90 text-sm sm:text-base md:text-lg lg:text-xl">
+            No lawyers, no friction, endless possibilities.
           </p>
         </div>
 
