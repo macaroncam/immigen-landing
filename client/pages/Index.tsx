@@ -22,7 +22,7 @@ export default function Index() {
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center pt-30">
         {/* Main Headline */}
-        <h1 className="font-inter-tight font-semibold leading-none tracking-tighter mb-6">
+        <h1 className="font-inter-tight font-semibold leading-tight tracking-tighter mb-3">
           <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl animate-gradient-shift">
             The First
           </span>
@@ -36,7 +36,7 @@ export default function Index() {
 
         {/* Subheadline */}
         <div className="mb-5 max-w-4xl leading-tight">
-          <p className="my-6 font-sans text-base text-[#F5F5F5] sm:px-0 font-medium leading-normal lg:my-[22px] lg:text-lg md:w-12/13 lg:max-w-xl text-center mx-auto text-balance">
+          <p className="mt-4 mb-6 font-sans text-base text-[#F5F5F5] sm:px-0 font-medium leading-normal lg:mb-[22px] lg:text-lg md:w-12/13 lg:max-w-xl text-center mx-auto text-balance">
             Immigen makes immigration effortless for bold talent and borderless
             teams. No lawyers, no friction, endless possibilities.
           </p>
