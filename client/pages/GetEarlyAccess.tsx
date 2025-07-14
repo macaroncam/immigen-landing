@@ -253,13 +253,13 @@ export default function GetEarlyAccess() {
                 </svg>
 
                 {/* Content */}
-                <h2 className="font-instrument text-2xl font-bold text-white mb-3">
+                <h2 className="font-sans text-2xl font-bold text-white mb-3">
                   Live Petition Preview
                 </h2>
-                <p className="font-instrument text-base text-blue-300 mb-4">
+                <p className="font-sans text-base text-blue-300 mb-4">
                   See your profile transformed in real time
                 </p>
-                <p className="font-instrument text-base text-white/60 leading-relaxed max-w-sm">
+                <p className="font-sans text-base text-white/60 leading-relaxed max-w-sm">
                   Submit your form to see a live preview of your petition
                 </p>
               </div>
