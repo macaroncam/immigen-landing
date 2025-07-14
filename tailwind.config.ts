@@ -28,6 +28,13 @@ export default {
           "Helvetica",
           "sans-serif",
         ],
+        "inter-tight": [
+          "Inter Tight",
+          "-apple-system",
+          "Roboto",
+          "Helvetica",
+          "sans-serif",
+        ],
       },
       colors: {
         "lime-accent": "#C9F31D",
