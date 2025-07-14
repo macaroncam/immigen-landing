@@ -17,9 +17,7 @@ export default function Index() {
       <FloatingElements />
 
       {/* Navigation */}
-      <nav className="absolute top-0 left-0 right-0 z-20 px-4 sm:px-6 lg:px-20 border-b border-white">
-        <Navbar />
-      </nav>
+      <Navbar />
 
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center pt-32">
