@@ -22,14 +22,14 @@ export default function Index() {
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center pt-30">
         {/* Main Headline */}
-        <h1 className="font-inter-tight font-semibold leading-relaxed tracking-tighter mb-3 py-4">
-          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl animate-gradient-shift pb-2">
+        <h1 className="font-inter-tight font-semibold leading-relaxed tracking-tighter mb-3 py-4 overflow-visible">
+          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl animate-gradient-shift pb-3 min-h-[1.2em] flex items-center justify-center">
             The First
           </span>
-          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl animate-gradient-shift pb-2">
+          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl animate-gradient-shift pb-3 min-h-[1.2em] flex items-center justify-center">
             End-to-End AI
           </span>
-          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl animate-gradient-shift pb-2">
+          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl animate-gradient-shift pb-3 min-h-[1.2em] flex items-center justify-center">
             Immigration Platform
           </span>
         </h1>
