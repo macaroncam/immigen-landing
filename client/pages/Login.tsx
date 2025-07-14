@@ -141,19 +141,19 @@ export default function Login() {
                 </div>
 
                 {/* Divider */}
-                <div className="relative mb-8">
+                <div className="relative mb-12">
                   <div className="absolute inset-0 flex items-center">
                     <div className="w-full border-t border-white/20"></div>
                   </div>
-                  <div className="relative flex justify-center text-sm">
-                    <span className="bg-black/80 px-4 text-white/60 font-sans">
+                  <div className="relative flex justify-center text-base">
+                    <span className="bg-black/80 px-6 text-white/60 font-sans">
                       Or continue with email
                     </span>
                   </div>
                 </div>
 
                 {/* Email/Password Form */}
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-8">
                   {/* Email Field */}
                   <div>
                     <label className="block text-sm font-sans text-white/70 mb-3">
