@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import FloatingElements from "../components/FloatingElements";
+import PageWrapper from "../components/PageWrapper";
 
 export default function GetEarlyAccess() {
   const [formData, setFormData] = useState({
