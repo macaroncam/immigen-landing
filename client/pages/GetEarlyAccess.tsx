@@ -88,7 +88,7 @@ export default function GetEarlyAccess() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-instrument text-nav-text/50 mb-2">
+                      <label className="block text-sm font-sans text-nav-text/50 mb-3">
                         Last name*
                       </label>
                       <input
@@ -96,16 +96,16 @@ export default function GetEarlyAccess() {
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
                         required
                       />
                     </div>
                   </div>
 
                   {/* Company & Job Title */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-instrument text-nav-text/50 mb-2">
+                      <label className="block text-sm font-sans text-nav-text/50 mb-3">
                         Company name*
                       </label>
                       <input
@@ -113,12 +113,12 @@ export default function GetEarlyAccess() {
                         name="companyName"
                         value={formData.companyName}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
                         required
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-instrument text-nav-text/50 mb-2">
+                      <label className="block text-sm font-sans text-nav-text/50 mb-3">
                         Job title*
                       </label>
                       <input
@@ -126,16 +126,16 @@ export default function GetEarlyAccess() {
                         name="jobTitle"
                         value={formData.jobTitle}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
                         required
                       />
                     </div>
                   </div>
 
                   {/* Email & Citizenship */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-instrument text-nav-text/50 mb-2">
+                      <label className="block text-sm font-sans text-nav-text/50 mb-3">
                         Email address*
                       </label>
                       <input
@@ -143,12 +143,12 @@ export default function GetEarlyAccess() {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
                         required
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-instrument text-nav-text/50 mb-2">
+                      <label className="block text-sm font-sans text-nav-text/50 mb-3">
                         Country of Citizenship*
                       </label>
                       <input
@@ -156,7 +156,7 @@ export default function GetEarlyAccess() {
                         name="citizenship"
                         value={formData.citizenship}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
                         required
                       />
                     </div>
@@ -164,7 +164,7 @@ export default function GetEarlyAccess() {
 
                   {/* CV Upload */}
                   <div>
-                    <label className="block text-sm font-instrument text-nav-text/50 mb-2">
+                    <label className="block text-sm font-sans text-nav-text/50 mb-3">
                       Upload your CV (PDF only)
                     </label>
                     <div className="relative">
