@@ -227,19 +227,43 @@ export default function WhyImmigrationIsBroken() {
             </div>
           </div>
 
-          {/* Conclusion */}
+          {/* Interactive Conclusion */}
           <div
-            className={`bg-lime-accent/5 border border-lime-accent/20 rounded-lg p-6 transition-all duration-1000 delay-500 ${
+            className={`group bg-lime-accent/5 border border-lime-accent/20 rounded-lg p-6 cursor-pointer transition-all duration-1000 delay-500 hover:bg-lime-accent/10 hover:border-lime-accent/40 hover:scale-[1.02] ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <p className="font-sans text-base text-white/90 leading-relaxed">
-              <span className="text-lime-accent font-medium">Immigen</span> was
-              built to break that cycle—by rethinking the system from the ground
-              up.
-            </p>
+            <div className="flex items-center justify-between">
+              <p className="font-sans text-base text-white/90 leading-relaxed group-hover:text-white transition-colors">
+                <span className="text-lime-accent font-medium group-hover:text-lime-accent/90 transition-colors">
+                  Immigen
+                </span>{" "}
+                was built to break that cycle—by rethinking the system from the
+                ground up.
+              </p>
+              <div className="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg
+                  className="w-5 h-5 text-lime-accent"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div className="mt-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
+              <p className="font-sans text-sm text-lime-accent/70">
+                See how we're transforming immigration →
+              </p>
+            </div>
           </div>
         </div>
       </div>
