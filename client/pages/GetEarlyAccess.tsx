@@ -4,6 +4,7 @@ import FloatingElements from "../components/FloatingElements";
 import PageWrapper from "../components/PageWrapper";
 
 export default function GetEarlyAccess() {
+  const [showFloatingElements, setShowFloatingElements] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -13,6 +14,15 @@ export default function GetEarlyAccess() {
     citizenship: "",
     cv: null as File | null,
   });
+
+  useEffect(() => {
+    // Delay FloatingElements rendering to prevent initial lag
+    const timer = setTimeout(() => {
+      setShowFloatingElements(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
