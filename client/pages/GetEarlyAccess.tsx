@@ -6,6 +6,7 @@ import PageWrapper from "../components/PageWrapper";
 
 export default function GetEarlyAccess() {
   const [showFloatingElements, setShowFloatingElements] = useState(false);
+  const location = useLocation();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -17,13 +18,16 @@ export default function GetEarlyAccess() {
   });
 
   useEffect(() => {
+    // Reset FloatingElements state on route change
+    setShowFloatingElements(false);
+
     // Delay FloatingElements rendering to prevent initial lag
     const timer = setTimeout(() => {
       setShowFloatingElements(true);
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [location.pathname]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
