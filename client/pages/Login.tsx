@@ -70,7 +70,7 @@ export default function Login() {
       <div className="relative z-10 flex items-center justify-center min-h-[calc(100vh-120px)] px-8">
         <div className="w-full max-w-md">
           {/* Form Container */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
             {/* Title */}
             <h1 className="text-center text-2xl font-medium text-gray-900 mb-8">
               Log in to your account
