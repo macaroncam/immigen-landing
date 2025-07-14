@@ -234,6 +234,18 @@
     }
   }
 
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
   /* Animation Classes */
   .animate-float-slow {
     animation: float-slow 8s ease-in-out infinite;
@@ -274,5 +286,14 @@
 
   .animate-code-scroll-ultra-slow {
     animation: code-scroll-ultra-slow 60s linear infinite;
+  }
+
+  .animate-gradient-shift {
+    background: linear-gradient(-45deg, #c9f31d, #a3e635, #84cc16, #c9f31d);
+    background-size: 400% 400%;
+    animation: gradient-shift 3s ease-in-out infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
