@@ -73,12 +73,12 @@ export default function Navbar() {
               />
             </svg>
           </Link>
-          <a
-            href="#"
+          <Link
+            to="/login"
             className="text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
           >
             Log In
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
