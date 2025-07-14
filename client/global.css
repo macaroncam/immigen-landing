@@ -289,7 +289,14 @@
   }
 
   .animate-gradient-shift {
-    background: linear-gradient(90deg, #ffffff 0%, #c9f31d 50%, #ffffff 100%);
+    background: linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #ffffff 30%,
+      #c9f31d 50%,
+      #ffffff 70%,
+      #ffffff 100%
+    );
     background-size: 200% 100%;
     animation: gradient-shift 8s ease-in-out infinite;
     -webkit-background-clip: text;
