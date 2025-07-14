@@ -120,6 +120,9 @@ export default function Index() {
           </div>
         </div>
       </div>
+
+      {/* Why Immigration Is Broken Section */}
+      <WhyImmigrationIsBroken />
     </PageWrapper>
   );
 }
