@@ -148,12 +148,12 @@ export default function Navbar() {
             >
               Contact Us
             </a>
-            <a
-              href="#"
+            <Link
+              to="/login"
               className="block text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
             >
               Log In
-            </a>
+            </Link>
             <Link
               to="/get-early-access"
               className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity mt-4"
