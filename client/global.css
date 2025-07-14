@@ -319,4 +319,51 @@
   .animate-code-scroll-ultra-slow {
     animation: code-scroll-ultra-slow 60s linear infinite;
   }
+
+  /* Startup Animation Classes */
+  .animate-slide-in-up {
+    animation: slideInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-fade-in-scale {
+    animation: fadeInScale 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-glow-pulse {
+    animation: glowPulse 3s ease-in-out infinite;
+  }
+
+  .animate-text-shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    background-size: 200% 100%;
+    animation: textShimmer 2s ease-in-out;
+  }
+
+  /* Startup sequence delays */
+  .delay-startup-1 {
+    animation-delay: 0.1s;
+  }
+  .delay-startup-2 {
+    animation-delay: 0.3s;
+  }
+  .delay-startup-3 {
+    animation-delay: 0.5s;
+  }
+  .delay-startup-4 {
+    animation-delay: 0.7s;
+  }
+  .delay-startup-5 {
+    animation-delay: 0.9s;
+  }
+  .delay-startup-6 {
+    animation-delay: 1.1s;
+  }
+  .delay-startup-7 {
+    animation-delay: 1.3s;
+  }
 }
