@@ -5,6 +5,17 @@ import FloatingElements from "../components/FloatingElements";
 import PageWrapper from "../components/PageWrapper";
 
 export default function Index() {
+  const [showFloatingElements, setShowFloatingElements] = useState(false);
+
+  useEffect(() => {
+    // Delay FloatingElements rendering to prevent initial lag
+    const timer = setTimeout(() => {
+      setShowFloatingElements(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <PageWrapper>
       <div className="min-h-screen relative overflow-hidden">
