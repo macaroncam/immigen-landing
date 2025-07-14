@@ -9,10 +9,13 @@ export default function Navbar() {
       <div className="grid grid-cols-3 items-center h-[90px] max-w-7xl mx-auto">
         {/* Logo - Left */}
         <div className="flex items-center h-full -mt-5">
-          <div className="font-zen-tokyo text-5xl sm:text-6xl lg:text-6xl leading-none">
+          <Link
+            to="/"
+            className="font-zen-tokyo text-5xl sm:text-6xl lg:text-6xl leading-none hover:opacity-90 transition-opacity"
+          >
             <span className="text-white">immi</span>
             <span className="text-lime-accent">gen.ai</span>
-          </div>
+          </Link>
         </div>
 
         {/* Desktop Navigation - Center */}
