@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between h-[90px] max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex-shrink-0 flex items-center h-full -mt-5">
-          <div className="font-sans text-5xl sm:text-6xl lg:text-6xl leading-none">
+          <div className="font-zen-tokyo text-5xl sm:text-6xl lg:text-6xl leading-none">
             <span className="text-white">immi</span>
             <span className="text-lime-accent">gen.ai</span>
           </div>
