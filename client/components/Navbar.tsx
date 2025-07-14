@@ -15,7 +15,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation - Center */}
-        <div className="hidden lg:flex items-center justify-center space-x-8">
+        <div className="hidden lg:flex items-center justify-center space-x-4">
           <a
             href="#"
             className="text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
