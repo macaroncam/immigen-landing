@@ -289,32 +289,25 @@
   }
 
   .animate-gradient-shift {
-    position: relative;
-    color: #ffffff;
-    letter-spacing: 0.05em;
-    line-height: 1.4;
-    display: block;
-    overflow: visible;
-  }
-
-  .animate-gradient-shift::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background: linear-gradient(
       90deg,
-      transparent 0%,
-      transparent 30%,
+      #ffffff 0%,
+      #ffffff 30%,
       #c9f31d 50%,
-      transparent 70%,
-      transparent 100%
+      #ffffff 70%,
+      #ffffff 100%
     );
     background-size: 200% 100%;
     animation: gradient-shift 8s ease-in-out infinite;
-    mix-blend-mode: overlay;
-    pointer-events: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.05em;
+    line-height: 1.6 !important;
+    padding: 0.1em 0 0.4em 0;
+    margin-bottom: 0.2em;
+    display: block;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
   }
 }
