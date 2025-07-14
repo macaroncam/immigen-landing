@@ -35,10 +35,15 @@ export default function Index() {
         </h1>
 
         {/* Subheadline */}
-        <p className="font-sans font-normal text-white/90 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-1xl mb-5 max-w-4xl">
-          Immigen makes immigration effortless for bold talent and borderless teams.
-          No lawyers, no friction, endless possibilities.
-        </p>
+        <div className="mb-5 max-w-4xl leading-tight">
+          <p className="font-sans font-normal text-white/90 text-sm sm:text-base md:text-lg lg:text-xl mb-1">
+            Immigen makes immigration effortless for bold talent and borderless
+            teams.
+          </p>
+          <p className="font-sans font-normal text-white/90 text-sm sm:text-base md:text-lg lg:text-xl">
+            No lawyers, no friction, endless possibilities.
+          </p>
+        </div>
 
         {/* CTA Button */}
         <button className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm sm:text-base px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity">
