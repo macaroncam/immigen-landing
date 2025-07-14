@@ -24,8 +24,9 @@ export default function Index() {
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center pt-30 overflow-visible">
+            {/* Hero Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-20 text-center pt-30 overflow-visible">
+        <div className="max-w-7xl mx-auto w-full flex flex-col items-center justify-center">
         {/* Main Headline */}
         <h1 className="font-sans font-bold leading-relaxed tracking-tighter mb-3 py-4 overflow-visible">
           <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl animate-gradient-shift pb-4">
@@ -50,7 +51,7 @@ export default function Index() {
           </p>
         </div>
 
-        {/* CTA Buttons */}
+                {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 items-center">
           <button className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm sm:text-base px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity">
             Get Early Access
