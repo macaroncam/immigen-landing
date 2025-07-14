@@ -143,7 +143,7 @@ export default function WhyImmigrationIsBroken() {
             </div>
           </div>
 
-          {/* Problem Grid */}
+          {/* Interactive Problem Grid */}
           <div
             className={`grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 transition-all duration-1000 delay-400 ${
               isVisible
@@ -152,33 +152,78 @@ export default function WhyImmigrationIsBroken() {
             }`}
           >
             {/* Expensive */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
-              <h3 className="font-sans text-base font-semibold text-white mb-2">
+            <div
+              className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 cursor-pointer transition-all duration-300 hover:bg-white/10 hover:border-lime-accent/30 hover:scale-105 ${
+                hoveredCard === 0 ? "bg-white/10 border-lime-accent/30" : ""
+              }`}
+              onMouseEnter={() => setHoveredCard(0)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              <h3 className="font-sans text-base font-semibold text-white mb-2 transition-colors">
                 Expensive
               </h3>
-              <p className="font-sans text-sm text-white/70 leading-relaxed">
-                $10K–$20K per application
+              <p className="font-sans text-sm text-white/70 leading-relaxed hover:text-white/90 transition-colors">
+                <span className="text-red-400 font-medium">$10K–$20K</span> per
+                application
               </p>
+              {hoveredCard === 0 && (
+                <div className="mt-3 pt-3 border-t border-white/10">
+                  <p className="font-sans text-xs text-white/50">
+                    Legal fees, filing costs, and administrative overhead
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Opaque */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
-              <h3 className="font-sans text-base font-semibold text-white mb-2">
+            <div
+              className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 cursor-pointer transition-all duration-300 hover:bg-white/10 hover:border-lime-accent/30 hover:scale-105 ${
+                hoveredCard === 1 ? "bg-white/10 border-lime-accent/30" : ""
+              }`}
+              onMouseEnter={() => setHoveredCard(1)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              <h3 className="font-sans text-base font-semibold text-white mb-2 transition-colors">
                 Opaque
               </h3>
-              <p className="font-sans text-sm text-white/70 leading-relaxed">
-                Which EB1A criteria do you even qualify for?
+              <p className="font-sans text-sm text-white/70 leading-relaxed hover:text-white/90 transition-colors">
+                Which{" "}
+                <span className="text-lime-accent font-medium">
+                  EB1A criteria
+                </span>{" "}
+                do you even qualify for?
               </p>
+              {hoveredCard === 1 && (
+                <div className="mt-3 pt-3 border-t border-white/10">
+                  <p className="font-sans text-xs text-white/50">
+                    Complex eligibility requirements without clear guidance
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* AI-written by lawyers */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
-              <h3 className="font-sans text-base font-semibold text-white mb-2">
+            <div
+              className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 cursor-pointer transition-all duration-300 hover:bg-white/10 hover:border-lime-accent/30 hover:scale-105 ${
+                hoveredCard === 2 ? "bg-white/10 border-lime-accent/30" : ""
+              }`}
+              onMouseEnter={() => setHoveredCard(2)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              <h3 className="font-sans text-base font-semibold text-white mb-2 transition-colors">
                 AI-written by lawyers
               </h3>
-              <p className="font-sans text-sm text-white/70 leading-relaxed">
-                Irony: 96% of your "custom" letter may be AI too.
+              <p className="font-sans text-sm text-white/70 leading-relaxed hover:text-white/90 transition-colors">
+                Irony: <span className="text-orange-400 font-medium">96%</span>{" "}
+                of your "custom" letter may be AI too.
               </p>
+              {hoveredCard === 2 && (
+                <div className="mt-3 pt-3 border-t border-white/10">
+                  <p className="font-sans text-xs text-white/50">
+                    Template-based solutions disguised as personalized service
+                  </p>
+                </div>
+              )}
             </div>
           </div>
 
