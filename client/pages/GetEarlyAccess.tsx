@@ -56,8 +56,8 @@ export default function GetEarlyAccess() {
         {/* Main Content */}
         <div className="relative z-10 min-h-screen px-4 sm:px-6 lg:px-20 pt-32 pb-16">
           <div className="max-w-7xl mx-auto">
-                        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 lg:gap-8">
-                            {/* Form Section */}
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 lg:gap-8">
+              {/* Form Section */}
               <div className="order-2 xl:order-1">
                 <div className="relative bg-transparent rounded-3xl p-8 lg:p-12">
                   {/* Gradient border */}
@@ -65,181 +65,182 @@ export default function GetEarlyAccess() {
                     <div className="w-full h-full bg-black/80 backdrop-blur-sm rounded-3xl"></div>
                   </div>
                   <div className="relative z-10">
-                  {/* Form Header */}
-                  <div className="text-center mb-12">
-                    <h1 className="font-sans text-3xl lg:text-4xl font-bold text-white mb-6">
-                      Let's get you approved.
-                    </h1>
-                    <p className="font-sans text-lg text-white/90 leading-relaxed max-w-md mx-auto mb-8">
-                      Join self-starters & global firms in pioneering the
-                      immigration revolution with Immigen. Reserve your spot on
-                      our early access list today.
-                    </p>
-                  </div>
-
-                  {/* Form */}
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    {/* Name Fields */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-sm font-sans text-nav-text/50 mb-3">
-                          First name*
-                        </label>
-                        <input
-                          type="text"
-                          name="firstName"
-                          value={formData.firstName}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-sans text-nav-text/50 mb-3">
-                          Last name*
-                        </label>
-                        <input
-                          type="text"
-                          name="lastName"
-                          value={formData.lastName}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
-                          required
-                        />
-                      </div>
+                    {/* Form Header */}
+                    <div className="text-center mb-12">
+                      <h1 className="font-sans text-3xl lg:text-4xl font-bold text-white mb-6">
+                        Let's get you approved.
+                      </h1>
+                      <p className="font-sans text-lg text-white/90 leading-relaxed max-w-md mx-auto mb-8">
+                        Join self-starters & global firms in pioneering the
+                        immigration revolution with Immigen. Reserve your spot
+                        on our early access list today.
+                      </p>
                     </div>
 
-                    {/* Company & Job Title */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-sm font-sans text-nav-text/50 mb-3">
-                          Company name*
-                        </label>
-                        <input
-                          type="text"
-                          name="companyName"
-                          value={formData.companyName}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-sans text-nav-text/50 mb-3">
-                          Job title*
-                        </label>
-                        <input
-                          type="text"
-                          name="jobTitle"
-                          value={formData.jobTitle}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    {/* Email & Citizenship */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-sm font-sans text-nav-text/50 mb-3">
-                          Email address*
-                        </label>
-                        <input
-                          type="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-sans text-nav-text/50 mb-3">
-                          Country of Citizenship*
-                        </label>
-                        <input
-                          type="text"
-                          name="citizenship"
-                          value={formData.citizenship}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    {/* CV Upload */}
-                    <div>
-                      <label className="block text-sm font-sans text-nav-text/50 mb-3">
-                        Upload your CV (PDF only)
-                      </label>
-                      <div className="relative">
-                        <input
-                          type="file"
-                          accept=".pdf"
-                          onChange={handleFileChange}
-                          className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
-                        />
-                        <div className="border border-lime-accent/30 rounded-lg p-8 text-center hover:border-lime-accent/50 transition-colors">
-                          <svg
-                            className="w-8 h-8 mx-auto mb-4 text-lime-accent"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            />
-                          </svg>
-                          <div className="text-white/70 mb-1 font-sans">
-                            <span>Drop your CV here or </span>
-                            <span className="text-lime-accent">
-                              browse files
-                            </span>
-                          </div>
-                          <div className="text-sm text-nav-text/50 font-sans">
-                            PDF files only, max 10MB
-                          </div>
-                          {formData.cv && (
-                            <div className="mt-2 text-sm text-lime-accent font-sans">
-                              Selected: {formData.cv.name}
-                            </div>
-                          )}
+                    {/* Form */}
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      {/* Name Fields */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                          <label className="block text-sm font-sans text-nav-text/50 mb-3">
+                            First name*
+                          </label>
+                          <input
+                            type="text"
+                            name="firstName"
+                            value={formData.firstName}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
+                            required
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm font-sans text-nav-text/50 mb-3">
+                            Last name*
+                          </label>
+                          <input
+                            type="text"
+                            name="lastName"
+                            value={formData.lastName}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
+                            required
+                          />
                         </div>
                       </div>
-                    </div>
 
-                    {/* Privacy Notice */}
-                    <div className="text-sm text-nav-text/70 leading-relaxed font-sans">
-                      By submitting this form, your information will be
-                      processed in accordance with our Privacy Policy.
-                    </div>
+                      {/* Company & Job Title */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                          <label className="block text-sm font-sans text-nav-text/50 mb-3">
+                            Company name*
+                          </label>
+                          <input
+                            type="text"
+                            name="companyName"
+                            value={formData.companyName}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
+                            required
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm font-sans text-nav-text/50 mb-3">
+                            Job title*
+                          </label>
+                          <input
+                            type="text"
+                            name="jobTitle"
+                            value={formData.jobTitle}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
+                            required
+                          />
+                        </div>
+                      </div>
 
-                    {/* Submit Button */}
-                    <button
-                      type="submit"
-                      className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-base px-8 py-4 rounded-xl hover:opacity-90 transition-opacity"
-                    >
-                      Submit
-                      <svg
-                        width="19"
-                        height="16"
-                        viewBox="0 0 19 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-4 h-4"
+                      {/* Email & Citizenship */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                          <label className="block text-sm font-sans text-nav-text/50 mb-3">
+                            Email address*
+                          </label>
+                          <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
+                            required
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm font-sans text-nav-text/50 mb-3">
+                            Country of Citizenship*
+                          </label>
+                          <input
+                            type="text"
+                            name="citizenship"
+                            value={formData.citizenship}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 bg-transparent border border-lime-accent/30 rounded-lg text-white placeholder-nav-text/50 focus:border-lime-accent focus:outline-none transition-colors font-sans"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      {/* CV Upload */}
+                      <div>
+                        <label className="block text-sm font-sans text-nav-text/50 mb-3">
+                          Upload your CV (PDF only)
+                        </label>
+                        <div className="relative">
+                          <input
+                            type="file"
+                            accept=".pdf"
+                            onChange={handleFileChange}
+                            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                          />
+                          <div className="border border-lime-accent/30 rounded-lg p-8 text-center hover:border-lime-accent/50 transition-colors">
+                            <svg
+                              className="w-8 h-8 mx-auto mb-4 text-lime-accent"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                              />
+                            </svg>
+                            <div className="text-white/70 mb-1 font-sans">
+                              <span>Drop your CV here or </span>
+                              <span className="text-lime-accent">
+                                browse files
+                              </span>
+                            </div>
+                            <div className="text-sm text-nav-text/50 font-sans">
+                              PDF files only, max 10MB
+                            </div>
+                            {formData.cv && (
+                              <div className="mt-2 text-sm text-lime-accent font-sans">
+                                Selected: {formData.cv.name}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Privacy Notice */}
+                      <div className="text-sm text-nav-text/70 leading-relaxed font-sans">
+                        By submitting this form, your information will be
+                        processed in accordance with our Privacy Policy.
+                      </div>
+
+                      {/* Submit Button */}
+                      <button
+                        type="submit"
+                        className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-base px-8 py-4 rounded-xl hover:opacity-90 transition-opacity"
                       >
-                        <path
-                          d="M18.7071 8.70711C19.0976 8.31658 19.0976 7.68342 18.7071 7.29289L12.3431 0.928932C11.9526 0.538408 11.3195 0.538408 10.9289 0.928932C10.5384 1.31946 10.5384 1.95262 10.9289 2.34315L16.5858 8L10.9289 13.6569C10.5384 14.0474 10.5384 14.6805 10.9289 15.0711C11.3195 15.4616 11.9526 15.4616 12.3431 15.0711L18.7071 8.70711ZM0 8V9H18V8V7H0V8Z"
-                          fill="black"
-                        />
-                      </svg>
-                    </button>
-                  </form>
+                        Submit
+                        <svg
+                          width="19"
+                          height="16"
+                          viewBox="0 0 19 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-4 h-4"
+                        >
+                          <path
+                            d="M18.7071 8.70711C19.0976 8.31658 19.0976 7.68342 18.7071 7.29289L12.3431 0.928932C11.9526 0.538408 11.3195 0.538408 10.9289 0.928932C10.5384 1.31946 10.5384 1.95262 10.9289 2.34315L16.5858 8L10.9289 13.6569C10.5384 14.0474 10.5384 14.6805 10.9289 15.0711C11.3195 15.4616 11.9526 15.4616 12.3431 15.0711L18.7071 8.70711ZM0 8V9H18V8V7H0V8Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </button>
+                    </form>
+                  </div>
                 </div>
               </div>
 
