@@ -63,7 +63,9 @@ export default function GetEarlyAccess() {
         <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
 
         {/* Floating Background Elements */}
-        {showFloatingElements && <FloatingElements />}
+        {showFloatingElements && (
+          <FloatingElements key={`floating-${location.pathname}`} />
+        )}
 
         {/* Navigation */}
         <Navbar />
