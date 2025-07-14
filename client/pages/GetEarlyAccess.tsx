@@ -56,7 +56,7 @@ export default function GetEarlyAccess() {
         {/* Main Content */}
         <div className="relative z-10 min-h-screen px-4 sm:px-6 lg:px-20 pt-32 pb-16">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 lg:gap-8">
               {/* Form Section */}
               <div className="order-2 xl:order-1">
                 <div className="bg-transparent border-2 border-lime-accent rounded-3xl p-8 lg:p-12">
