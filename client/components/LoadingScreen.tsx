@@ -64,7 +64,7 @@ export default function LoadingScreen({
         </div>
 
         {/* Loading Bar Container */}
-        <div className="w-80 sm:w-96 mb-4">
+        <div className="w-60 sm:w-96 mb-4">
           <div className="w-full bg-white/20 rounded-full h-1.5 overflow-hidden">
             <div
               className="h-full bg-gradient-to-r from-lime-accent to-green-400 rounded-full transition-all duration-100 ease-out relative"
