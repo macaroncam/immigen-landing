@@ -1,4 +1,5 @@
 import { useState, useEffect, ReactNode } from "react";
+import { useLocation } from "react-router-dom";
 import LoadingScreen from "./LoadingScreen";
 
 interface PageWrapperProps {
@@ -8,12 +9,13 @@ interface PageWrapperProps {
 export default function PageWrapper({ children }: PageWrapperProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    // Reset loading state when component mounts (new page)
+    // Reset loading state when route changes
     setIsLoading(true);
     setShowContent(false);
-  }, []);
+  }, [location.pathname]);
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
