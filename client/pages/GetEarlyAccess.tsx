@@ -205,7 +205,7 @@ export default function GetEarlyAccess() {
                   </div>
 
                   {/* Privacy Notice */}
-                  <div className="text-sm text-nav-text/70 leading-relaxed">
+                  <div className="text-sm text-nav-text/70 leading-relaxed font-sans">
                     By submitting this form, your information will be processed
                     in accordance with our Privacy Policy.
                   </div>
@@ -213,7 +213,7 @@ export default function GetEarlyAccess() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="flex items-center gap-2 bg-lime-accent text-black font-instrument font-bold text-base px-8 py-4 rounded-xl hover:opacity-90 transition-opacity"
+                    className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-base px-8 py-4 rounded-xl hover:opacity-90 transition-opacity"
                   >
                     Submit
                     <svg
