@@ -40,7 +40,7 @@ export default function Index() {
             Immigen makes immigration effortless for bold talent and borderless
             teams.
           </p>
-          <p className="font-sans font-normal text-white/90 text-sm sm:text-base md:text-lg lg:text-xl">
+          <p className="font-sans font-semibold text-white/90 text-sm sm:text-base md:text-lg lg:text-xl">
             No lawyers, no friction, endless possibilities.
           </p>
         </div>
