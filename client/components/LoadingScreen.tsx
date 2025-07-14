@@ -78,7 +78,7 @@ export default function LoadingScreen({
 
         {/* Loading Text */}
         <div className="text-white/70 text-sm font-sans tracking-wider">
-          Initializing AI Platform...
+          ...
         </div>
 
         {/* Progress Percentage */}
