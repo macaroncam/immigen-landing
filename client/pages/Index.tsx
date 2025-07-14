@@ -22,7 +22,7 @@ export default function Index() {
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center pt-30 overflow-visible">
         {/* Main Headline */}
-        <h1 className="font-light font-semibold leading-relaxed tracking-tighter mb-3 py-4 overflow-visible">
+        <h1 className="font-sans font-semibold leading-relaxed tracking-tighter mb-3 py-4 overflow-visible">
           <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl animate-gradient-shift pb-4">
             The First
           </span>
