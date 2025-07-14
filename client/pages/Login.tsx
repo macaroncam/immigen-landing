@@ -40,25 +40,29 @@ export default function Login() {
       </div>
 
       {/* Header */}
-      <div className="relative z-10 flex justify-between items-center p-8">
-        {/* Logo */}
-        <Link
-          to="/"
-          className="font-zen-tokyo text-4xl lg:text-5xl font-normal text-black"
-        >
-          <span className="text-black">immi</span>
-          <span className="text-lime-accent">gen.ai</span>
-        </Link>
+      <div className="relative z-10 px-4 sm:px-6 lg:px-20">
+        <div className="flex items-center justify-between h-[90px] max-w-7xl mx-auto">
+          {/* Logo */}
+          <div className="flex items-center h-full -mt-5">
+            <Link
+              to="/"
+              className="font-zen-tokyo text-5xl sm:text-6xl lg:text-6xl leading-none hover:opacity-90 transition-opacity"
+            >
+              <span className="text-black">immi</span>
+              <span className="text-lime-accent">gen.ai</span>
+            </Link>
+          </div>
 
-        {/* Sign Up Link */}
-        <div className="text-sm text-gray-600">
-          Don't have an account?{" "}
-          <Link
-            to="/get-early-access"
-            className="text-black font-medium hover:underline"
-          >
-            Sign up →
-          </Link>
+          {/* Sign Up Link */}
+          <div className="text-sm text-gray-600">
+            Don't have an account?{" "}
+            <Link
+              to="/get-early-access"
+              className="text-black font-medium hover:underline"
+            >
+              Sign up →
+            </Link>
+          </div>
         </div>
       </div>
 
