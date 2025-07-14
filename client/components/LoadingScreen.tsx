@@ -58,13 +58,13 @@ export default function LoadingScreen({
       {/* Loading Content */}
       <div className="relative z-10 flex flex-col items-center">
         {/* Logo */}
-        <div className="font-zen-tokyo text-6xl sm:text-7xl lg:text-6xl leading-none mb-8 animate-pulse">
+        <div className="font-zen-tokyo text-6xl sm:text-7xl lg:text-6xl leading-none mb-5 animate-pulse">
           <span className="text-white">immi</span>
           <span className="text-lime-accent">gen.ai</span>
         </div>
 
         {/* Loading Bar Container */}
-        <div className="w-60 sm:w-96 mb-4">
+        <div className="w-50 sm:w-96 mb-4">
           <div className="w-full bg-white/20 rounded-full h-1.5 overflow-hidden">
             <div
               className="h-full bg-gradient-to-r from-lime-accent to-green-400 rounded-full transition-all duration-100 ease-out relative"
