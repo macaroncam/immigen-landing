@@ -78,9 +78,9 @@ export default function Login() {
 
         {/* Main Content */}
         <div className="relative z-10 min-h-screen px-4 sm:px-6 lg:px-20 pt-48 pb-16">
-          <div className="max-w-md mx-auto">
+          <div className="max-w-xl mx-auto">
             {/* Login Form */}
-            <div className="relative bg-transparent rounded-3xl p-8 lg:p-12">
+            <div className="relative bg-transparent rounded-3xl p-12 lg:p-16">
               {/* Gradient border */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-white via-lime-accent to-white opacity-30 p-[1px]">
                 <div className="w-full h-full bg-black/80 backdrop-blur-sm rounded-3xl"></div>
