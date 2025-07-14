@@ -24,13 +24,10 @@ export default function Index() {
         {/* Main Headline */}
         <h1 className="font-sans font-medium text-white leading-none mb-6">
           <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">
-            The first
+            The first end-to-end
           </span>
           <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">
-            end-to-end AI
-          </span>
-          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">
-            immigration platform
+            AI immigration platform
           </span>
         </h1>
 
