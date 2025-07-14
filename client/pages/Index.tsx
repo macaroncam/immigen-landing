@@ -7,7 +7,7 @@ export default function Index() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2Fdc9bec237a7c4c8db3eebedfa5bf8146%2Faad0f23363294e01a1f8e09bee89d4e3?format=webp&width=800"
+          src="/starry-background.gif"
           alt="Starry space background"
           className="w-full h-full object-cover"
         />

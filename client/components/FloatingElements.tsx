@@ -260,7 +260,7 @@ export default function FloatingElements() {
       {/* Far Left Column */}
       <CodeColumn
         lines={codeSnippets1}
-        speed="animate-code-scroll-slow"
+        speed="animate-code-scroll-fast"
         className="left-4 top-20 w-96 opacity-6"
         delay="0s"
       />
@@ -268,7 +268,7 @@ export default function FloatingElements() {
       {/* Left Column */}
       <CodeColumn
         lines={codeSnippets5}
-        speed="animate-code-scroll-medium"
+        speed="animate-code-scroll-fast"
         className="left-20 top-60 w-[30rem] opacity-5"
         delay="8s"
       />
@@ -276,7 +276,7 @@ export default function FloatingElements() {
       {/* Center Left Column */}
       <CodeColumn
         lines={codeSnippets2}
-        speed="animate-code-scroll-medium"
+        speed="animate-code-scroll-fast"
         className="left-1/4 top-40 w-[30rem] opacity-7"
         delay="2s"
       />
@@ -300,7 +300,7 @@ export default function FloatingElements() {
       {/* Right Column */}
       <CodeColumn
         lines={codeSnippets4}
-        speed="animate-code-scroll-reverse"
+        speed="animate-code-scroll-fast"
         className="right-20 top-60 w-[26rem] opacity-5"
         delay="3s"
       />
@@ -308,7 +308,7 @@ export default function FloatingElements() {
       {/* Far Right Column */}
       <CodeColumn
         lines={codeSnippets1.slice(10, 25)}
-        speed="animate-code-scroll-slow"
+        speed="animate-code-scroll-fast"
         className="right-4 top-20 w-80 opacity-4"
         delay="6s"
       />
@@ -316,30 +316,56 @@ export default function FloatingElements() {
       {/* Additional Background Columns for Maximum Density */}
       <CodeColumn
         lines={codeSnippets1.slice(0, 15)}
-        speed="animate-code-scroll-ultra-slow"
+        speed="animate-code-scroll-fast"
         className="left-1/3 top-80 w-80 opacity-3"
         delay="4s"
       />
 
       <CodeColumn
         lines={codeSnippets2.slice(5, 20)}
-        speed="animate-code-scroll-medium"
+        speed="animate-code-scroll-fast"
         className="left-12 bottom-20 w-[26rem] opacity-2"
         delay="1.5s"
       />
 
       <CodeColumn
         lines={codeSnippets3.slice(8, 23)}
-        speed="animate-code-scroll-reverse"
+        speed="animate-code-scroll-fast"
         className="right-12 bottom-40 w-96 opacity-3"
         delay="7s"
       />
 
       <CodeColumn
         lines={codeSnippets5.slice(0, 18)}
-        speed="animate-code-scroll-ultra-slow"
+        speed="animate-code-scroll-fast"
         className="right-1/3 top-100 w-[28rem] opacity-2"
         delay="9s"
+      />
+
+      {/* Extra columns for more density and speed */}
+      <CodeColumn
+        lines={codeSnippets4}
+        speed="animate-code-scroll-fast"
+        className="left-1/5 top-10 w-80 opacity-4"
+        delay="2.5s"
+      />
+      <CodeColumn
+        lines={codeSnippets6}
+        speed="animate-code-scroll-fast"
+        className="right-1/5 bottom-10 w-80 opacity-4"
+        delay="3.5s"
+      />
+      <CodeColumn
+        lines={codeSnippets2}
+        speed="animate-code-scroll-fast"
+        className="left-1/6 top-1/2 w-72 opacity-3"
+        delay="1.2s"
+      />
+      <CodeColumn
+        lines={codeSnippets3}
+        speed="animate-code-scroll-fast"
+        className="right-1/6 bottom-1/2 w-72 opacity-3"
+        delay="2.2s"
       />
     </div>
   );
