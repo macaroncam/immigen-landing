@@ -30,8 +30,9 @@ export default function GetEarlyAccess() {
     console.log("Form submitted:", formData);
   };
 
-  return (
-    <div className="min-h-screen relative overflow-hidden">
+    return (
+    <PageWrapper>
+      <div className="min-h-screen relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -59,7 +60,7 @@ export default function GetEarlyAccess() {
             {/* Form Section */}
             <div className="order-2 xl:order-1">
               <div className="bg-transparent border-2 border-lime-accent rounded-3xl p-8 lg:p-12">
-                {/* Form Header */}
+                                {/* Form Header */}
                 <div className="text-center mb-12">
                   <h1 className="font-sans text-3xl lg:text-4xl font-bold text-white mb-6">
                     Let's get you approved.
@@ -74,12 +75,12 @@ export default function GetEarlyAccess() {
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Fields */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-sans text-nav-text/50 mb-3">
                         First name*
                       </label>
-                      <input
+                                            <input
                         type="text"
                         name="firstName"
                         value={formData.firstName}
@@ -88,7 +89,7 @@ export default function GetEarlyAccess() {
                         required
                       />
                     </div>
-                    <div>
+                                        <div>
                       <label className="block text-sm font-sans text-nav-text/50 mb-3">
                         Last name*
                       </label>
@@ -189,7 +190,7 @@ export default function GetEarlyAccess() {
                             d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
                           />
                         </svg>
-                        <div className="text-white/70 mb-1 font-sans">
+                                                <div className="text-white/70 mb-1 font-sans">
                           <span>Drop your CV here or </span>
                           <span className="text-lime-accent">browse files</span>
                         </div>
@@ -205,7 +206,7 @@ export default function GetEarlyAccess() {
                     </div>
                   </div>
 
-                  {/* Privacy Notice */}
+                                    {/* Privacy Notice */}
                   <div className="text-sm text-nav-text/70 leading-relaxed font-sans">
                     By submitting this form, your information will be processed
                     in accordance with our Privacy Policy.
@@ -253,7 +254,7 @@ export default function GetEarlyAccess() {
                   />
                 </svg>
 
-                {/* Content */}
+                                {/* Content */}
                 <h2 className="font-sans text-2xl font-bold text-white mb-3">
                   Live Petition Preview
                 </h2>
