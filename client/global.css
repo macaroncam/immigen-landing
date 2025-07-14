@@ -303,7 +303,7 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     letter-spacing: 0.05em;
-    line-height: 1.1 !important;
+    line-height: 1.0 !important;
     padding-bottom: 0.15em !important;
     margin-bottom: 0.1em;
     display: block;
