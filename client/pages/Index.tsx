@@ -35,7 +35,7 @@ export default function Index() {
             End-to-End AI
           </span>
           <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl animate-gradient-shift pb-4">
-            Immigration Platform
+            Immigration Agent
           </span>
         </h1>
 
