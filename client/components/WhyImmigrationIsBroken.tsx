@@ -86,7 +86,7 @@ export default function WhyImmigrationIsBroken() {
             <div className="w-16 h-0.5 bg-lime-accent/60 mb-8"></div>
           </div>
 
-          {/* Problem Questions */}
+          {/* Problem Questions with Interactive Counters */}
           <div className="space-y-6 mb-12">
             <p
               className={`font-sans text-lg text-white/90 leading-relaxed transition-all duration-1000 delay-100 ${
@@ -96,30 +96,51 @@ export default function WhyImmigrationIsBroken() {
               }`}
             >
               Why does a visa petition cost{" "}
-              <span className="text-lime-accent font-medium">$15,000</span> and
-              take{" "}
-              <span className="text-lime-accent font-medium">60 pages</span>?
+              <span className="text-lime-accent font-medium font-mono">
+                ${costCounter.toLocaleString()}
+              </span>{" "}
+              and take{" "}
+              <span className="text-lime-accent font-medium font-mono">
+                {pageCounter} pages
+              </span>
+              ?
             </p>
 
-            <p
-              className={`font-sans text-lg text-white/90 leading-relaxed transition-all duration-1000 delay-200 ${
+            <div
+              className={`group cursor-pointer transition-all duration-1000 delay-200 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
               }`}
             >
-              Why does the world's best talent still need gatekeepers?
-            </p>
+              <p className="font-sans text-lg text-white/90 leading-relaxed group-hover:text-white transition-colors">
+                Why does the world's{" "}
+                <span className="text-lime-accent font-medium group-hover:text-lime-accent/80 transition-colors">
+                  best talent
+                </span>{" "}
+                still need{" "}
+                <span className="text-red-400 font-medium group-hover:text-red-300 transition-colors">
+                  gatekeepers
+                </span>
+                ?
+              </p>
+            </div>
 
-            <p
-              className={`font-sans text-lg text-white/90 leading-relaxed transition-all duration-1000 delay-300 ${
+            <div
+              className={`group cursor-pointer transition-all duration-1000 delay-300 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
               }`}
             >
-              Why hasn't this changed?
-            </p>
+              <p className="font-sans text-lg text-white/90 leading-relaxed group-hover:text-white transition-colors">
+                Why hasn't this{" "}
+                <span className="text-lime-accent font-medium group-hover:text-lime-accent/80 transition-colors">
+                  changed
+                </span>
+                ?
+              </p>
+            </div>
           </div>
 
           {/* Problem Grid */}
