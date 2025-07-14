@@ -289,9 +289,9 @@
   }
 
   .animate-gradient-shift {
-    background: linear-gradient(-45deg, #c9f31d, #a3e635, #84cc16, #c9f31d);
-    background-size: 400% 400%;
-    animation: gradient-shift 3s ease-in-out infinite;
+    background: linear-gradient(90deg, #ffffff 0%, #c9f31d 50%, #ffffff 100%);
+    background-size: 200% 100%;
+    animation: gradient-shift 2s ease-in-out infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
