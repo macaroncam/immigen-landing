@@ -33,7 +33,7 @@ export default function Login() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2Fdc9bec237a7c4c8db3eebedfa5bf8146%2F399fb2637bb7498496f2a133b9f5b6a4?format=webp&width=800"
+          src="https://cdn.builder.io/api/v1/image/assets%2Fdc9bec237a7c4c8db3eebedfa5bf8146%2F0e0321c9ef0545d9a464fe2ada49b089?format=webp&width=800"
           alt="Gradient background"
           className="w-full h-full object-cover"
         />
@@ -42,7 +42,10 @@ export default function Login() {
       {/* Header */}
       <div className="relative z-10 flex justify-between items-center p-8">
         {/* Logo */}
-        <Link to="/" className="font-zen-tokyo text-2xl font-normal text-black">
+        <Link
+          to="/"
+          className="font-zen-tokyo text-4xl lg:text-5xl font-normal text-black"
+        >
           <span className="text-black">immi</span>
           <span className="text-lime-accent">gen.ai</span>
         </Link>
