@@ -303,11 +303,9 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     letter-spacing: 0.05em;
-    line-height: 1.8 !important;
-    padding: 0.2em 0 0.8em 0 !important;
-    margin-bottom: 0.4em;
+    line-height: 1.2 !important;
+    padding-bottom: 0.15em !important;
+    margin-bottom: 0.1em;
     display: block;
-    height: auto;
-    min-height: 2em;
   }
 }
