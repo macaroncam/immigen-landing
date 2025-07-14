@@ -36,7 +36,8 @@ export default function Index() {
 
         {/* Subheadline */}
         <p className="font-sans font-normal text-white/90 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl mb-8 max-w-4xl">
-          Immigen makes immigration effortless—for bold talent and borderless teams. No lawyers, no friction, just possibility.
+          Immigen makes immigration effortless—for bold talent and borderless teams.
+          No lawyers, no friction, just possibility.
         </p>
 
         {/* CTA Button */}
