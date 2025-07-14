@@ -22,7 +22,7 @@ export default function Index() {
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center pt-32">
         {/* Main Headline */}
-        <h1 className="font-instrument font-semibold text-white leading-none mb-6">
+        <h1 className="font-sans font-semibold text-white leading-none mb-6">
           <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">
             The first
           </span>
@@ -35,12 +35,12 @@ export default function Index() {
         </h1>
 
         {/* Subheadline */}
-        <p className="font-instrument font-semibold text-white/90 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl mb-8 max-w-4xl">
+        <p className="font-sans font-semibold text-white/90 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl mb-8 max-w-4xl">
           start to finish, no lawyers required.
         </p>
 
         {/* CTA Button */}
-        <button className="flex items-center gap-2 bg-lime-accent text-black font-instrument font-bold text-sm sm:text-base px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity">
+        <button className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm sm:text-base px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity">
           Get Early Access
           <svg
             width="19"
