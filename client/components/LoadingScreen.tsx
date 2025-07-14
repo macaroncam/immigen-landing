@@ -11,7 +11,7 @@ export default function LoadingScreen({
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const duration = 5000; // 3.5 seconds total loading time to allow animations to initialize
+    const duration = 3500; // 3.5 seconds total loading time to allow animations to initialize
     const interval = 50; // Update every 50ms
     const step = 100 / (duration / interval);
 
