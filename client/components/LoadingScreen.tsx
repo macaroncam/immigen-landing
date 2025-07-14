@@ -37,7 +37,7 @@ export default function LoadingScreen({
 
   return (
     <div
-      className={`fixed inset-0 z-50 bg-black flex flex-col items-center justify-center transition-opacity duration-500 ${
+      className={`fixed inset-0 z-[9999] bg-black flex flex-col items-center justify-center transition-opacity duration-500 ${
         fadeOut ? "opacity-0" : "opacity-100"
       }`}
     >
@@ -58,7 +58,7 @@ export default function LoadingScreen({
       {/* Loading Content */}
       <div className="relative z-10 flex flex-col items-center">
         {/* Logo */}
-        <div className="font-zen-tokyo text-6xl sm:text-7xl lg:text-8xl leading-none mb-5 animate-pulse">
+        <div className="font-zen-tokyo text-6xl sm:text-7xl lg:text-8xl leading-none mb-8 animate-pulse">
           <span className="text-white">immi</span>
           <span className="text-lime-accent">gen.ai</span>
         </div>
