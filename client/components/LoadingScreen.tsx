@@ -11,7 +11,7 @@ export default function LoadingScreen({
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const duration = 3500; // 3.5 seconds total loading time to allow animations to initialize
+    const duration = 1500; // 3.5 seconds total loading time to allow animations to initialize
     const interval = 50; // Update every 50ms
     const step = 100 / (duration / interval);
 
@@ -58,7 +58,7 @@ export default function LoadingScreen({
       {/* Loading Content */}
       <div className="relative z-10 flex flex-col items-center">
         {/* Logo */}
-        <div className="font-zen-tokyo text-6xl sm:text-7xl lg:text-8xl leading-none mb-8 animate-pulse">
+        <div className="font-zen-tokyo text-6xl sm:text-7xl lg:text-6xl leading-none mb-8 animate-pulse">
           <span className="text-white">immi</span>
           <span className="text-lime-accent">gen.ai</span>
         </div>
