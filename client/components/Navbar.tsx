@@ -4,7 +4,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-20 px-4 sm:px-6 lg:px-20">
+    <nav className="absolute top-0 left-0 right-0 z-20 px-4 sm:px-6 lg:px-20 border-b border-white/30">
       <div className="flex items-center justify-between h-[90px] max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex-shrink-0 flex items-center h-full -mt-5">
