@@ -54,19 +54,8 @@ export default function Login() {
   return (
     <PageWrapper>
       <div className="min-h-screen relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="/starry-background.gif"
-            alt="Starry space background"
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Tech Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-green-900/8 via-emerald-900/4 to-lime-900/6"></div>
-        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-green-500/3 to-lime-500/5"></div>
-        <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 via-blue-500/20 to-cyan-400/20"></div>
 
         {/* Floating Background Elements */}
         {showFloatingElements && (
