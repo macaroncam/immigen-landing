@@ -154,7 +154,7 @@ export default function ScrollTextAnimation() {
           </h2>
 
           {/* Paragraphs below with typewriter effect */}
-          <div className="mt-16 max-w-6xl">
+          <div className="mt-16 w-full pr-4 sm:pr-6 lg:pr-20">
             {(() => {
               const fullText =
                 "Immigen isn't a wrapper on a general-purpose model.\n\nIt's built on a custom Logical-Semantic Integration Model (LSIM) that blends structured fact-rule chains, semantic search, and in-context learning to replicate expert-level petition strategy.\n\nThe result? No hallucinations. No generic advice. But filings you can trust.";
