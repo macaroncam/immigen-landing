@@ -47,8 +47,21 @@ export default function Product() {
 
     // Handle wheel events for scroll hijacking
     const handleWheel = (e: WheelEvent) => {
-      if (isScrollLocked && sectionRef.current) {
+      if (!sectionRef.current) return;
+
+      const rect = sectionRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const inSectionArea = rect.top <= 0 && rect.bottom > windowHeight;
+
+      // If we're in the section area, handle the wheel event
+      if (inSectionArea || isScrollLocked) {
         e.preventDefault();
+
+        // Ensure we're locked when in section
+        if (!isScrollLocked && inSectionArea) {
+          setIsScrollLocked(true);
+          document.body.style.overflow = "hidden";
+        }
 
         // Simulate scroll progress based on wheel direction
         setScrollProgress((prev) => {
