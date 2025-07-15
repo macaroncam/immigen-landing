@@ -1,6 +1,20 @@
 export default function CustomersSection() {
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
+    <div id="customers" className="relative min-h-screen overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="/starry-background.gif"
+          alt="Starry space background"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Tech Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-green-900/8 via-emerald-900/4 to-lime-900/6"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-green-500/3 to-lime-500/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
+
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-20">
         {/* Header */}
