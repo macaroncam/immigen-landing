@@ -29,12 +29,12 @@ export default function ScrollTextAnimation() {
 
   // Text morphing logic - slower transition
   const getMorphingState = () => {
-    if (scrollProgress < 0.2) {
+    if (scrollProgress < 0.3) {
       return { phase: "start" };
-    } else if (scrollProgress > 0.8) {
+    } else if (scrollProgress > 0.7) {
       return { phase: "end" };
     } else {
-      return { phase: "morphing", progress: (scrollProgress - 0.2) / 0.6 };
+      return { phase: "morphing", progress: (scrollProgress - 0.3) / 0.4 };
     }
   };
 
