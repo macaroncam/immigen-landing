@@ -59,7 +59,11 @@ export default function Index() {
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-20 text-center pt-30 overflow-visible">
           <div className="max-w-7xl mx-auto w-full flex flex-col items-center justify-center">
             {/* Main Headline */}
-            <h1 className="font-sans font-bold leading-relaxed tracking-tighter mb-3 py-4 overflow-visible">
+            <h1
+              ref={heroTitle.ref}
+              className="font-sans font-bold leading-relaxed tracking-tighter mb-3 py-4 overflow-visible"
+              style={heroTitle.animationStyle}
+            >
               <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl animate-gradient-shift pb-4">
                 The First
               </span>
@@ -72,7 +76,11 @@ export default function Index() {
             </h1>
 
             {/* Subheadline */}
-            <div className="mb-5 max-w-4xl leading-tight">
+            <div
+              ref={heroSubtitle.ref}
+              className="mb-5 max-w-4xl leading-tight"
+              style={heroSubtitle.animationStyle}
+            >
               <p className="font-sans font-medium text-white/90 text-sm sm:text-base md:text-lg lg:text-xl mb-1">
                 Immigen makes immigration effortless for bold talent and
                 borderless teams.
@@ -83,7 +91,11 @@ export default function Index() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 items-center">
+            <div
+              ref={heroButtons.ref}
+              className="flex flex-col sm:flex-row gap-4 items-center"
+              style={heroButtons.animationStyle}
+            >
               <Link
                 to="/get-early-access"
                 className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm sm:text-base px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity"
