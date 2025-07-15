@@ -17,68 +17,36 @@ export default function CustomersSection() {
           </p>
         </div>
 
-        {/* Customer Boxes - Diagonal Layout */}
+        {/* Customer Boxes - Clean Diagonal Layout */}
         <div className="relative">
           {/* Self-petitioners Box - Top Left */}
-          <div className="absolute top-0 left-0 w-[420px] lg:w-[500px] transform -rotate-3">
-            <div className="relative overflow-hidden rounded-3xl border border-lime-accent/20 bg-gradient-to-br from-black via-lime-accent/5 to-black backdrop-blur-sm hover:scale-105 transition-all duration-500">
-              {/* Gradient border effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-lime-accent/30 via-transparent to-lime-accent/10 rounded-3xl"></div>
-              <div className="absolute inset-[1px] bg-black/80 rounded-3xl"></div>
-
-              <div className="relative p-8">
-                <h3 className="font-sans text-3xl font-bold text-white mb-3 tracking-tight">
-                  Self-petitioners
-                </h3>
-                <p className="font-sans text-white/60 leading-relaxed text-lg mb-8">
-                  For researchers, founders, creatives, and builders applying
-                  for EB1A, O-1, or H-1B on their own.
-                </p>
-
-                {/* Tech indicators */}
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-lime-accent rounded-full animate-pulse"></div>
-                  <div className="w-2 h-2 bg-lime-accent/40 rounded-full"></div>
-                  <div className="w-2 h-2 bg-lime-accent/20 rounded-full"></div>
-                  <span className="ml-3 font-mono text-xs text-lime-accent/80">
-                    AI_PROCESSING
-                  </span>
-                </div>
-              </div>
+          <div className="absolute top-0 left-0 w-[400px] lg:w-[460px] transform -rotate-2">
+            <div className="bg-gradient-to-br from-gray-900/80 via-gray-800/60 to-lime-accent/10 backdrop-blur-xl rounded-3xl border border-white/10 p-8 hover:border-lime-accent/30 transition-all duration-300">
+              <h3 className="font-sans text-2xl font-semibold text-white mb-4 tracking-tight">
+                Self-petitioners
+              </h3>
+              <p className="font-sans text-white/70 leading-relaxed mb-6">
+                For researchers, founders, creatives, and builders applying for
+                EB1A, O-1, or H-1B on their own.
+              </p>
             </div>
           </div>
 
           {/* Global teams Box - Bottom Right */}
-          <div className="absolute top-[200px] lg:top-[180px] right-0 w-[420px] lg:w-[500px] transform rotate-3">
-            <div className="relative overflow-hidden rounded-3xl border border-lime-accent/20 bg-gradient-to-br from-black via-lime-accent/5 to-black backdrop-blur-sm hover:scale-105 transition-all duration-500">
-              {/* Gradient border effect */}
-              <div className="absolute inset-0 bg-gradient-to-tl from-lime-accent/30 via-transparent to-lime-accent/10 rounded-3xl"></div>
-              <div className="absolute inset-[1px] bg-black/80 rounded-3xl"></div>
-
-              <div className="relative p-8">
-                <h3 className="font-sans text-3xl font-bold text-white mb-3 tracking-tight">
-                  Global teams
-                </h3>
-                <p className="font-sans text-white/60 leading-relaxed text-lg mb-8">
-                  For startups, labs, and enterprises hiring across
-                  borders—without legal bottlenecks.
-                </p>
-
-                {/* Tech indicators */}
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-lime-accent rounded-full animate-pulse"></div>
-                  <div className="w-2 h-2 bg-lime-accent/40 rounded-full"></div>
-                  <div className="w-2 h-2 bg-lime-accent/20 rounded-full"></div>
-                  <span className="ml-3 font-mono text-xs text-lime-accent/80">
-                    TEAM_SYNC
-                  </span>
-                </div>
-              </div>
+          <div className="absolute top-[200px] lg:top-[180px] right-0 w-[400px] lg:w-[460px] transform rotate-2">
+            <div className="bg-gradient-to-tl from-gray-900/80 via-gray-800/60 to-lime-accent/10 backdrop-blur-xl rounded-3xl border border-white/10 p-8 hover:border-lime-accent/30 transition-all duration-300">
+              <h3 className="font-sans text-2xl font-semibold text-white mb-4 tracking-tight">
+                Global teams
+              </h3>
+              <p className="font-sans text-white/70 leading-relaxed mb-6">
+                For startups, labs, and enterprises hiring across
+                borders—without legal bottlenecks.
+              </p>
             </div>
           </div>
 
           {/* Spacer for proper height */}
-          <div className="h-[500px] lg:h-[450px]"></div>
+          <div className="h-[450px] lg:h-[400px]"></div>
         </div>
       </div>
     </div>
