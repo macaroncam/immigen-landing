@@ -1,21 +1,25 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <nav className="absolute top-0 left-0 right-0 z-20 px-4 sm:px-6 lg:px-20 border-b border-white/10">
-      <div className="flex items-center justify-between h-[90px] max-w-7xl mx-auto">
-        {/* Logo */}
-        <div className="flex-shrink-0 flex items-center h-full -mt-5">
-          <div className="font-zen-tokyo text-5xl sm:text-6xl lg:text-6xl leading-none">
+      <div className="grid grid-cols-3 items-center h-[90px] max-w-7xl mx-auto">
+        {/* Logo - Left */}
+        <div className="flex items-center h-full -mt-5">
+          <Link
+            to="/"
+            className="font-zen-tokyo text-5xl sm:text-6xl lg:text-6xl leading-none hover:opacity-90 transition-opacity"
+          >
             <span className="text-white">immi</span>
             <span className="text-lime-accent">gen.ai</span>
-          </div>
+          </Link>
         </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center space-x-8">
+        {/* Desktop Navigation - Center */}
+        <div className="hidden lg:flex items-center justify-center space-x-4">
           <a
             href="#"
             className="text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
@@ -29,14 +33,26 @@ export default function Navbar() {
             Product
           </a>
           <a
-            href="#"
+            href="#pricing"
             className="text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("pricing")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Pricing
           </a>
           <a
-            href="#"
+            href="#customers"
             className="text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("customers")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Customers
           </a>
@@ -48,9 +64,12 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Desktop Right Side */}
-        <div className="hidden lg:flex items-center space-x-6">
-          <button className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity">
+        {/* Desktop Right Side - Right */}
+        <div className="hidden lg:flex items-center justify-end space-x-6">
+          <Link
+            to="/get-early-access"
+            className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity"
+          >
             Get Early Access
             <svg
               width="19"
@@ -65,13 +84,13 @@ export default function Navbar() {
                 fill="black"
               />
             </svg>
-          </button>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/login"
             className="text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
           >
             Log In
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -118,14 +137,28 @@ export default function Navbar() {
               About Us
             </a>
             <a
-              href="#"
+              href="#pricing"
               className="block text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                setIsMenuOpen(false);
+                document
+                  .getElementById("pricing")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Pricing
             </a>
             <a
-              href="#"
+              href="#customers"
               className="block text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                setIsMenuOpen(false);
+                document
+                  .getElementById("customers")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Customers
             </a>
@@ -141,13 +174,16 @@ export default function Navbar() {
             >
               Contact Us
             </a>
-            <a
-              href="#"
+            <Link
+              to="/login"
               className="block text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
             >
               Log In
-            </a>
-            <button className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity mt-4">
+            </Link>
+            <Link
+              to="/get-early-access"
+              className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-sm px-6 py-3 rounded-2xl hover:opacity-90 transition-opacity mt-4"
+            >
               Get Early Access
               <svg
                 width="19"
@@ -162,7 +198,7 @@ export default function Navbar() {
                   fill="black"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       )}
