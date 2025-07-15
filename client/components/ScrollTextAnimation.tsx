@@ -152,27 +152,36 @@ export default function ScrollTextAnimation() {
             )}
           </h2>
 
-          {/* Paragraphs below */}
-          <div
-            className="mt-12 max-w-4xl"
-            style={{
-              opacity: Math.max(0, Math.min(1, (scrollProgress - 0.2) * 2)),
-            }}
-          >
-            <p className="font-sans text-lg md:text-xl text-white/90 leading-relaxed mb-8">
-              Immigen isn't a wrapper on a general-purpose model.
-            </p>
+          {/* Paragraphs below with typewriter effect */}
+          <div className="mt-16 max-w-6xl">
+            {(() => {
+              const fullText =
+                "Immigen isn't a wrapper on a general-purpose model.\n\nIt's built on a custom Logical-Semantic Integration Model (LSIM) that blends structured fact-rule chains, semantic search, and in-context learning to replicate expert-level petition strategy.\n\nThe result? No hallucinations. No generic advice. But filings you can trust.";
 
-            <p className="font-sans text-lg md:text-xl text-white/90 leading-relaxed mb-8">
-              It's built on a custom Logical-Semantic Integration Model (LSIM)
-              that blends structured fact-rule chains, semantic search, and
-              in-context learning to replicate expert-level petition strategy.
-            </p>
+              // Calculate how much text to reveal based on scroll progress
+              const revealProgress = Math.max(
+                0,
+                Math.min(1, (scrollProgress - 0.3) * 1.5),
+              );
+              const charactersToShow = Math.floor(
+                fullText.length * revealProgress,
+              );
+              const visibleText = fullText.substring(0, charactersToShow);
 
-            <p className="font-sans text-lg md:text-xl text-white/90 leading-relaxed">
-              The result? No hallucinations. No generic advice. But filings you
-              can trust.
-            </p>
+              return (
+                <div className="font-sans text-2xl md:text-3xl lg:text-4xl text-white/90 leading-relaxed">
+                  {visibleText.split("\n\n").map((paragraph, index) => (
+                    <p key={index} className="mb-8 last:mb-0">
+                      {paragraph}
+                      {index === visibleText.split("\n\n").length - 1 &&
+                        charactersToShow < fullText.length && (
+                          <span className="animate-pulse">|</span>
+                        )}
+                    </p>
+                  ))}
+                </div>
+              );
+            })()}
           </div>
         </div>
       </div>
