@@ -21,7 +21,7 @@ export default function CustomersSection() {
         <div className="relative">
           {/* Self-petitioners Box - Top Left */}
           <div className="absolute top-0 left-0 w-[420px] lg:w-[480px] transform -rotate-2">
-            <div className="bg-gray-800 rounded-3xl p-8">
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 border border-lime-accent/5">
               <h3 className="font-sans text-xl font-medium text-white mb-4">
                 Self-petitioners
               </h3>
@@ -34,7 +34,7 @@ export default function CustomersSection() {
 
           {/* Global teams Box - Bottom Right */}
           <div className="absolute top-[200px] lg:top-[180px] right-0 w-[420px] lg:w-[480px] transform rotate-2">
-            <div className="bg-gray-800 rounded-3xl p-8">
+            <div className="bg-gradient-to-bl from-gray-800 to-gray-900 rounded-3xl p-8 border border-lime-accent/5">
               <h3 className="font-sans text-xl font-medium text-white mb-4">
                 Global teams
               </h3>
