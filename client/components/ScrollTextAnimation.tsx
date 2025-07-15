@@ -43,7 +43,7 @@ export default function ScrollTextAnimation() {
   return (
     <div
       ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-start justify-start overflow-hidden pt-32"
     >
       {/* Background Image */}
       <div className="absolute inset-0">
