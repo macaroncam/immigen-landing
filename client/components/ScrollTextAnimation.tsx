@@ -67,11 +67,14 @@ export default function ScrollTextAnimation() {
       <div className="relative z-10 px-4 sm:px-6 lg:px-20 text-left w-full min-w-0">
         <div className="font-sans font-bold leading-relaxed tracking-tighter overflow-visible w-full">
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl pb-4 whitespace-nowrap w-full"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl pb-4 w-full"
             style={{
               minWidth: "max-content",
               fontSize: "clamp(1.5rem, 4vw, 3rem)",
               letterSpacing: "0.02em",
+              whiteSpace: "nowrap",
+              display: "flex",
+              alignItems: "baseline",
             }}
           >
             <span className="animate-gradient-shift">Trust in </span>
