@@ -162,12 +162,16 @@ export default function ScrollTextAnimation() {
               // Calculate how much text to reveal based on scroll progress
               const revealProgress = Math.max(
                 0,
-                Math.min(1, (scrollProgress - 0.6) * 1.5),
+                Math.min(1, (scrollProgress - 0.6) * 1.0),
               );
               const charactersToShow = Math.floor(
                 fullText.length * revealProgress,
               );
               const visibleText = fullText.substring(0, charactersToShow);
+
+              // For complete section reading - show all text after animation completes
+              const showCompleteText = scrollProgress > 1.2;
+              const displayText = showCompleteText ? fullText : visibleText;
 
               return (
                 <div
