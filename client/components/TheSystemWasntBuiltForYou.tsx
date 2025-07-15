@@ -55,7 +55,11 @@ export default function TheSystemWasntBuiltForYou() {
         {/* Main Content Section */}
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start">
           {/* Left Side - Feature List */}
-          <div className="space-y-8">
+          <div
+            ref={contentAnimation.ref}
+            className="space-y-8"
+            style={contentAnimation.animationStyle}
+          >
             {/* It's Overpriced. */}
             <div
               className={`border-b border-lime-accent/20 pb-8 cursor-pointer transition-all duration-500 ease-out ${
