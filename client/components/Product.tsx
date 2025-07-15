@@ -2,7 +2,6 @@ import { useEffect, useState, useRef } from "react";
 
 export default function Product() {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [isScrollLocked, setIsScrollLocked] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -12,109 +11,17 @@ export default function Product() {
       const rect = sectionRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
-      // Check if section is in viewport
-      const sectionTop = rect.top;
-      const sectionBottom = rect.bottom;
-
-      // If section is in viewport, lock scrolling
-      if (sectionTop <= 0 && sectionBottom > windowHeight) {
-        if (!isScrollLocked) {
-          setIsScrollLocked(true);
-          // Prevent default scrolling
-          document.body.style.overflow = "hidden";
-        }
-
-        // Only update progress if we're locked (prevents interference)
-        if (isScrollLocked) {
-          // Calculate progress for animations
-          const progress = Math.abs(sectionTop) / (rect.height - windowHeight);
-          const clampedProgress = Math.max(0, Math.min(2, progress * 2));
-          setScrollProgress(clampedProgress);
-        }
-      } else {
-        // Reset everything when leaving section
-        if (isScrollLocked) {
-          setIsScrollLocked(false);
-          document.body.style.overflow = "auto";
-        }
-
-        // Reset progress when completely out of section
-        if (sectionTop > windowHeight || sectionBottom < 0) {
-          setScrollProgress(0);
-        }
-      }
-    };
-
-    // Handle wheel events for scroll hijacking
-    const handleWheel = (e: WheelEvent) => {
-      if (!sectionRef.current) return;
-
-      const rect = sectionRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      const inSectionArea = rect.top <= 0 && rect.bottom > windowHeight;
-
-      // If we're in the section area, handle the wheel event
-      if (inSectionArea || isScrollLocked) {
-        e.preventDefault();
-
-        // Ensure we're locked when in section
-        if (!isScrollLocked && inSectionArea) {
-          setIsScrollLocked(true);
-          document.body.style.overflow = "hidden";
-        }
-
-        // Simulate scroll progress based on wheel direction
-        setScrollProgress((prev) => {
-          const delta = e.deltaY > 0 ? 0.04 : -0.04;
-          const newProgress = Math.max(0, Math.min(2.5, prev + delta));
-
-          // Allow scrolling past when animation is complete and fully exited
-          if (newProgress >= 2.3 && e.deltaY > 0) {
-            // Use a timeout to prevent bouncing back
-            setTimeout(() => {
-              setIsScrollLocked(false);
-              document.body.style.overflow = "auto";
-              // Force scroll to next section
-              const nextElement = sectionRef.current?.nextElementSibling;
-              if (nextElement) {
-                nextElement.scrollIntoView({ behavior: "smooth" });
-              }
-            }, 200);
-            return newProgress;
-          }
-
-          // Allow scrolling back up when at beginning
-          if (newProgress <= 0 && e.deltaY < 0) {
-            setTimeout(() => {
-              setIsScrollLocked(false);
-              document.body.style.overflow = "auto";
-              // Force scroll to previous section
-              const prevElement = sectionRef.current?.previousElementSibling;
-              if (prevElement) {
-                prevElement.scrollIntoView({
-                  behavior: "smooth",
-                  block: "end",
-                });
-              }
-            }, 200);
-            return 0;
-          }
-
-          return newProgress;
-        });
-      }
+      // Calculate progress based on text position in viewport
+      const progress = 1 - rect.top / windowHeight;
+      const clampedProgress = Math.max(0, Math.min(2, progress));
+      setScrollProgress(clampedProgress);
     };
 
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("wheel", handleWheel, { passive: false });
     handleScroll(); // Initial call
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("wheel", handleWheel);
-      document.body.style.overflow = "auto"; // Cleanup
-    };
-  }, [isScrollLocked]);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Text morphing logic
   const getMorphingState = () => {
@@ -131,9 +38,6 @@ export default function Product() {
   };
 
   const morphState = getMorphingState();
-
-  // Calculate exit animation for the trust section
-  const exitProgress = Math.max(0, Math.min(1, (scrollProgress - 1.5) * 3));
 
   return (
     <div
@@ -154,43 +58,6 @@ export default function Product() {
       <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-green-500/3 to-lime-500/5"></div>
       <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
 
-      {/* AI Lady Hologram - Revealed from right as text exits left */}
-      <div
-        className="fixed inset-0 flex items-center justify-center pointer-events-none z-5"
-        style={{
-          transform: `translateX(${100 - exitProgress * 100}%)`,
-          transition: "transform 0.8s ease-out",
-          opacity: exitProgress > 0.1 ? exitProgress : 0,
-        }}
-      >
-        <div
-          className="relative flex items-center justify-center"
-          style={{ height: "100vh", width: "100vw" }}
-        >
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets%2Fdc9bec237a7c4c8db3eebedfa5bf8146%2Fdc671564e8b94567b8ee2a05967f4e81?format=webp&width=800"
-            alt="AI Immigration Agent"
-            className="w-auto object-contain"
-            style={{
-              height: "70vh",
-              maxHeight: "70vh",
-              filter: `brightness(${0.9 + exitProgress * 0.3}) saturate(${1.2 + exitProgress * 0.3})`,
-              transform: `scale(${0.85 + exitProgress * 0.15})`,
-              transition: "filter 0.8s ease-out, transform 0.8s ease-out",
-            }}
-          />
-
-          {/* Lime green glow effect */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background: `radial-gradient(ellipse at center, rgba(201, 243, 29, ${exitProgress * 0.2}) 0%, transparent 70%)`,
-              mixBlendMode: "screen",
-            }}
-          />
-        </div>
-      </div>
-
       {/* Text Content */}
       <div className="relative z-10 px-4 sm:px-6 lg:px-20 text-left w-full min-w-0">
         <div className="font-sans leading-relaxed tracking-tighter overflow-visible w-full">
@@ -203,8 +70,6 @@ export default function Product() {
               whiteSpace: "nowrap",
               display: "flex",
               alignItems: "baseline",
-              transform: `translateX(${-exitProgress * 100}%)`,
-              transition: "transform 0.6s ease-out",
             }}
           >
             <span className="animate-gradient-shift">Trust in </span>
@@ -246,13 +111,7 @@ export default function Product() {
           </h2>
 
           {/* Paragraphs below with typewriter effect */}
-          <div
-            className="mt-16 w-full pr-4 sm:pr-6 lg:pr-20"
-            style={{
-              transform: `translateX(${-exitProgress * 100}%)`,
-              transition: "transform 0.6s ease-out",
-            }}
-          >
+          <div className="mt-16 w-full pr-4 sm:pr-6 lg:pr-20">
             {(() => {
               const fullText =
                 "Immigen isn't a ChatGPT wrapper.\n\nIt's built on a custom Logical-Semantic Integration Model (LSIM) designed to replicate expert-level petition strategy.\n\nThe result? No hallucinations. No generic advice. But filings you can trust.";
