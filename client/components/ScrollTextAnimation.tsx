@@ -169,7 +169,13 @@ export default function ScrollTextAnimation() {
               const visibleText = fullText.substring(0, charactersToShow);
 
               return (
-                <div className="font-sans text-2xl md:text-3xl lg:text-4xl text-white/90 leading-relaxed">
+                <div
+                  className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white/90 leading-relaxed"
+                  style={{
+                    fontSize: "clamp(2rem, 6vw, 4.5rem)",
+                    letterSpacing: "0.02em",
+                  }}
+                >
                   {visibleText.split("\n\n").map((paragraph, index) => (
                     <p key={index} className="mb-8 last:mb-0">
                       {paragraph}
