@@ -63,42 +63,43 @@ export default function ScrollTextAnimation() {
       <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
 
       {/* Text Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 text-left">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-20 text-left">
         <div className="font-sans font-bold leading-relaxed tracking-tighter overflow-visible">
-          {morphState.phase === "start" && (
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white pb-4">
-              Trust in Immigen
-            </h2>
-          )}
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl pb-4">
+            <span className="text-white">Trust in </span>
+            {morphState.phase === "start" && (
+              <span className="text-white">Immigen</span>
+            )}
 
-          {morphState.phase === "morphing" && (
-            <div className="relative">
-              <h2
-                className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white pb-4 absolute inset-0 transition-opacity duration-200"
-                style={{
-                  opacity: 1 - morphState.progress,
-                  transform: `translateY(${morphState.progress * 20}px)`,
-                }}
-              >
-                Trust in Immigen
-              </h2>
-              <h2
-                className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl animate-gradient-shift pb-4 transition-opacity duration-200"
-                style={{
-                  opacity: morphState.progress,
-                  transform: `translateY(${(1 - morphState.progress) * -20}px)`,
-                }}
-              >
+            {morphState.phase === "morphing" && (
+              <span className="relative inline-block">
+                <span
+                  className="text-white absolute transition-opacity duration-200"
+                  style={{
+                    opacity: 1 - morphState.progress,
+                    transform: `translateY(${morphState.progress * 20}px)`,
+                  }}
+                >
+                  Immigen
+                </span>
+                <span
+                  className="animate-gradient-shift transition-opacity duration-200"
+                  style={{
+                    opacity: morphState.progress,
+                    transform: `translateY(${(1 - morphState.progress) * -20}px)`,
+                  }}
+                >
+                  AI built for Immigration
+                </span>
+              </span>
+            )}
+
+            {morphState.phase === "end" && (
+              <span className="animate-gradient-shift">
                 AI built for Immigration
-              </h2>
-            </div>
-          )}
-
-          {morphState.phase === "end" && (
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl animate-gradient-shift pb-4">
-              AI built for Immigration
-            </h2>
-          )}
+              </span>
+            )}
+          </h2>
         </div>
       </div>
     </div>
