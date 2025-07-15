@@ -105,7 +105,7 @@ export default function AISolutionsSection() {
         {/* AI Providers Section */}
         <div className="mt-20 lg:mt-32">
           <div className="text-center mb-8">
-            <p className="text-sm font-normal text-white uppercase tracking-[4px]">
+            <p className="text-sm font-normal text-lime-accent uppercase tracking-[4px]">
               GENERATIVE AI PROVIDERS WE PARTNER WITH:
             </p>
           </div>
@@ -113,27 +113,27 @@ export default function AISolutionsSection() {
           {/* Provider Logos */}
           <div className="flex flex-wrap justify-center items-center gap-4">
             {/* OpenAI */}
-            <div className="flex items-center justify-center w-56 h-28 rounded-2xl bg-black/40 border border-white/15 backdrop-blur-sm">
+            <div className="flex items-center justify-center w-56 h-28 rounded-2xl bg-black/40 border border-lime-accent/20 backdrop-blur-sm hover:border-lime-accent/40 transition-colors">
               <div className="text-white font-semibold text-lg">OpenAI</div>
             </div>
 
             {/* Adept */}
-            <div className="flex items-center justify-center w-56 h-28 rounded-2xl bg-black/40 border border-white/15 backdrop-blur-sm">
+            <div className="flex items-center justify-center w-56 h-28 rounded-2xl bg-black/40 border border-lime-accent/20 backdrop-blur-sm hover:border-lime-accent/40 transition-colors">
               <div className="text-white font-semibold text-lg">Adept</div>
             </div>
 
             {/* Meta */}
-            <div className="flex items-center justify-center w-56 h-28 rounded-2xl bg-black/40 border border-white/15 backdrop-blur-sm">
+            <div className="flex items-center justify-center w-56 h-28 rounded-2xl bg-black/40 border border-lime-accent/20 backdrop-blur-sm hover:border-lime-accent/40 transition-colors">
               <div className="text-white font-semibold text-lg">Meta</div>
             </div>
 
             {/* Cohere */}
-            <div className="flex items-center justify-center w-56 h-28 rounded-2xl bg-black/40 border border-white/15 backdrop-blur-sm">
+            <div className="flex items-center justify-center w-56 h-28 rounded-2xl bg-black/40 border border-lime-accent/20 backdrop-blur-sm hover:border-lime-accent/40 transition-colors">
               <div className="text-white font-semibold text-lg">Cohere</div>
             </div>
 
             {/* Anthropic */}
-            <div className="flex items-center justify-center w-56 h-28 rounded-2xl bg-black/40 border border-white/15 backdrop-blur-sm">
+            <div className="flex items-center justify-center w-56 h-28 rounded-2xl bg-black/40 border border-lime-accent/20 backdrop-blur-sm hover:border-lime-accent/40 transition-colors">
               <div className="text-white font-semibold text-lg">Anthropic</div>
             </div>
           </div>
