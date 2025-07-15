@@ -33,11 +33,11 @@ export default function ScrollTextAnimation() {
     if (scrollProgress < 0.5) {
       return { phase: "start" }; // "Trust in ImmiGen.AI" (stays longer)
     } else if (scrollProgress > 0.8) {
-      return { phase: "end" }; // "Trust in our Gen.AI"
+      return { phase: "end" }; // "Trust in                     Our Gen.AI"
     } else {
       return {
         phase: "morphing",
-        progress: (scrollProgress - 0.5) / 0.3, // "Immi" → "our", "Gen.AI" stays
+        progress: (scrollProgress - 0.5) / 0.3, // "Immi" → "                    Our", "Gen.AI" stays
       };
     }
   };
@@ -104,12 +104,12 @@ export default function ScrollTextAnimation() {
                       transform: `translateY(${(1 - morphState.progress) * -8}px)`,
                     }}
                   >
-                    our
+                    Our
                   </span>
                 </>
               )}
               {morphState.phase === "end" && (
-                <span className="animate-gradient-shift">our</span>
+                <span className="animate-gradient-shift"> Our</span>
               )}
             </span>
             <span className="animate-gradient-shift">Gen.AI</span>
