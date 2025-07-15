@@ -25,6 +25,12 @@ export default function TheSystemWasntBuiltForYou() {
       <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-green-500/3 to-lime-500/5"></div>
       <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
 
+      {/* Top edge gradient for continuity */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-green-900/10 to-transparent"></div>
+
+      {/* Bottom edge gradient for continuity */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-green-900/10 to-transparent"></div>
+
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-20">
         {/* Header Section */}
         <div
