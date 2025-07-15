@@ -24,7 +24,11 @@ export default function CustomersSection() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-20">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div
+          ref={headerAnimation.ref}
+          className="text-center mb-16"
+          style={headerAnimation.animationStyle}
+        >
           <h2 className="font-sans font-bold leading-relaxed tracking-tighter mb-3 py-4 overflow-visible">
             <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl animate-gradient-shift pb-4">
               Who We Serve
@@ -35,7 +39,11 @@ export default function CustomersSection() {
         {/* Customer Boxes - Straight Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Self-petitioners Box */}
-          <div className="bg-gradient-to-br from-gray-700/90 via-gray-800/95 to-lime-accent/20 rounded-3xl p-8">
+          <div
+            ref={leftBoxAnimation.ref}
+            className="bg-gradient-to-br from-gray-700/90 via-gray-800/95 to-lime-accent/20 rounded-3xl p-8"
+            style={leftBoxAnimation.animationStyle}
+          >
             <h3 className="font-sans text-xl font-medium text-white mb-4">
               Self-petitioners
             </h3>
