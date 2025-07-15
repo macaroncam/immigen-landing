@@ -43,9 +43,9 @@ export default function TheSystemWasntBuiltForYou() {
         </div>
 
         {/* Main Content Section */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start">
           {/* Left Side - Feature List */}
-          <div className="space-y-0">
+          <div className="space-y-8">
             {/* It's Overpriced. */}
             <div
               className={`border-b border-lime-accent/20 pb-6 mb-6 cursor-pointer transition-all duration-300 ${
