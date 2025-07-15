@@ -218,13 +218,13 @@ export default function ScrollTextAnimation() {
                           let opacity;
                           if (distanceFromReveal <= 0) {
                             opacity = 1; // Already revealed
-                          } else if (distanceFromReveal <= 5) {
+                          } else if (distanceFromReveal <= 8) {
                             opacity = Math.max(
-                              0.1,
-                              1 - distanceFromReveal * 0.2,
-                            ); // Gradient fade
+                              0.05,
+                              1 - distanceFromReveal * 0.12,
+                            ); // More dramatic gradient fade
                           } else {
-                            opacity = 0.1; // Not yet revealed
+                            opacity = 0.05; // Very faint for unrevealed text
                           }
 
                           const shouldHighlight =
