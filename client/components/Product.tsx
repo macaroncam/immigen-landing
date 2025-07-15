@@ -119,7 +119,6 @@ export default function Product() {
     <div
       ref={sectionRef}
       className="relative min-h-screen flex items-start justify-start overflow-hidden pt-32"
-      style={{ height: "200vh" }} // Extra height for scroll hijacking
     >
       {/* Background Image */}
       <div className="absolute inset-0">
