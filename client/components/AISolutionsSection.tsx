@@ -19,27 +19,29 @@ export default function AISolutionsSection() {
         {/* Header Section */}
         <div className="flex flex-col items-center text-center mb-16 lg:mb-24">
           {/* AI for the Enterprise Badge */}
-          <div className="inline-flex items-center px-5 py-2 rounded-full bg-white/5 backdrop-blur-sm mb-5">
-            <span className="text-xs font-normal text-purple-300 uppercase tracking-[3px]">
+          <div className="inline-flex items-center px-5 py-2 rounded-full bg-lime-accent/10 backdrop-blur-sm mb-5 border border-lime-accent/20">
+            <span className="text-xs font-normal text-lime-accent uppercase tracking-[3px]">
               AI for the Enterprise
             </span>
           </div>
 
           {/* Main Heading */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-4 leading-tight">
-            Full-Stack AI Solutions
+            <span className="animate-gradient-shift">
+              Full-Stack AI Solutions
+            </span>
           </h2>
 
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mb-8">
+          <p className="text-lg sm:text-xl text-white/80 max-w-2xl mb-8">
             Outcomes delivered with world-class data, models, agents, and
             deployment.
           </p>
 
           {/* Book a Demo Button */}
-          <button className="inline-flex items-center gap-2 px-5 py-2.5 bg-purple-800/80 border border-purple-600/60 rounded-xl text-purple-100 text-sm font-medium hover:bg-purple-700/80 transition-colors">
+          <button className="inline-flex items-center gap-2 px-6 py-3 bg-lime-accent text-black font-sans font-bold text-sm rounded-2xl hover:opacity-90 transition-opacity">
             Book a Demo
-            <span className="text-purple-100">→</span>
+            <span className="text-black">→</span>
           </button>
         </div>
 
