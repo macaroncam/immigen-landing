@@ -124,8 +124,8 @@ export default function Index() {
         </div>
       </div>
 
-      {/* AI Solutions Section */}
-      <AISolutionsSection />
+      {/* The System Wasn't Built for You Section */}
+      <TheSystemWasntBuiltForYou />
 
       {/* Scroll Text Animation */}
       <ScrollTextAnimation />
