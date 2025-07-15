@@ -18,21 +18,28 @@ export default function Product() {
 
       // If section is in viewport, lock scrolling
       if (sectionTop <= 0 && sectionBottom > windowHeight) {
-        setIsScrollLocked(true);
+        if (!isScrollLocked) {
+          setIsScrollLocked(true);
+          // Prevent default scrolling
+          document.body.style.overflow = "hidden";
+        }
 
-        // Prevent default scrolling
-        document.body.style.overflow = "hidden";
-
-        // Calculate progress for animations
-        const progress = Math.abs(sectionTop) / (rect.height - windowHeight);
-        const clampedProgress = Math.max(0, Math.min(2, progress * 2));
-        setScrollProgress(clampedProgress);
+        // Only update progress if we're locked (prevents interference)
+        if (isScrollLocked) {
+          // Calculate progress for animations
+          const progress = Math.abs(sectionTop) / (rect.height - windowHeight);
+          const clampedProgress = Math.max(0, Math.min(2, progress * 2));
+          setScrollProgress(clampedProgress);
+        }
       } else {
-        setIsScrollLocked(false);
-        document.body.style.overflow = "auto";
+        // Reset everything when leaving section
+        if (isScrollLocked) {
+          setIsScrollLocked(false);
+          document.body.style.overflow = "auto";
+        }
 
-        // Reset progress when not in section
-        if (sectionTop > 0) {
+        // Reset progress when completely out of section
+        if (sectionTop > windowHeight || sectionBottom < 0) {
           setScrollProgress(0);
         }
       }
