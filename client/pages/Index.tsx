@@ -127,14 +127,66 @@ export default function Index() {
         </div>
       </div>
 
+      {/* Flowing Section Divider */}
+      <div className="relative h-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/starry-background.gif"
+            alt="Starry space background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-900/10 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-lime-accent/30 to-transparent"></div>
+      </div>
+
       {/* The System Wasn't Built for You Section */}
       <TheSystemWasntBuiltForYou />
+
+      {/* Flowing Section Divider */}
+      <div className="relative h-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/starry-background.gif"
+            alt="Starry space background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-green-900/5 to-green-900/5"></div>
+        <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-lime-accent/20 to-transparent"></div>
+      </div>
 
       {/* Product Section */}
       <Product />
 
+      {/* Flowing Section Divider */}
+      <div className="relative h-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/starry-background.gif"
+            alt="Starry space background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-green-900/5 to-green-900/5"></div>
+        <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-lime-accent/20 to-transparent"></div>
+      </div>
+
       {/* Customers Section */}
       <CustomersSection />
+
+      {/* Flowing Section Divider */}
+      <div className="relative h-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/starry-background.gif"
+            alt="Starry space background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-green-900/5 to-green-900/5"></div>
+        <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-lime-accent/20 to-transparent"></div>
+      </div>
 
       {/* Pricing Section */}
       <PricingSection />
