@@ -161,7 +161,11 @@ export default function TheSystemWasntBuiltForYou() {
           </div>
 
           {/* Right Side - 3D Visualization */}
-          <div className="flex justify-center lg:justify-end">
+          <div
+            ref={imageAnimation.ref}
+            className="flex justify-center lg:justify-end"
+            style={imageAnimation.animationStyle}
+          >
             <div className="w-full max-w-2xl">
               <div
                 className={`transition-all duration-500 ${
