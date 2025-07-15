@@ -123,6 +123,9 @@ export default function Index() {
         </div>
       </div>
 
+      {/* Scroll Text Animation */}
+      <ScrollTextAnimation />
+
       {/* Customers Section */}
       <CustomersSection />
 
