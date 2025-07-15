@@ -147,6 +147,7 @@ export default function Product() {
                         style={{
                           fontSize: "clamp(1.5rem, 4vw, 3rem)",
                           letterSpacing: "0.02em",
+                          lineHeight: "1.6",
                         }}
                       >
                         {paragraph.split("").map((char, charIndex) => {
