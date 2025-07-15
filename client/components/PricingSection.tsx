@@ -205,10 +205,7 @@ export default function PricingSection() {
               </ul>
             </div>
           </div>
-        </div>
-
-        {/* Enterprise Section */}
-        <div className="max-w-3xl mx-auto mt-16">
+          {/* Enterprise Plan */}
           <div
             className={`cursor-pointer transition-all duration-300 rounded-xl p-8 ${
               selectedPlan === "enterprise"
@@ -217,16 +214,18 @@ export default function PricingSection() {
             }`}
             onClick={() => setSelectedPlan("enterprise")}
           >
-            <div className="text-center">
-              <h3 className="font-sans text-2xl font-bold text-white mb-4">
+            <div className="mb-8">
+              <h3 className="font-sans text-2xl font-bold text-white mb-2">
                 Enterprise
               </h3>
-              <p className="font-sans text-lg text-white/60 mb-6">
-                Custom solutions for teams and organizations with advanced
-                immigration needs.
+              <div className="font-sans text-5xl font-bold text-white mb-2">
+                Custom
+              </div>
+              <p className="font-sans text-sm text-white/60 mb-6">
+                Custom solutions for teams and organizations
               </p>
               <button
-                className={`font-sans font-medium py-3 px-8 rounded-lg transition-all ${
+                className={`w-full font-sans font-medium py-3 px-4 rounded-lg transition-all ${
                   selectedPlan === "enterprise"
                     ? "bg-lime-accent text-black hover:bg-lime-accent/90"
                     : "bg-transparent border border-white/30 text-white hover:bg-white/5"
@@ -236,31 +235,38 @@ export default function PricingSection() {
               </button>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-white/10">
-              <div className="text-center">
-                <h4 className="font-sans font-semibold text-white mb-2">
-                  Unlimited Usage
-                </h4>
-                <p className="font-sans text-sm text-white/60">
-                  No limits on requests or processing
-                </p>
-              </div>
-              <div className="text-center">
-                <h4 className="font-sans font-semibold text-white mb-2">
-                  Dedicated Support
-                </h4>
-                <p className="font-sans text-sm text-white/60">
-                  24/7 priority support with dedicated account manager
-                </p>
-              </div>
-              <div className="text-center">
-                <h4 className="font-sans font-semibold text-white mb-2">
-                  Custom Integration
-                </h4>
-                <p className="font-sans text-sm text-white/60">
-                  API access and custom workflow integration
-                </p>
-              </div>
+            <div className="border-t border-white/10 pt-6">
+              <p className="font-sans text-sm font-medium text-white/60 mb-4 text-center">
+                what you will get
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center text-sm text-white/80">
+                  <span className="text-lime-accent mr-3">•</span>
+                  <span>
+                    <strong>Unlimited Usage</strong> across all model tiers
+                  </span>
+                </li>
+                <li className="flex items-center text-sm text-white/80">
+                  <span className="text-lime-accent mr-3">•</span>
+                  <span>
+                    <strong>Dedicated Support</strong> with account manager
+                  </span>
+                </li>
+                <li className="flex items-center text-sm text-white/80">
+                  <span className="text-lime-accent mr-3">•</span>
+                  <span>
+                    <strong>Custom Integration</strong> and API access
+                  </span>
+                </li>
+                <li className="flex items-center text-sm text-white/80">
+                  <span className="text-lime-accent mr-3">•</span>
+                  Advanced security and compliance features
+                </li>
+                <li className="flex items-center text-sm text-white/80">
+                  <span className="text-lime-accent mr-3">•</span>
+                  Priority processing and dedicated infrastructure
+                </li>
+              </ul>
             </div>
           </div>
         </div>
