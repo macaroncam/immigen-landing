@@ -17,15 +17,15 @@ export default function CustomersSection() {
           </p>
         </div>
 
-        {/* Customer Boxes - Chat Interface Style */}
+        {/* Customer Boxes - Ultra Clean */}
         <div className="relative">
           {/* Self-petitioners Box - Top Left */}
-          <div className="absolute top-0 left-0 w-[420px] lg:w-[480px] transform -rotate-2">
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 border border-lime-accent/5">
-              <h3 className="font-sans text-xl font-medium text-white mb-4">
+          <div className="absolute top-0 left-0 w-[400px] lg:w-[460px] transform -rotate-2">
+            <div className="bg-gradient-to-b from-gray-700/80 to-gray-800/90 rounded-3xl p-7">
+              <h3 className="font-sans text-lg font-medium text-white mb-3">
                 Self-petitioners
               </h3>
-              <p className="font-sans text-white/80 leading-relaxed">
+              <p className="font-sans text-white/70 leading-relaxed text-sm">
                 For researchers, founders, creatives, and builders applying for
                 EB1A, O-1, or H-1B on their own.
               </p>
@@ -33,12 +33,12 @@ export default function CustomersSection() {
           </div>
 
           {/* Global teams Box - Bottom Right */}
-          <div className="absolute top-[200px] lg:top-[180px] right-0 w-[420px] lg:w-[480px] transform rotate-2">
-            <div className="bg-gradient-to-bl from-gray-800 to-gray-900 rounded-3xl p-8 border border-lime-accent/5">
-              <h3 className="font-sans text-xl font-medium text-white mb-4">
+          <div className="absolute top-[180px] lg:top-[160px] right-0 w-[400px] lg:w-[460px] transform rotate-2">
+            <div className="bg-gradient-to-b from-gray-700/80 to-gray-800/90 rounded-3xl p-7">
+              <h3 className="font-sans text-lg font-medium text-white mb-3">
                 Global teams
               </h3>
-              <p className="font-sans text-white/80 leading-relaxed">
+              <p className="font-sans text-white/70 leading-relaxed text-sm">
                 For startups, labs, and enterprises hiring across
                 borders—without legal bottlenecks.
               </p>
@@ -46,7 +46,7 @@ export default function CustomersSection() {
           </div>
 
           {/* Spacer for proper height */}
-          <div className="h-[420px]"></div>
+          <div className="h-[380px]"></div>
         </div>
       </div>
     </div>
