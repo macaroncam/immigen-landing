@@ -29,14 +29,14 @@ export default function ScrollTextAnimation() {
 
   // Text morphing logic - slower transition
   const getMorphingState = () => {
-    if (scrollProgress < 0.3) {
-      return { phase: "start" }; // "Trust in ImmiGen.AI"
-    } else if (scrollProgress > 0.7) {
+    if (scrollProgress < 0.5) {
+      return { phase: "start" }; // "Trust in ImmiGen.AI" (stays longer)
+    } else if (scrollProgress > 0.8) {
       return { phase: "end" }; // "Trust in our Gen.AI"
     } else {
       return {
         phase: "morphing",
-        progress: (scrollProgress - 0.3) / 0.4, // "Immi" → "our", "Gen.AI" stays (slower)
+        progress: (scrollProgress - 0.5) / 0.3, // "Immi" → "our", "Gen.AI" stays
       };
     }
   };
