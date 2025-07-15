@@ -4,17 +4,12 @@ export default function CustomersSection() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-20">
         {/* Header */}
-        <div className="mb-16">
-          <h2 className="font-sans text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-            Unlock the potential
-            <br />
-            of your immigration with AI
+        <div className="text-center mb-16">
+          <h2 className="font-sans font-bold leading-relaxed tracking-tighter mb-3 py-4 overflow-visible">
+            <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl animate-gradient-shift pb-4">
+              Who We Serve
+            </span>
           </h2>
-          <p className="font-sans text-lg text-white/60 max-w-lg leading-relaxed">
-            Elit patientesque pretium vitae euismod magna non quis nibh faucibus
-            egestas quis molestada. Egestas nisl pulvinar maecenas rutrum. Odio
-            id interdum sit tristique.
-          </p>
         </div>
 
         {/* Customer Boxes - Chat Bubble with Lime Accent */}
