@@ -12,36 +12,29 @@ export default function CustomersSection() {
           </h2>
         </div>
 
-        {/* Customer Boxes - Chat Bubble with Lime Accent */}
-        <div className="relative">
-          {/* Self-petitioners Box - Top Left */}
-          <div className="absolute top-0 left-0 w-[380px] lg:w-[440px] transform -rotate-2">
-            <div className="bg-gradient-to-br from-gray-700 via-gray-800 to-lime-accent/10 rounded-3xl p-6">
-              <h3 className="font-sans text-lg font-medium text-white mb-3">
-                Self-petitioners
-              </h3>
-              <p className="font-sans text-white/80 leading-relaxed text-sm">
-                For researchers, founders, creatives, and builders applying for
-                EB1A, O-1, or H-1B on their own.
-              </p>
-            </div>
+        {/* Customer Boxes - Straight Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* Self-petitioners Box */}
+          <div className="bg-gradient-to-br from-gray-700/90 via-gray-800/95 to-lime-accent/20 rounded-3xl p-8">
+            <h3 className="font-sans text-xl font-medium text-white mb-4">
+              Self-petitioners
+            </h3>
+            <p className="font-sans text-white/80 leading-relaxed">
+              For researchers, founders, creatives, and builders applying for
+              EB1A, O-1, or H-1B on their own.
+            </p>
           </div>
 
-          {/* Global teams Box - Bottom Right */}
-          <div className="absolute top-[160px] lg:top-[140px] right-0 w-[380px] lg:w-[440px] transform rotate-2">
-            <div className="bg-gradient-to-bl from-gray-700 via-gray-800 to-lime-accent/10 rounded-3xl p-6">
-              <h3 className="font-sans text-lg font-medium text-white mb-3">
-                Global teams
-              </h3>
-              <p className="font-sans text-white/80 leading-relaxed text-sm">
-                For startups, labs, and enterprises hiring across
-                borders—without legal bottlenecks.
-              </p>
-            </div>
+          {/* Global teams Box */}
+          <div className="bg-gradient-to-bl from-gray-700/90 via-gray-800/95 to-lime-accent/20 rounded-3xl p-8">
+            <h3 className="font-sans text-xl font-medium text-white mb-4">
+              Global teams
+            </h3>
+            <p className="font-sans text-white/80 leading-relaxed">
+              For startups, labs, and enterprises hiring across borders—without
+              legal bottlenecks.
+            </p>
           </div>
-
-          {/* Spacer for proper height */}
-          <div className="h-[320px]"></div>
         </div>
       </div>
     </div>
