@@ -5,6 +5,9 @@ export default function Product() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
 
+  // Animation for the text content
+  const textAnimation = useScrollAnimation({ delay: 200, threshold: 0.3 });
+
   useEffect(() => {
     const handleScroll = () => {
       if (!sectionRef.current) return;
