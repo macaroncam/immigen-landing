@@ -66,10 +66,11 @@ export default function ScrollTextAnimation() {
       <div className="relative z-10 px-2 sm:px-4 text-left w-full min-w-0">
         <div className="font-sans font-bold leading-relaxed tracking-tighter overflow-visible w-full">
           <h2
-            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl pb-4 whitespace-nowrap w-full"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl pb-4 whitespace-nowrap w-full"
             style={{
               minWidth: "max-content",
-              fontSize: "clamp(0.875rem, 2.5vw, 1.5rem)",
+              fontSize: "clamp(2rem, 6vw, 4.5rem)",
+              letterSpacing: "0.02em",
             }}
           >
             <span className="text-white">Trust in </span>
