@@ -179,7 +179,7 @@ export default function ScrollTextAnimation() {
                   {visibleText.split("\n\n").map((paragraph, index) => (
                     <p
                       key={index}
-                      className={`mb-8 last:mb-0 ${
+                      className={`mb-8 last:mb-0 relative ${
                         index === 1
                           ? "text-xl sm:text-2xl md:text-3xl lg:text-4xl"
                           : "text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
@@ -191,10 +191,21 @@ export default function ScrollTextAnimation() {
                             : "clamp(1.5rem, 5vw, 3rem)",
                       }}
                     >
-                      {paragraph}
+                      <span
+                        className="relative z-10"
+                        style={{
+                          background: `linear-gradient(90deg, rgba(201, 243, 29, 0.3) 0%, rgba(201, 243, 29, 0.3) ${(paragraph.length / fullText.length) * revealProgress * 100}%, transparent ${(paragraph.length / fullText.length) * revealProgress * 100}%)`,
+                          boxDecorationBreak: "clone",
+                          WebkitBoxDecorationBreak: "clone",
+                        }}
+                      >
+                        {paragraph}
+                      </span>
                       {index === visibleText.split("\n\n").length - 1 &&
                         charactersToShow < fullText.length && (
-                          <span className="animate-pulse">|</span>
+                          <span className="animate-pulse text-lime-accent">
+                            |
+                          </span>
                         )}
                     </p>
                   ))}
