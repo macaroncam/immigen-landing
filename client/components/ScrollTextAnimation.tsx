@@ -30,14 +30,14 @@ export default function ScrollTextAnimation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Text morphing logic - only "Immigen" changes
+  // Text morphing logic - slower transition
   const getMorphingState = () => {
-    if (scrollProgress < 0.1) {
+    if (scrollProgress < 0.2) {
       return { phase: "start" };
-    } else if (scrollProgress > 0.4) {
+    } else if (scrollProgress > 0.8) {
       return { phase: "end" };
     } else {
-      return { phase: "morphing", progress: (scrollProgress - 0.1) / 0.3 };
+      return { phase: "morphing", progress: (scrollProgress - 0.2) / 0.6 };
     }
   };
 
