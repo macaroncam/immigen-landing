@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import FloatingElements from "../components/FloatingElements";
-import ScrollTextAnimation from "../components/ScrollTextAnimation";
+import Product from "../components/Product";
 import TheSystemWasntBuiltForYou from "../components/TheSystemWasntBuiltForYou";
 import PricingSection from "../components/PricingSection";
 import CustomersSection from "../components/CustomersSection";
