@@ -24,20 +24,20 @@ export default function TheSystemWasntBuiltForYou() {
         <div className="flex flex-col items-center text-center mb-16 lg:mb-24">
           {/* AI for the Enterprise Badge */}
           <div className="inline-flex items-center px-5 py-2 rounded-full bg-lime-accent/10 backdrop-blur-sm mb-5 border border-lime-accent/20">
-            <span className="text-xs font-normal text-lime-accent uppercase tracking-[3px]">
+            <span className="text-xs font-sans font-medium text-lime-accent uppercase tracking-[3px]">
               The Problem
             </span>
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-4 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sans font-bold text-white mb-4 leading-tight">
             <span className="animate-gradient-shift">
               The System Wasn't Built for You.
             </span>
           </h2>
 
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-white/80 max-w-2xl mb-8">
+          <p className="text-lg sm:text-xl font-sans font-medium text-white/80 max-w-2xl mb-8">
             Immigration was built for bureaucracy—not for people.
           </p>
         </div>
