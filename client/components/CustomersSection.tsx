@@ -54,7 +54,11 @@ export default function CustomersSection() {
           </div>
 
           {/* Global teams Box */}
-          <div className="bg-gradient-to-bl from-gray-700/90 via-gray-800/95 to-lime-accent/20 rounded-3xl p-8">
+          <div
+            ref={rightBoxAnimation.ref}
+            className="bg-gradient-to-bl from-gray-700/90 via-gray-800/95 to-lime-accent/20 rounded-3xl p-8"
+            style={rightBoxAnimation.animationStyle}
+          >
             <h3 className="font-sans text-xl font-medium text-white mb-4">
               Global teams
             </h3>
