@@ -80,7 +80,11 @@ export default function ScrollTextAnimation() {
             <span className="animate-gradient-shift">Trust in </span>
             <span
               className="relative inline-block"
-              style={{ width: "8ch", minWidth: "8ch", display: "inline-block" }}
+              style={{
+                width: "12ch",
+                minWidth: "12ch",
+                display: "inline-block",
+              }}
             >
               {morphState.phase === "start" && (
                 <span className="animate-gradient-shift">Immi</span>
