@@ -162,7 +162,7 @@ export default function ScrollTextAnimation() {
               // Calculate reveal progress for character-by-character effect
               const revealProgress = Math.max(
                 0,
-                Math.min(1, (scrollProgress - 0.6) * 1.0),
+                Math.min(1, scrollProgress * 1.2),
               );
               const charactersToReveal = Math.floor(
                 fullText.length * revealProgress,
