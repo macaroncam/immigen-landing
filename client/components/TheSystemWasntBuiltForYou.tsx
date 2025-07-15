@@ -114,15 +114,17 @@ export default function TheSystemWasntBuiltForYou() {
 
             {/* It's Already Written by AI */}
             <div
-              className={`border-b border-lime-accent/20 pb-6 mb-6 cursor-pointer transition-all duration-300 ${
-                hoveredSection === "ai" ? "opacity-100" : "opacity-60"
+              className={`pb-8 cursor-pointer transition-all duration-500 ease-out ${
+                hoveredSection === "ai"
+                  ? "opacity-100 scale-[1.02]"
+                  : "opacity-60 scale-100"
               } hover:opacity-100`}
               onMouseEnter={() => setHoveredSection("ai")}
               onMouseLeave={() => setHoveredSection(null)}
             >
-              <h3 className="text-xl sm:text-2xl font-normal mb-3 leading-tight">
+              <h3 className="text-2xl sm:text-3xl font-normal mb-4 leading-tight">
                 <span
-                  className={`transition-all duration-300 ${
+                  className={`transition-all duration-500 ${
                     hoveredSection === "ai"
                       ? "animate-gradient-shift"
                       : "text-white/70"
@@ -132,7 +134,7 @@ export default function TheSystemWasntBuiltForYou() {
                 </span>
               </h3>
               <p
-                className={`text-base leading-relaxed transition-all duration-300 ${
+                className={`text-lg leading-relaxed transition-all duration-500 ${
                   hoveredSection === "ai" ? "text-white" : "text-white/50"
                 }`}
               >
