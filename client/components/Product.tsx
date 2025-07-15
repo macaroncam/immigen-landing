@@ -128,9 +128,10 @@ export default function Product() {
 
               return (
                 <div
-                  className="font-sans text-white/90 leading-relaxed"
+                  className="font-sans text-white/90"
                   style={{
                     letterSpacing: "0.2em",
+                    lineHeight: "1.8",
                   }}
                 >
                   {displayText.split("\n\n").map((paragraph, index) => {
