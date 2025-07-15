@@ -196,9 +196,9 @@ export default function ScrollTextAnimation() {
                     return (
                       <p
                         key={index}
-                        className="mb-12 last:mb-0 relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+                        className="mb-12 last:mb-0 relative text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
                         style={{
-                          fontSize: "clamp(2rem, 6vw, 4.5rem)",
+                          fontSize: "clamp(1.5rem, 4vw, 3rem)",
                           letterSpacing: "0.02em",
                         }}
                       >
