@@ -83,11 +83,9 @@ export default function ScrollTextAnimation() {
                 className="relative inline-block"
                 style={{ minWidth: "max-content" }}
               >
-                <span className="text-white invisible">
-                  Gen.AI built for Immigration
-                </span>
+                <span className="text-white invisible">our Gen.AI</span>
                 <span
-                  className="text-white absolute top-0 left-0 transition-all duration-500 ease-out"
+                  className="text-white absolute top-0 left-0 transition-all duration-700 ease-out"
                   style={{
                     opacity: 1 - morphState.progress,
                     transform: `translateY(${morphState.progress * 8}px)`,
@@ -96,8 +94,17 @@ export default function ScrollTextAnimation() {
                   Immi
                 </span>
                 <span
-                  className="text-white absolute top-0 left-0"
-                  style={{ left: "3.2em" }}
+                  className="text-white absolute top-0 left-0 transition-all duration-700 ease-out"
+                  style={{
+                    opacity: morphState.progress,
+                    transform: `translateY(${(1 - morphState.progress) * -8}px)`,
+                  }}
+                >
+                  our
+                </span>
+                <span
+                  className="animate-gradient-shift absolute top-0 left-0"
+                  style={{ left: "2.5em" }}
                 >
                   Gen.AI
                 </span>
