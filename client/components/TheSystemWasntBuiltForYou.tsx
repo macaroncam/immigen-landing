@@ -47,11 +47,31 @@ export default function TheSystemWasntBuiltForYou() {
           {/* Left Side - Feature List */}
           <div className="space-y-0">
             {/* It's Overpriced. */}
-            <div className="border-b border-lime-accent/20 pb-6 mb-6">
+            <div
+              className={`border-b border-lime-accent/20 pb-6 mb-6 cursor-pointer transition-all duration-300 ${
+                hoveredSection === "overpriced" ? "opacity-100" : "opacity-60"
+              } hover:opacity-100`}
+              onMouseEnter={() => setHoveredSection("overpriced")}
+              onMouseLeave={() => setHoveredSection(null)}
+            >
               <h3 className="text-xl sm:text-2xl font-normal mb-3 leading-tight">
-                <span className="animate-gradient-shift">It's Overpriced.</span>
+                <span
+                  className={`transition-all duration-300 ${
+                    hoveredSection === "overpriced"
+                      ? "animate-gradient-shift"
+                      : "text-white/70"
+                  }`}
+                >
+                  It's Overpriced.
+                </span>
               </h3>
-              <p className="text-white/90 text-base leading-relaxed">
+              <p
+                className={`text-base leading-relaxed transition-all duration-300 ${
+                  hoveredSection === "overpriced"
+                    ? "text-white"
+                    : "text-white/50"
+                }`}
+              >
                 Petitions routinely cost $10,000 to $20,000 for what is often a
                 templated, recycled process. You're paying premium prices for
                 work that hasn't evolved in decades.
@@ -59,11 +79,29 @@ export default function TheSystemWasntBuiltForYou() {
             </div>
 
             {/* It Takes Forever */}
-            <div className="border-b border-lime-accent/20 pb-6 mb-6">
+            <div
+              className={`border-b border-lime-accent/20 pb-6 mb-6 cursor-pointer transition-all duration-300 ${
+                hoveredSection === "forever" ? "opacity-100" : "opacity-60"
+              } hover:opacity-100`}
+              onMouseEnter={() => setHoveredSection("forever")}
+              onMouseLeave={() => setHoveredSection(null)}
+            >
               <h3 className="text-xl sm:text-2xl font-normal mb-3 leading-tight">
-                <span className="animate-gradient-shift">It takes forever</span>
+                <span
+                  className={`transition-all duration-300 ${
+                    hoveredSection === "forever"
+                      ? "animate-gradient-shift"
+                      : "text-white/70"
+                  }`}
+                >
+                  It takes forever
+                </span>
               </h3>
-              <p className="text-white/90 text-base leading-relaxed">
+              <p
+                className={`text-base leading-relaxed transition-all duration-300 ${
+                  hoveredSection === "forever" ? "text-white" : "text-white/50"
+                }`}
+              >
                 Lawyers are overloaded and slow. Your case waits in a queue
                 while firms juggle dozens of clients, leaving you in the dark
                 for weeks, sometimes even months.
@@ -71,13 +109,29 @@ export default function TheSystemWasntBuiltForYou() {
             </div>
 
             {/* It's Already Written by AI */}
-            <div className="border-b border-lime-accent/20 pb-6 mb-6">
+            <div
+              className={`border-b border-lime-accent/20 pb-6 mb-6 cursor-pointer transition-all duration-300 ${
+                hoveredSection === "ai" ? "opacity-100" : "opacity-60"
+              } hover:opacity-100`}
+              onMouseEnter={() => setHoveredSection("ai")}
+              onMouseLeave={() => setHoveredSection(null)}
+            >
               <h3 className="text-xl sm:text-2xl font-normal mb-3 leading-tight">
-                <span className="animate-gradient-shift">
+                <span
+                  className={`transition-all duration-300 ${
+                    hoveredSection === "ai"
+                      ? "animate-gradient-shift"
+                      : "text-white/70"
+                  }`}
+                >
                   It's Already Written by AI
                 </span>
               </h3>
-              <p className="text-white/90 text-base leading-relaxed">
+              <p
+                className={`text-base leading-relaxed transition-all duration-300 ${
+                  hoveredSection === "ai" ? "text-white" : "text-white/50"
+                }`}
+              >
                 Most legal teams are using ChatGPT, Claude, and other
                 general-purpose AI to ghostwrite petitions behind the scenes.
                 You never see it, but you still pay as if every sentence was
