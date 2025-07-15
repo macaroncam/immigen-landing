@@ -63,6 +63,23 @@ export default function Product() {
             return newProgress;
           }
 
+          // Allow scrolling back up when at beginning
+          if (newProgress <= 0 && e.deltaY < 0) {
+            setTimeout(() => {
+              setIsScrollLocked(false);
+              document.body.style.overflow = "auto";
+              // Force scroll to previous section
+              const prevElement = sectionRef.current?.previousElementSibling;
+              if (prevElement) {
+                prevElement.scrollIntoView({
+                  behavior: "smooth",
+                  block: "end",
+                });
+              }
+            }, 200);
+            return 0;
+          }
+
           return newProgress;
         });
       }
