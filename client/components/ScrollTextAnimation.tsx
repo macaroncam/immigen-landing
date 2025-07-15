@@ -180,7 +180,13 @@ export default function ScrollTextAnimation() {
                     letterSpacing: "0.02em",
                   }}
                 >
-                  {visibleText.split("\n\n").map((paragraph, index) => (
+                                    {displayText.split("\n\n").map((paragraph, index) => {
+                    const fullParagraphs = fullText.split("\n\n");
+                    const currentParagraphStart = fullParagraphs.slice(0, index).join("\n\n").length + (index > 0 ? 2 : 0);
+                    const visibleInThisParagraph = Math.max(0, Math.min(paragraph.length, charactersToShow - currentParagraphStart));
+                    const highlightPercentage = showCompleteText ? 100 : (visibleInThisParagraph / paragraph.length) * 100;
+
+                    return (
                     <p
                       key={index}
                       className={`mb-8 last:mb-0 relative ${
