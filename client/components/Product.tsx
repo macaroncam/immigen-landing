@@ -44,7 +44,7 @@ export default function Product() {
   return (
     <div
       ref={sectionRef}
-      className="relative min-h-screen flex items-start justify-start overflow-hidden pt-32"
+      className="relative min-h-screen flex items-start justify-start overflow-hidden pt-32 pb-16"
     >
       {/* Background Image */}
       <div className="absolute inset-0">
