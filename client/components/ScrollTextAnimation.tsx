@@ -93,7 +93,7 @@ export default function ScrollTextAnimation() {
 
             {morphState.phase === "end" && (
               <span className="animate-gradient-shift">
-                AI built for Immigration
+                Gen.AI built for Immigration
               </span>
             )}
           </h2>
