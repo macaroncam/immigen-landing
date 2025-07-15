@@ -17,11 +17,11 @@ export default function CustomersSection() {
           </p>
         </div>
 
-        {/* Customer Boxes - Exact Chat Bubble Style */}
+        {/* Customer Boxes - Chat Bubble with Lime Accent */}
         <div className="relative">
           {/* Self-petitioners Box - Top Left */}
           <div className="absolute top-0 left-0 w-[380px] lg:w-[440px] transform -rotate-2">
-            <div className="bg-gradient-to-b from-gray-700 to-gray-800 rounded-2xl p-6">
+            <div className="bg-gradient-to-br from-gray-700 via-gray-800 to-lime-accent/10 rounded-3xl p-6">
               <h3 className="font-sans text-lg font-medium text-white mb-3">
                 Self-petitioners
               </h3>
@@ -34,7 +34,7 @@ export default function CustomersSection() {
 
           {/* Global teams Box - Bottom Right */}
           <div className="absolute top-[160px] lg:top-[140px] right-0 w-[380px] lg:w-[440px] transform rotate-2">
-            <div className="bg-gradient-to-b from-gray-700 to-gray-800 rounded-2xl p-6">
+            <div className="bg-gradient-to-bl from-gray-700 via-gray-800 to-lime-accent/10 rounded-3xl p-6">
               <h3 className="font-sans text-lg font-medium text-white mb-3">
                 Global teams
               </h3>
