@@ -12,12 +12,13 @@ export default function ScrollTextAnimation() {
       const windowHeight = window.innerHeight;
 
       // Calculate progress based on text position in viewport
+      // Extended range to allow typewriter to complete
       // When text is at bottom of screen (rect.top = windowHeight), progress = 0
-      // When text is at top of screen (rect.top = 0), progress = 1
+      // When text is well past top of screen (rect.top = -windowHeight), progress = 2
       const progress = 1 - rect.top / windowHeight;
 
-      // Clamp between 0 and 1
-      const clampedProgress = Math.max(0, Math.min(1, progress));
+      // Allow progress to go beyond 1 for typewriter completion
+      const clampedProgress = Math.max(0, Math.min(2, progress));
       setScrollProgress(clampedProgress);
     };
 
