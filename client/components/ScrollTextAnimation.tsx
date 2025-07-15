@@ -63,9 +63,12 @@ export default function ScrollTextAnimation() {
       <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
 
       {/* Text Content */}
-      <div className="relative z-10 px-2 sm:px-4 text-left w-full">
+      <div className="relative z-10 px-2 sm:px-4 text-left w-full min-w-0">
         <div className="font-sans font-bold leading-relaxed tracking-tighter overflow-visible w-full">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl pb-4 whitespace-nowrap overflow-hidden w-full">
+          <h2
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl pb-4 whitespace-nowrap w-full"
+            style={{ minWidth: "max-content" }}
+          >
             <span className="text-white">Trust in </span>
             {morphState.phase === "start" && (
               <span className="text-white">Immigen</span>
