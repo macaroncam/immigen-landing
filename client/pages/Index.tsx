@@ -13,10 +13,7 @@ export default function Index() {
   const [showFloatingElements, setShowFloatingElements] = useState(false);
   const location = useLocation();
 
-  // Animation hooks for different elements
-  const heroTitle = useScrollAnimation({ delay: 200 });
-  const heroSubtitle = useScrollAnimation({ delay: 400 });
-  const heroButtons = useScrollAnimation({ delay: 600 });
+  // No animations for hero section - should appear immediately
 
   useEffect(() => {
     // Reset FloatingElements state on route change
