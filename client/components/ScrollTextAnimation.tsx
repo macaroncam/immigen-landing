@@ -75,86 +75,42 @@ export default function ScrollTextAnimation() {
             }}
           >
             <span className="animate-gradient-shift">Trust in </span>
-            {morphState.phase === "start" && (
-              <span className="animate-gradient-shift">ImmiGen.AI</span>
-            )}
-
-            {morphState.phase === "morphing" && (
-              <span
-                className="relative inline-block"
-                style={{ minWidth: "max-content" }}
-              >
-                <span className="animate-gradient-shift invisible">
-                  our Gen.AI
-                </span>
-                <span
-                  className="animate-gradient-shift absolute top-0 left-0 transition-all duration-700 ease-out"
-                  style={{
-                    opacity: 1 - morphState.progress,
-                    transform: `translateY(${morphState.progress * 8}px)`,
-                  }}
-                >
+            <span className="relative inline-block">
+              <span className="animate-gradient-shift invisible">our</span>
+              {morphState.phase === "start" && (
+                <span className="animate-gradient-shift absolute top-0 left-0">
                   Immi
                 </span>
-                <span
-                  className="animate-gradient-shift absolute top-0 left-0 transition-all duration-700 ease-out"
-                  style={{
-                    opacity: morphState.progress,
-                    transform: `translateY(${(1 - morphState.progress) * -8}px)`,
-                  }}
-                >
+              )}
+              {morphState.phase === "morphing" && (
+                <>
+                  <span
+                    className="animate-gradient-shift absolute top-0 left-0 transition-all duration-700 ease-out"
+                    style={{
+                      opacity: 1 - morphState.progress,
+                      transform: `translateY(${morphState.progress * 8}px)`,
+                    }}
+                  >
+                    Immi
+                  </span>
+                  <span
+                    className="animate-gradient-shift absolute top-0 left-0 transition-all duration-700 ease-out"
+                    style={{
+                      opacity: morphState.progress,
+                      transform: `translateY(${(1 - morphState.progress) * -8}px)`,
+                    }}
+                  >
+                    our
+                  </span>
+                </>
+              )}
+              {morphState.phase === "end" && (
+                <span className="animate-gradient-shift absolute top-0 left-0">
                   our
                 </span>
-                <span
-                  className="animate-gradient-shift absolute top-0 left-0"
-                  style={{ left: "2.5em" }}
-                >
-                  Gen.AI
-                </span>
-              </span>
-            )}
-
-            {morphState.phase === "phase2" && (
-              <span
-                className="relative inline-block"
-                style={{ minWidth: "max-content" }}
-              >
-                <span className="text-white invisible">
-                  Gen.AI built for Immigration
-                </span>
-                <span
-                  className={`absolute top-0 left-0 transition-all duration-500 ease-out ${
-                    morphState.progress > 0.5
-                      ? "animate-gradient-shift"
-                      : "text-white"
-                  }`}
-                  style={{ left: "3.2em" }}
-                >
-                  Gen.AI
-                </span>
-                <span
-                  className="text-white absolute top-0 left-0 transition-all duration-500 ease-out"
-                  style={{
-                    opacity: morphState.progress,
-                    transform: `translateY(${(1 - morphState.progress) * -8}px)`,
-                    left: "8.5em",
-                  }}
-                >
-                  built for Immigration
-                </span>
-              </span>
-            )}
-
-            {morphState.phase === "end" && (
-              <span
-                className="relative inline-block"
-                style={{ minWidth: "max-content" }}
-              >
-                <span className="animate-gradient-shift">
-                  Trust in our Gen.AI
-                </span>
-              </span>
-            )}
+              )}
+            </span>
+            <span className="animate-gradient-shift">Gen.AI</span>
           </h2>
 
           {/* Paragraphs below with typewriter effect */}
