@@ -45,14 +45,22 @@ export default function Product() {
 
         // Simulate scroll progress based on wheel direction
         setScrollProgress((prev) => {
-          const delta = e.deltaY > 0 ? 0.05 : -0.05;
-          const newProgress = Math.max(0, Math.min(2, prev + delta));
+          const delta = e.deltaY > 0 ? 0.04 : -0.04;
+          const newProgress = Math.max(0, Math.min(2.5, prev + delta));
 
-          // Allow scrolling past when animation is complete
-          if (newProgress >= 2 && e.deltaY > 0) {
-            setIsScrollLocked(false);
-            document.body.style.overflow = "auto";
-            return 2;
+          // Allow scrolling past when animation is complete and fully exited
+          if (newProgress >= 2.3 && e.deltaY > 0) {
+            // Use a timeout to prevent bouncing back
+            setTimeout(() => {
+              setIsScrollLocked(false);
+              document.body.style.overflow = "auto";
+              // Force scroll to next section
+              const nextElement = sectionRef.current?.nextElementSibling;
+              if (nextElement) {
+                nextElement.scrollIntoView({ behavior: "smooth" });
+              }
+            }, 200);
+            return newProgress;
           }
 
           return newProgress;
