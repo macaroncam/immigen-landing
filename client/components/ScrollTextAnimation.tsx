@@ -208,23 +208,45 @@ export default function ScrollTextAnimation() {
                               : "clamp(1.5rem, 5vw, 3rem)",
                         }}
                       >
-                        <span
-                          className="relative z-10"
-                          style={{
-                            background: `linear-gradient(90deg, rgba(201, 243, 29, 0.3) 0%, rgba(201, 243, 29, 0.3) ${highlightPercentage}%, transparent ${highlightPercentage}%)`,
-                            boxDecorationBreak: "clone",
-                            WebkitBoxDecorationBreak: "clone",
-                          }}
-                        >
-                          {paragraph}
-                        </span>
-                        {!showCompleteText &&
-                          index === displayText.split("\n\n").length - 1 &&
-                          charactersToShow < fullText.length && (
-                            <span className="animate-pulse text-lime-accent">
-                              |
+                        {paragraph.split("").map((char, charIndex) => {
+                          const globalCharIndex =
+                            currentParagraphStart + charIndex;
+                          const distanceFromReveal =
+                            globalCharIndex - charactersToReveal;
+
+                          // Calculate opacity based on distance from current reveal position
+                          let opacity;
+                          if (distanceFromReveal <= 0) {
+                            opacity = 1; // Already revealed
+                          } else if (distanceFromReveal <= 5) {
+                            opacity = Math.max(
+                              0.1,
+                              1 - distanceFromReveal * 0.2,
+                            ); // Gradient fade
+                          } else {
+                            opacity = 0.1; // Not yet revealed
+                          }
+
+                          const shouldHighlight =
+                            globalCharIndex <= charactersToReveal;
+
+                          return (
+                            <span
+                              key={charIndex}
+                              className="relative z-10"
+                              style={{
+                                opacity,
+                                backgroundColor: shouldHighlight
+                                  ? "rgba(201, 243, 29, 0.3)"
+                                  : "transparent",
+                                transition:
+                                  "opacity 0.3s ease-out, background-color 0.3s ease-out",
+                              }}
+                            >
+                              {char}
                             </span>
-                          )}
+                          );
+                        })}
                       </p>
                     );
                   })}
