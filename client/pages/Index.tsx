@@ -7,6 +7,7 @@ import TheSystemWasntBuiltForYou from "../components/TheSystemWasntBuiltForYou";
 import PricingSection from "../components/PricingSection";
 import CustomersSection from "../components/CustomersSection";
 import PageWrapper from "../components/PageWrapper";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 export default function Index() {
   const [showFloatingElements, setShowFloatingElements] = useState(false);
