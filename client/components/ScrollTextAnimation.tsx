@@ -70,7 +70,7 @@ export default function ScrollTextAnimation() {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl pb-4 w-full"
             style={{
               minWidth: "max-content",
-              fontSize: "clamp(1.5rem, 4vw, 3rem)",
+              fontSize: "clamp(2rem, 8vw, 8rem)",
               letterSpacing: "0.02em",
               whiteSpace: "nowrap",
               display: "flex",
