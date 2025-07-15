@@ -158,14 +158,17 @@ export default function Product() {
 
                           let opacity;
                           if (distanceFromReveal <= 0) {
+                            // Fully revealed characters
                             opacity = 1;
-                          } else if (distanceFromReveal <= 8) {
+                          } else if (distanceFromReveal <= 5) {
+                            // About to be revealed - dramatic fade
                             opacity = Math.max(
-                              0.05,
-                              1 - distanceFromReveal * 0.12,
+                              0.1,
+                              1 - distanceFromReveal * 0.3,
                             );
                           } else {
-                            opacity = 0.05;
+                            // Far away characters - nearly invisible
+                            opacity = 0.02;
                           }
 
                           const shouldHighlight =
