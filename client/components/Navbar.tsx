@@ -137,14 +137,28 @@ export default function Navbar() {
               About Us
             </a>
             <a
-              href="#"
+              href="#pricing"
               className="block text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                setIsMenuOpen(false);
+                document
+                  .getElementById("pricing")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Pricing
             </a>
             <a
-              href="#"
+              href="#customers"
               className="block text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                setIsMenuOpen(false);
+                document
+                  .getElementById("customers")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Customers
             </a>
