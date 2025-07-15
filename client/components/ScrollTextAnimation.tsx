@@ -180,45 +180,57 @@ export default function ScrollTextAnimation() {
                     letterSpacing: "0.02em",
                   }}
                 >
-                                    {displayText.split("\n\n").map((paragraph, index) => {
+                  {displayText.split("\n\n").map((paragraph, index) => {
                     const fullParagraphs = fullText.split("\n\n");
-                    const currentParagraphStart = fullParagraphs.slice(0, index).join("\n\n").length + (index > 0 ? 2 : 0);
-                    const visibleInThisParagraph = Math.max(0, Math.min(paragraph.length, charactersToShow - currentParagraphStart));
-                    const highlightPercentage = showCompleteText ? 100 : (visibleInThisParagraph / paragraph.length) * 100;
+                    const currentParagraphStart =
+                      fullParagraphs.slice(0, index).join("\n\n").length +
+                      (index > 0 ? 2 : 0);
+                    const visibleInThisParagraph = Math.max(
+                      0,
+                      Math.min(
+                        paragraph.length,
+                        charactersToShow - currentParagraphStart,
+                      ),
+                    );
+                    const highlightPercentage = showCompleteText
+                      ? 100
+                      : (visibleInThisParagraph / paragraph.length) * 100;
 
                     return (
-                    <p
-                      key={index}
-                      className={`mb-8 last:mb-0 relative ${
-                        index === 1
-                          ? "text-xl sm:text-2xl md:text-3xl lg:text-4xl"
-                          : "text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
-                      }`}
-                      style={{
-                        fontSize:
+                      <p
+                        key={index}
+                        className={`mb-8 last:mb-0 relative ${
                           index === 1
-                            ? "clamp(1.25rem, 4vw, 2.5rem)"
-                            : "clamp(1.5rem, 5vw, 3rem)",
-                      }}
-                    >
-                      <span
-                        className="relative z-10"
+                            ? "text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+                            : "text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+                        }`}
                         style={{
-                          background: `linear-gradient(90deg, rgba(201, 243, 29, 0.3) 0%, rgba(201, 243, 29, 0.3) ${(paragraph.length / fullText.length) * revealProgress * 100}%, transparent ${(paragraph.length / fullText.length) * revealProgress * 100}%)`,
-                          boxDecorationBreak: "clone",
-                          WebkitBoxDecorationBreak: "clone",
+                          fontSize:
+                            index === 1
+                              ? "clamp(1.25rem, 4vw, 2.5rem)"
+                              : "clamp(1.5rem, 5vw, 3rem)",
                         }}
                       >
-                        {paragraph}
-                      </span>
-                      {index === visibleText.split("\n\n").length - 1 &&
-                        charactersToShow < fullText.length && (
-                          <span className="animate-pulse text-lime-accent">
-                            |
-                          </span>
-                        )}
-                    </p>
-                  ))}
+                        <span
+                          className="relative z-10"
+                          style={{
+                            background: `linear-gradient(90deg, rgba(201, 243, 29, 0.3) 0%, rgba(201, 243, 29, 0.3) ${highlightPercentage}%, transparent ${highlightPercentage}%)`,
+                            boxDecorationBreak: "clone",
+                            WebkitBoxDecorationBreak: "clone",
+                          }}
+                        >
+                          {paragraph}
+                        </span>
+                        {!showCompleteText &&
+                          index === displayText.split("\n\n").length - 1 &&
+                          charactersToShow < fullText.length && (
+                            <span className="animate-pulse text-lime-accent">
+                              |
+                            </span>
+                          )}
+                      </p>
+                    );
+                  })}
                 </div>
               );
             })()}
