@@ -100,54 +100,6 @@ export default function ScrollTextAnimation() {
             </h2>
           )}
         </div>
-
-        {/* Progress indicator */}
-        <div className="mt-12 flex items-center justify-center">
-          <div className="w-32 h-1 bg-white/20 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-lime-accent rounded-full transition-all duration-300"
-              style={{ width: `${scrollProgress * 100}%` }}
-            />
-          </div>
-        </div>
-
-        {/* Scroll hint */}
-        <div
-          className="mt-8 flex flex-col items-center transition-opacity duration-500"
-          style={{ opacity: 1 - scrollProgress }}
-        >
-          <p className="text-white/60 text-sm mb-4">Scroll to reveal</p>
-          <svg
-            className="w-6 h-6 text-lime-accent animate-bounce"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </div>
-      </div>
-
-      {/* Floating particles effect */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-lime-accent/20 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              transform: `translateY(${scrollProgress * 100}px) scale(${scrollProgress})`,
-              opacity: scrollProgress * 0.6,
-            }}
-          />
-        ))}
       </div>
     </div>
   );
