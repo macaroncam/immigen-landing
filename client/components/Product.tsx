@@ -2,84 +2,74 @@ import { useEffect, useState, useRef } from "react";
 
 export default function Product() {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [isInSection, setIsInSection] = useState(false);
-  const [hasExited, setHasExited] = useState(false);
+  const [isScrollLocked, setIsScrollLocked] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let isScrollLocked = false;
-
-    const handleWheel = (e: WheelEvent) => {
-      if (!sectionRef.current || hasExited) return;
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
 
       const rect = sectionRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
-      // Check if we're in the section area
-      const inSection = rect.top <= 0 && rect.bottom > windowHeight;
+      // Check if section is in viewport
+      const sectionTop = rect.top;
+      const sectionBottom = rect.bottom;
 
-      if (inSection && !hasExited) {
+      // If section is in viewport, lock scrolling
+      if (sectionTop <= 0 && sectionBottom > windowHeight) {
+        setIsScrollLocked(true);
+
+        // Prevent default scrolling
+        document.body.style.overflow = "hidden";
+
+        // Calculate progress for animations
+        const progress = Math.abs(sectionTop) / (rect.height - windowHeight);
+        const clampedProgress = Math.max(0, Math.min(2, progress * 2));
+        setScrollProgress(clampedProgress);
+      } else {
+        setIsScrollLocked(false);
+        document.body.style.overflow = "auto";
+
+        // Reset progress when not in section
+        if (sectionTop > 0) {
+          setScrollProgress(0);
+        }
+      }
+    };
+
+    // Handle wheel events for scroll hijacking
+    const handleWheel = (e: WheelEvent) => {
+      if (isScrollLocked && sectionRef.current) {
         e.preventDefault();
-        e.stopPropagation();
 
-        setIsInSection(true);
-        isScrollLocked = true;
-
-        // Update progress based on wheel direction
+        // Simulate scroll progress based on wheel direction
         setScrollProgress((prev) => {
-          const delta = e.deltaY > 0 ? 0.08 : -0.08;
-          const newProgress = Math.max(0, Math.min(2.2, prev + delta));
+          const delta = e.deltaY > 0 ? 0.05 : -0.05;
+          const newProgress = Math.max(0, Math.min(2, prev + delta));
 
-          // Once we reach the end, allow exit
-          if (newProgress >= 2.0 && e.deltaY > 0) {
-            setHasExited(true);
-            setIsInSection(false);
-            isScrollLocked = false;
-
-            // Re-enable scrolling and scroll past the section
-            setTimeout(() => {
-              document.body.style.overflow = "auto";
-              window.scrollBy({ top: windowHeight, behavior: "smooth" });
-            }, 100);
+          // Allow scrolling past when animation is complete
+          if (newProgress >= 2 && e.deltaY > 0) {
+            setIsScrollLocked(false);
+            document.body.style.overflow = "auto";
+            return 2;
           }
 
           return newProgress;
         });
-      } else if (!inSection) {
-        setIsInSection(false);
-        isScrollLocked = false;
       }
     };
 
-    const handleScroll = () => {
-      if (!sectionRef.current || hasExited) return;
-
-      const rect = sectionRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      // Only set initial state, don't interfere with wheel handling
-      const inSection = rect.top <= 0 && rect.bottom > windowHeight;
-
-      if (inSection && !isInSection && scrollProgress === 0) {
-        setIsInSection(true);
-      } else if (!inSection && rect.top > windowHeight) {
-        // Reset if we scroll back up above the section
-        setScrollProgress(0);
-        setHasExited(false);
-        setIsInSection(false);
-      }
-    };
-
-    // Use wheel for main interaction, scroll for initial detection
+    window.addEventListener("scroll", handleScroll);
     window.addEventListener("wheel", handleWheel, { passive: false });
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Initial call
 
     return () => {
-      window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("scroll", handleScroll);
-      document.body.style.overflow = "auto";
+      window.removeEventListener("wheel", handleWheel);
+      document.body.style.overflow = "auto"; // Cleanup
     };
-  }, [scrollProgress, isInSection, hasExited]);
+  }, [isScrollLocked]);
 
   // Text morphing logic
   const getMorphingState = () => {
@@ -104,6 +94,7 @@ export default function Product() {
     <div
       ref={sectionRef}
       className="relative min-h-screen flex items-start justify-start overflow-hidden pt-32"
+      style={{ height: "200vh" }} // Extra height for scroll hijacking
     >
       {/* Background Image */}
       <div className="absolute inset-0">
