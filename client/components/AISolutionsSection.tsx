@@ -74,7 +74,7 @@ export default function AISolutionsSection() {
                 </span>
               </h3>
               <p className="text-white/90 text-base leading-relaxed">
-                Most legal teams use using ChatGPT, Claude, and other
+                Most legal teams are using ChatGPT, Claude, and other
                 general-purpose AI to ghostwrite petitions behind the scenes.
                 You never see it, but you still pay as if every sentence was
                 custom and hand-crafted.
