@@ -66,8 +66,11 @@ export default function ScrollTextAnimation() {
       <div className="relative z-10 px-2 sm:px-4 text-left w-full min-w-0">
         <div className="font-sans font-bold leading-relaxed tracking-tighter overflow-visible w-full">
           <h2
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl pb-4 whitespace-nowrap w-full"
-            style={{ minWidth: "max-content" }}
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl pb-4 whitespace-nowrap w-full"
+            style={{
+              minWidth: "max-content",
+              fontSize: "clamp(1.5rem, 4vw, 3rem)",
+            }}
           >
             <span className="text-white">Trust in </span>
             {morphState.phase === "start" && (
