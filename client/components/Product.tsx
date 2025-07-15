@@ -155,32 +155,52 @@ export default function Product() {
                           const distanceFromReveal =
                             globalCharIndex - charactersToReveal;
 
-                          let opacity;
+                          let opacity, scale, transform;
                           if (distanceFromReveal <= 0) {
+                            // Fully revealed
                             opacity = 1;
-                          } else if (distanceFromReveal <= 8) {
+                            scale = 1;
+                            transform = "translateY(0px)";
+                          } else if (distanceFromReveal <= 6) {
+                            // About to be revealed - dramatic gradient
                             opacity = Math.max(
-                              0.05,
-                              1 - distanceFromReveal * 0.12,
+                              0.1,
+                              1 - distanceFromReveal * 0.25,
                             );
+                            scale = 0.8 + (1 - distanceFromReveal * 0.05);
+                            transform = `translateY(${distanceFromReveal * 3}px)`;
                           } else {
-                            opacity = 0.05;
+                            // Far from reveal - almost invisible
+                            opacity = 0.02;
+                            scale = 0.8;
+                            transform = "translateY(10px)";
                           }
 
                           const shouldHighlight =
                             globalCharIndex <= charactersToReveal;
 
+                          // Enhanced highlighting for more drama
+                          const isJustRevealed =
+                            distanceFromReveal <= 0 && distanceFromReveal >= -3;
+
                           return (
                             <span
                               key={charIndex}
-                              className="relative z-10"
+                              className="relative z-10 inline-block"
                               style={{
                                 opacity,
+                                transform: `scale(${scale}) ${transform}`,
                                 backgroundColor: shouldHighlight
-                                  ? "rgba(201, 243, 29, 0.3)"
+                                  ? isJustRevealed
+                                    ? "rgba(201, 243, 29, 0.6)"
+                                    : "rgba(201, 243, 29, 0.2)"
                                   : "transparent",
+                                boxShadow: isJustRevealed
+                                  ? "0 0 10px rgba(201, 243, 29, 0.4)"
+                                  : "none",
+                                borderRadius: "2px",
                                 transition:
-                                  "opacity 0.3s ease-out, background-color 0.3s ease-out",
+                                  "all 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
                               }}
                             >
                               {char}
