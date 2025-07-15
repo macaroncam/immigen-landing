@@ -48,15 +48,17 @@ export default function TheSystemWasntBuiltForYou() {
           <div className="space-y-8">
             {/* It's Overpriced. */}
             <div
-              className={`border-b border-lime-accent/20 pb-6 mb-6 cursor-pointer transition-all duration-300 ${
-                hoveredSection === "overpriced" ? "opacity-100" : "opacity-60"
+              className={`border-b border-lime-accent/20 pb-8 cursor-pointer transition-all duration-500 ease-out ${
+                hoveredSection === "overpriced"
+                  ? "opacity-100 scale-[1.02]"
+                  : "opacity-60 scale-100"
               } hover:opacity-100`}
               onMouseEnter={() => setHoveredSection("overpriced")}
               onMouseLeave={() => setHoveredSection(null)}
             >
-              <h3 className="text-xl sm:text-2xl font-normal mb-3 leading-tight">
+              <h3 className="text-2xl sm:text-3xl font-normal mb-4 leading-tight">
                 <span
-                  className={`transition-all duration-300 ${
+                  className={`transition-all duration-500 ${
                     hoveredSection === "overpriced"
                       ? "animate-gradient-shift"
                       : "text-white/70"
@@ -66,7 +68,7 @@ export default function TheSystemWasntBuiltForYou() {
                 </span>
               </h3>
               <p
-                className={`text-base leading-relaxed transition-all duration-300 ${
+                className={`text-lg leading-relaxed transition-all duration-500 ${
                   hoveredSection === "overpriced"
                     ? "text-white"
                     : "text-white/50"
