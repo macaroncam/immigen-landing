@@ -21,28 +21,21 @@ export default function AISolutionsSection() {
           {/* AI for the Enterprise Badge */}
           <div className="inline-flex items-center px-5 py-2 rounded-full bg-lime-accent/10 backdrop-blur-sm mb-5 border border-lime-accent/20">
             <span className="text-xs font-normal text-lime-accent uppercase tracking-[3px]">
-              AI for the Enterprise
+              The Problem
             </span>
           </div>
 
           {/* Main Heading */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-4 leading-tight">
             <span className="animate-gradient-shift">
-              Full-Stack AI Solutions
+              The System Wasn't Built for You
             </span>
           </h2>
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-white/80 max-w-2xl mb-8">
-            Outcomes delivered with world-class data, models, agents, and
-            deployment.
+            Immigration was built for bureaucracy—not for people.
           </p>
-
-          {/* Book a Demo Button */}
-          <button className="inline-flex items-center gap-2 px-6 py-3 bg-lime-accent text-black font-sans font-bold text-sm rounded-2xl hover:opacity-90 transition-opacity">
-            Book a Demo
-            <span className="text-black">→</span>
-          </button>
         </div>
 
         {/* Main Content Section */}
