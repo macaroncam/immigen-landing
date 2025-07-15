@@ -17,11 +17,11 @@ export default function CustomersSection() {
           </p>
         </div>
 
-        {/* Customer Boxes - Chat Bubble Style */}
+        {/* Customer Boxes - Minimal Chat Style */}
         <div className="relative">
           {/* Self-petitioners Box - Top Left */}
-          <div className="absolute top-0 left-0 w-[400px] lg:w-[460px] transform -rotate-2">
-            <div className="bg-gray-800/95 rounded-3xl p-6">
+          <div className="absolute top-0 left-0 w-[380px] lg:w-[440px] transform -rotate-2">
+            <div className="bg-gray-800 rounded-2xl p-6">
               <h3 className="font-sans text-lg font-medium text-white mb-3">
                 Self-petitioners
               </h3>
@@ -33,8 +33,8 @@ export default function CustomersSection() {
           </div>
 
           {/* Global teams Box - Bottom Right */}
-          <div className="absolute top-[180px] lg:top-[160px] right-0 w-[400px] lg:w-[460px] transform rotate-2">
-            <div className="bg-gray-800/95 rounded-3xl p-6">
+          <div className="absolute top-[160px] lg:top-[140px] right-0 w-[380px] lg:w-[440px] transform rotate-2">
+            <div className="bg-gray-800 rounded-2xl p-6">
               <h3 className="font-sans text-lg font-medium text-white mb-3">
                 Global teams
               </h3>
@@ -46,7 +46,7 @@ export default function CustomersSection() {
           </div>
 
           {/* Spacer for proper height */}
-          <div className="h-[360px]"></div>
+          <div className="h-[320px]"></div>
         </div>
       </div>
     </div>
