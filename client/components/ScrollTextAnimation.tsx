@@ -81,41 +81,38 @@ export default function ScrollTextAnimation() {
             )}
 
             {morphState.phase === "morphing" && (
-              <>
-                <span className="animate-gradient-shift">Trust in </span>
-                <span
-                  className="relative inline-block"
-                  style={{ minWidth: "max-content" }}
-                >
-                  <span className="animate-gradient-shift invisible">
-                    our Gen.AI
-                  </span>
-                  <span
-                    className="animate-gradient-shift absolute top-0 left-0 transition-all duration-700 ease-out"
-                    style={{
-                      opacity: 1 - morphState.progress,
-                      transform: `translateY(${morphState.progress * 8}px)`,
-                    }}
-                  >
-                    Immi
-                  </span>
-                  <span
-                    className="animate-gradient-shift absolute top-0 left-0 transition-all duration-700 ease-out"
-                    style={{
-                      opacity: morphState.progress,
-                      transform: `translateY(${(1 - morphState.progress) * -8}px)`,
-                    }}
-                  >
-                    our
-                  </span>
-                  <span
-                    className="animate-gradient-shift absolute top-0 left-0"
-                    style={{ left: "2.5em" }}
-                  >
-                    Gen.AI
-                  </span>
+              <span
+                className="relative inline-block"
+                style={{ minWidth: "max-content" }}
+              >
+                <span className="animate-gradient-shift invisible">
+                  our Gen.AI
                 </span>
-              </>
+                <span
+                  className="animate-gradient-shift absolute top-0 left-0 transition-all duration-700 ease-out"
+                  style={{
+                    opacity: 1 - morphState.progress,
+                    transform: `translateY(${morphState.progress * 8}px)`,
+                  }}
+                >
+                  Immi
+                </span>
+                <span
+                  className="animate-gradient-shift absolute top-0 left-0 transition-all duration-700 ease-out"
+                  style={{
+                    opacity: morphState.progress,
+                    transform: `translateY(${(1 - morphState.progress) * -8}px)`,
+                  }}
+                >
+                  our
+                </span>
+                <span
+                  className="animate-gradient-shift absolute top-0 left-0"
+                  style={{ left: "2.5em" }}
+                >
+                  Gen.AI
+                </span>
+              </span>
             )}
 
             {morphState.phase === "phase2" && (
