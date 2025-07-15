@@ -1,4 +1,10 @@
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+
 export default function CustomersSection() {
+  const headerAnimation = useScrollAnimation({ delay: 100 });
+  const leftBoxAnimation = useScrollAnimation({ delay: 200 });
+  const rightBoxAnimation = useScrollAnimation({ delay: 400 });
+
   return (
     <div id="customers" className="relative min-h-screen overflow-hidden">
       {/* Background Image */}
