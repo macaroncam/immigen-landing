@@ -137,7 +137,7 @@ export default function ScrollTextAnimation() {
                 <div
                   className="font-sans text-white/90 leading-relaxed"
                   style={{
-                    letterSpacing: "0.1em",
+                    letterSpacing: "0.2em",
                   }}
                 >
                   {displayText.split("\n\n").map((paragraph, index) => {
