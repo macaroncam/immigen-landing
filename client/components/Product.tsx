@@ -63,7 +63,11 @@ export default function Product() {
       <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
 
       {/* Text Content */}
-      <div className="relative z-10 px-4 sm:px-6 lg:px-20 text-left w-full min-w-0">
+      <div
+        ref={textAnimation.ref}
+        className="relative z-10 px-4 sm:px-6 lg:px-20 text-left w-full min-w-0"
+        style={textAnimation.animationStyle}
+      >
         <div className="font-sans leading-relaxed tracking-tighter overflow-visible w-full">
           <h2
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl pb-4 w-full font-bold"
