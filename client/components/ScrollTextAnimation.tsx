@@ -63,7 +63,7 @@ export default function ScrollTextAnimation() {
       <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
 
       {/* Text Content */}
-      <div className="relative z-10 px-4 sm:px-6 lg:px-20 text-left">
+      <div className="relative z-10 px-2 sm:px-4 text-left w-full">
         <div className="font-sans font-bold leading-relaxed tracking-tighter overflow-visible">
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl pb-4">
             <span className="text-white">Trust in </span>
