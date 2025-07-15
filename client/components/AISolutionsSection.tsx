@@ -45,24 +45,24 @@ export default function AISolutionsSection() {
             {/* It's Overpriced. */}
             <div className="border-b border-lime-accent/20 pb-6 mb-6">
               <h3 className="text-xl sm:text-2xl font-normal mb-3 leading-tight">
-                <span className="animate-gradient-shift">
-                  It’s Overpriced.
-                </span>
+                <span className="animate-gradient-shift">It’s Overpriced.</span>
               </h3>
               <p className="text-white/90 text-base leading-relaxed">
-                Petitions routinely cost $10,000 to $20,000 for what is often a templated, recycled process. You’re paying premium prices for work that hasn’t evolved in decades.
+                Petitions routinely cost $10,000 to $20,000 for what is often a
+                templated, recycled process. You’re paying premium prices for
+                work that hasn’t evolved in decades.
               </p>
             </div>
 
             {/* It Takes Forever */}
             <div className="border-b border-lime-accent/20 pb-6 mb-6">
               <h3 className="text-xl sm:text-2xl font-normal mb-3 leading-tight">
-                <span className="animate-gradient-shift">
-                  It takes forever
-                </span>
+                <span className="animate-gradient-shift">It takes forever</span>
               </h3>
               <p className="text-white/90 text-base leading-relaxed">
-                Lawyers are overloaded and slow. Your case waits in a queue while firms juggle dozens of clients, leaving you in the dark for weeks, sometimes even months.
+                Lawyers are overloaded and slow. Your case waits in a queue
+                while firms juggle dozens of clients, leaving you in the dark
+                for weeks, sometimes even months.
               </p>
             </div>
 
@@ -74,7 +74,10 @@ export default function AISolutionsSection() {
                 </span>
               </h3>
               <p className="text-white/90 text-base leading-relaxed">
-                Most legal teams use using ChatGPT, Claude, and other general-purpose AI to ghostwrite petitions behind the scenes. You never see it, but you still pay as if every sentence was custom and hand-crafted.
+                Most legal teams use using ChatGPT, Claude, and other
+                general-purpose AI to ghostwrite petitions behind the scenes.
+                You never see it, but you still pay as if every sentence was
+                custom and hand-crafted.
               </p>
             </div>
           </div>
@@ -89,7 +92,6 @@ export default function AISolutionsSection() {
               />
             </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
