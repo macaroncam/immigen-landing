@@ -10,7 +10,7 @@ export default function TheSystemWasntBuiltForYou() {
   const imageAnimation = useScrollAnimation({ delay: 500 });
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-32">
+    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-32 pb-16">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
