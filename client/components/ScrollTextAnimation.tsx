@@ -78,12 +78,9 @@ export default function ScrollTextAnimation() {
             }}
           >
             <span className="animate-gradient-shift">Trust in </span>
-            <span className="relative inline-block">
-              <span className="animate-gradient-shift invisible">our</span>
+            <span className="relative inline-block" style={{ width: "4ch" }}>
               {morphState.phase === "start" && (
-                <span className="animate-gradient-shift absolute top-0 left-0">
-                  Immi
-                </span>
+                <span className="animate-gradient-shift">Immi</span>
               )}
               {morphState.phase === "morphing" && (
                 <>
@@ -108,9 +105,7 @@ export default function ScrollTextAnimation() {
                 </>
               )}
               {morphState.phase === "end" && (
-                <span className="animate-gradient-shift absolute top-0 left-0">
-                  our
-                </span>
+                <span className="animate-gradient-shift">our</span>
               )}
             </span>
             <span className="animate-gradient-shift">Gen.AI</span>
