@@ -159,19 +159,14 @@ export default function ScrollTextAnimation() {
               const fullText =
                 "Immigen isn't a wrapper on a general-purpose model.\n\nIt's built on a custom Logical-Semantic Integration Model (LSIM) that combine structured fact-rule chains, and in-context learning to replicate expert-level petition strategy.\n\nThe result? No hallucinations. No generic advice. But filings you can trust.";
 
-              // Calculate how much text to reveal based on scroll progress
-              const revealProgress = Math.max(
+              // Calculate opacity based on scroll progress
+              const opacityProgress = Math.max(
                 0,
-                Math.min(1, (scrollProgress - 0.7) * 1.5),
+                Math.min(1, (scrollProgress - 0.6) * 1.0),
               );
-              const charactersToShow = Math.floor(
-                fullText.length * revealProgress,
-              );
-              const visibleText = fullText.substring(0, charactersToShow);
 
-              // For complete section reading - show all text after animation completes
-              const showCompleteText = scrollProgress > 1.2;
-              const displayText = showCompleteText ? fullText : visibleText;
+              // Always show full text, just change opacity
+              const displayText = fullText;
 
               return (
                 <div
