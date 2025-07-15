@@ -30,23 +30,18 @@ export default function ScrollTextAnimation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Text morphing logic
-  const getDisplayText = () => {
-    const startText = "Trust in Immigen";
-    const endText = "AI built for Immigration";
-
-    if (scrollProgress < 0.3) {
-      return startText;
-    } else if (scrollProgress > 0.7) {
-      return endText;
+  // Text morphing logic - only "Immigen" changes
+  const getMorphingState = () => {
+    if (scrollProgress < 0.1) {
+      return { phase: "start" };
+    } else if (scrollProgress > 0.4) {
+      return { phase: "end" };
     } else {
-      // Morphing phase - show both texts with different opacities
-      return { startText, endText, isMorphing: true };
+      return { phase: "morphing", progress: (scrollProgress - 0.1) / 0.3 };
     }
   };
 
-  const displayText = getDisplayText();
-  const isMorphing = typeof displayText === "object";
+  const morphState = getMorphingState();
 
   return (
     <div
