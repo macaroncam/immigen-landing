@@ -72,21 +72,21 @@ export default function ScrollTextAnimation() {
             )}
 
             {morphState.phase === "morphing" && (
-              <span className="relative inline-block min-w-[280px] sm:min-w-[350px] md:min-w-[420px] lg:min-w-[500px] xl:min-w-[600px]">
+              <span className="relative inline-block">
                 <span
-                  className="text-white absolute top-0 left-0 transition-opacity duration-200"
+                  className="text-white absolute top-0 left-0 transition-opacity duration-500"
                   style={{
                     opacity: 1 - morphState.progress,
-                    transform: `translateY(${morphState.progress * 10}px)`,
+                    transform: `translateY(${morphState.progress * 15}px)`,
                   }}
                 >
                   Immigen
                 </span>
                 <span
-                  className="animate-gradient-shift absolute top-0 left-0 transition-opacity duration-200"
+                  className="animate-gradient-shift absolute top-0 left-0 transition-opacity duration-500"
                   style={{
                     opacity: morphState.progress,
-                    transform: `translateY(${(1 - morphState.progress) * -10}px)`,
+                    transform: `translateY(${(1 - morphState.progress) * -15}px)`,
                   }}
                 >
                   AI built for Immigration
