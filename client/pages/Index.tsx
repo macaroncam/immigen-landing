@@ -127,8 +127,8 @@ export default function Index() {
       {/* The System Wasn't Built for You Section */}
       <TheSystemWasntBuiltForYou />
 
-      {/* Scroll Text Animation */}
-      <ScrollTextAnimation />
+      {/* Product Section */}
+      <Product />
 
       {/* Customers Section */}
       <CustomersSection />
