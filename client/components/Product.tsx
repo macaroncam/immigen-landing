@@ -131,7 +131,6 @@ export default function Product() {
                   className="font-sans text-white/90"
                   style={{
                     letterSpacing: "0.2em",
-                    lineHeight: "2.5",
                   }}
                 >
                   {displayText.split("\n\n").map((paragraph, index) => {
