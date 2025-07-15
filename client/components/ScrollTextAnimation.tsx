@@ -162,7 +162,7 @@ export default function ScrollTextAnimation() {
               // Calculate how much text to reveal based on scroll progress
               const revealProgress = Math.max(
                 0,
-                Math.min(1, (scrollProgress - 0.6) * 1.5),
+                Math.min(1, (scrollProgress - 0.6) * 0.8),
               );
               const charactersToShow = Math.floor(
                 fullText.length * revealProgress,
