@@ -151,6 +151,29 @@ export default function ScrollTextAnimation() {
               </span>
             )}
           </h2>
+
+          {/* Paragraphs below */}
+          <div
+            className="mt-12 max-w-4xl"
+            style={{
+              opacity: Math.max(0, Math.min(1, (scrollProgress - 0.2) * 2)),
+            }}
+          >
+            <p className="font-sans text-lg md:text-xl text-white/90 leading-relaxed mb-8">
+              Immigen isn't a wrapper on a general-purpose model.
+            </p>
+
+            <p className="font-sans text-lg md:text-xl text-white/90 leading-relaxed mb-8">
+              It's built on a custom Logical-Semantic Integration Model (LSIM)
+              that blends structured fact-rule chains, semantic search, and
+              in-context learning to replicate expert-level petition strategy.
+            </p>
+
+            <p className="font-sans text-lg md:text-xl text-white/90 leading-relaxed">
+              The result? No hallucinations. No generic advice. But filings you
+              can trust.
+            </p>
+          </div>
         </div>
       </div>
     </div>
