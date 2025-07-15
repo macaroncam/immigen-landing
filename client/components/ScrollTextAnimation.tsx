@@ -75,9 +75,21 @@ export default function ScrollTextAnimation() {
             )}
 
             {morphState.phase === "morphing" && (
-              <span className="relative inline-block">
+              <span
+                className="relative inline-block"
+                style={{ minWidth: "max-content" }}
+              >
                 <span
-                  className="text-white transition-all duration-700 ease-out"
+                  className="text-white transition-all duration-700 ease-out invisible"
+                  style={{
+                    opacity: 1 - morphState.progress,
+                    transform: `translateY(${morphState.progress * 5}px) scale(${1 - morphState.progress * 0.05})`,
+                  }}
+                >
+                  Gen.AI built for Immigration
+                </span>
+                <span
+                  className="text-white absolute top-0 left-0 transition-all duration-700 ease-out"
                   style={{
                     opacity: 1 - morphState.progress,
                     transform: `translateY(${morphState.progress * 5}px) scale(${1 - morphState.progress * 0.05})`,
