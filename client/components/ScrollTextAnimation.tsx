@@ -9,18 +9,15 @@ export default function ScrollTextAnimation() {
       if (!sectionRef.current) return;
 
       const rect = sectionRef.current.getBoundingClientRect();
-      const sectionTop = rect.top;
-      const sectionHeight = rect.height;
       const windowHeight = window.innerHeight;
 
-      // Calculate progress based on section visibility
-      const scrollStart = windowHeight;
-      const scrollEnd = -sectionHeight;
-      const scrollRange = scrollStart - scrollEnd;
-      const currentProgress = (scrollStart - sectionTop) / scrollRange;
+      // Calculate progress based on text position in viewport
+      // When text is at bottom of screen (rect.top = windowHeight), progress = 0
+      // When text is at top of screen (rect.top = 0), progress = 1
+      const progress = 1 - rect.top / windowHeight;
 
       // Clamp between 0 and 1
-      const clampedProgress = Math.max(0, Math.min(1, currentProgress));
+      const clampedProgress = Math.max(0, Math.min(1, progress));
       setScrollProgress(clampedProgress);
     };
 
