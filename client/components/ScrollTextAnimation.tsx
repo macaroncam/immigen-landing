@@ -86,7 +86,7 @@ export default function ScrollTextAnimation() {
                     transform: `translateY(${(1 - morphState.progress) * -15}px)`,
                   }}
                 >
-                  AI built for Immigration
+                  Gen.AI built for Immigration
                 </span>
               </span>
             )}
