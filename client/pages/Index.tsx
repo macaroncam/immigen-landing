@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import FloatingElements from "../components/FloatingElements";
 import ScrollTextAnimation from "../components/ScrollTextAnimation";
-import AISolutionsSection from "../components/AISolutionsSection";
+import TheSystemWasntBuiltForYou from "../components/TheSystemWasntBuiltForYou";
 import PricingSection from "../components/PricingSection";
 import CustomersSection from "../components/CustomersSection";
 import PageWrapper from "../components/PageWrapper";
