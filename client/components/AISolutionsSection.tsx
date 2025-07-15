@@ -28,7 +28,7 @@ export default function AISolutionsSection() {
           {/* Main Heading */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-4 leading-tight">
             <span className="animate-gradient-shift">
-              The System Wasn't Built for You
+              The System Wasn't Built for You.
             </span>
           </h2>
 
@@ -42,43 +42,39 @@ export default function AISolutionsSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Side - Feature List */}
           <div className="space-y-0">
-            {/* Fine-Tuning and RLHF */}
+            {/* It's Overpriced. */}
             <div className="border-b border-lime-accent/20 pb-6 mb-6">
               <h3 className="text-xl sm:text-2xl font-normal mb-3 leading-tight">
                 <span className="animate-gradient-shift">
-                  Fine-Tuning and RLHF
+                  It’s Overpriced.
                 </span>
               </h3>
               <p className="text-white/90 text-base leading-relaxed">
-                Adapt best-in-class foundation models to your business and your
-                specific data to build sustainable, successful AI programs and
-                data from your enterprise.
+                Petitions routinely cost $10,000 to $20,000 for what is often a templated, recycled process. You’re paying premium prices for work that hasn’t evolved in decades.
               </p>
             </div>
 
-            {/* Foundation Models */}
+            {/* It Takes Forever */}
             <div className="border-b border-lime-accent/20 pb-6 mb-6">
               <h3 className="text-xl sm:text-2xl font-normal mb-3 leading-tight">
                 <span className="animate-gradient-shift">
-                  Foundation Models
+                  It takes forever
                 </span>
               </h3>
               <p className="text-white/90 text-base leading-relaxed">
-                Scale partners or integrates with all of the leading AI models,
-                from open-source to closed-source, including OpenAI, Google,
-                Meta, Cohere, and more.
+                Lawyers are overloaded and slow. Your case waits in a queue while firms juggle dozens of clients, leaving you in the dark for weeks, sometimes even months.
               </p>
             </div>
 
-            {/* Enterprise Data */}
-            <div className="pb-6">
+            {/* It's Already Written by AI */}
+            <div className="border-b border-lime-accent/20 pb-6 mb-6">
               <h3 className="text-xl sm:text-2xl font-normal mb-3 leading-tight">
-                <span className="animate-gradient-shift">Enterprise Data</span>
+                <span className="animate-gradient-shift">
+                  It's Already Written by AI
+                </span>
               </h3>
               <p className="text-white/90 text-base leading-relaxed">
-                Scale's Data Engine enables you to integrate your enterprise
-                data into the fold of these models, providing the base for
-                long-term strategic differentiation.
+                Most legal teams use using ChatGPT, Claude, and other general-purpose AI to ghostwrite petitions behind the scenes. You never see it, but you still pay as if every sentence was custom and hand-crafted.
               </p>
             </div>
           </div>
