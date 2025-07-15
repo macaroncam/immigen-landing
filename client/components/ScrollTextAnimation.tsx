@@ -176,20 +176,13 @@ export default function ScrollTextAnimation() {
                   }}
                 >
                   {displayText.split("\n\n").map((paragraph, index) => {
-                    const fullParagraphs = fullText.split("\n\n");
-                    const currentParagraphStart =
-                      fullParagraphs.slice(0, index).join("\n\n").length +
-                      (index > 0 ? 2 : 0);
-                    const visibleInThisParagraph = Math.max(
+                    // Calculate individual paragraph opacity with staggered timing
+                    const paragraphDelay = index * 0.15; // Each paragraph starts revealing slightly later
+                    const paragraphOpacity = Math.max(
                       0,
-                      Math.min(
-                        paragraph.length,
-                        charactersToShow - currentParagraphStart,
-                      ),
+                      Math.min(1, (opacityProgress - paragraphDelay) / 0.4),
                     );
-                    const highlightPercentage = showCompleteText
-                      ? 100
-                      : (visibleInThisParagraph / paragraph.length) * 100;
+                    const highlightPercentage = opacityProgress * 100;
 
                     return (
                       <p
