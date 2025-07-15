@@ -17,15 +17,15 @@ export default function CustomersSection() {
           </p>
         </div>
 
-        {/* Customer Boxes - Clean Diagonal Layout */}
+        {/* Customer Boxes - Clean Minimal Layout */}
         <div className="relative">
           {/* Self-petitioners Box - Top Left */}
-          <div className="absolute top-0 left-0 w-[400px] lg:w-[460px] transform -rotate-2">
-            <div className="bg-gradient-to-br from-gray-900/80 via-gray-800/60 to-lime-accent/10 backdrop-blur-xl rounded-3xl border border-white/10 p-8 hover:border-lime-accent/30 transition-all duration-300">
-              <h3 className="font-sans text-2xl font-semibold text-white mb-4 tracking-tight">
+          <div className="absolute top-0 left-0 w-[380px] lg:w-[440px] transform -rotate-2">
+            <div className="bg-gradient-to-b from-gray-800/90 to-gray-900/90 rounded-2xl p-6 backdrop-blur-sm">
+              <h3 className="font-sans text-xl font-medium text-white mb-3">
                 Self-petitioners
               </h3>
-              <p className="font-sans text-white/70 leading-relaxed mb-6">
+              <p className="font-sans text-white/60 leading-relaxed text-sm">
                 For researchers, founders, creatives, and builders applying for
                 EB1A, O-1, or H-1B on their own.
               </p>
@@ -33,12 +33,12 @@ export default function CustomersSection() {
           </div>
 
           {/* Global teams Box - Bottom Right */}
-          <div className="absolute top-[200px] lg:top-[180px] right-0 w-[400px] lg:w-[460px] transform rotate-2">
-            <div className="bg-gradient-to-tl from-gray-900/80 via-gray-800/60 to-lime-accent/10 backdrop-blur-xl rounded-3xl border border-white/10 p-8 hover:border-lime-accent/30 transition-all duration-300">
-              <h3 className="font-sans text-2xl font-semibold text-white mb-4 tracking-tight">
+          <div className="absolute top-[160px] lg:top-[140px] right-0 w-[380px] lg:w-[440px] transform rotate-2">
+            <div className="bg-gradient-to-b from-gray-800/90 to-gray-900/90 rounded-2xl p-6 backdrop-blur-sm">
+              <h3 className="font-sans text-xl font-medium text-white mb-3">
                 Global teams
               </h3>
-              <p className="font-sans text-white/70 leading-relaxed mb-6">
+              <p className="font-sans text-white/60 leading-relaxed text-sm">
                 For startups, labs, and enterprises hiring across
                 borders—without legal bottlenecks.
               </p>
@@ -46,7 +46,7 @@ export default function CustomersSection() {
           </div>
 
           {/* Spacer for proper height */}
-          <div className="h-[450px] lg:h-[400px]"></div>
+          <div className="h-[320px]"></div>
         </div>
       </div>
     </div>
