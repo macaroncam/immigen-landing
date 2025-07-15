@@ -5,8 +5,7 @@ export default function Product() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  // Animation for the text content
-  const textAnimation = useScrollAnimation({ delay: 200, threshold: 0.3 });
+  // No animation for Product section - should appear immediately
 
   useEffect(() => {
     const handleScroll = () => {
