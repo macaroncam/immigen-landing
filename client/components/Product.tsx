@@ -174,6 +174,10 @@ export default function Product() {
                           const shouldHighlight =
                             globalCharIndex <= charactersToReveal;
 
+                          // Make recently revealed characters more obvious
+                          const isRecentlyRevealed =
+                            distanceFromReveal <= 0 && distanceFromReveal >= -5;
+
                           return (
                             <span
                               key={charIndex}
@@ -181,10 +185,15 @@ export default function Product() {
                               style={{
                                 opacity,
                                 backgroundColor: shouldHighlight
-                                  ? "rgba(201, 243, 29, 0.3)"
+                                  ? isRecentlyRevealed
+                                    ? "rgba(201, 243, 29, 0.5)"
+                                    : "rgba(201, 243, 29, 0.2)"
                                   : "transparent",
-                                transition:
-                                  "opacity 0.3s ease-out, background-color 0.3s ease-out",
+                                boxShadow: isRecentlyRevealed
+                                  ? "0 0 8px rgba(201, 243, 29, 0.6)"
+                                  : "none",
+                                borderRadius: "2px",
+                                transition: "all 0.5s ease-out",
                               }}
                             >
                               {char}
