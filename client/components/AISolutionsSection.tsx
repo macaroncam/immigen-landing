@@ -50,11 +50,13 @@ export default function AISolutionsSection() {
           {/* Left Side - Feature List */}
           <div className="space-y-0">
             {/* Fine-Tuning and RLHF */}
-            <div className="border-b border-white/10 pb-6 mb-6">
-              <h3 className="text-xl sm:text-2xl font-normal text-white mb-3 leading-tight">
-                Fine-Tuning and RLHF
+            <div className="border-b border-lime-accent/20 pb-6 mb-6">
+              <h3 className="text-xl sm:text-2xl font-normal mb-3 leading-tight">
+                <span className="animate-gradient-shift">
+                  Fine-Tuning and RLHF
+                </span>
               </h3>
-              <p className="text-white text-base leading-relaxed">
+              <p className="text-white/90 text-base leading-relaxed">
                 Adapt best-in-class foundation models to your business and your
                 specific data to build sustainable, successful AI programs and
                 data from your enterprise.
@@ -62,11 +64,13 @@ export default function AISolutionsSection() {
             </div>
 
             {/* Foundation Models */}
-            <div className="border-b border-white/10 pb-6 mb-6">
-              <h3 className="text-xl sm:text-2xl font-normal text-white mb-3 leading-tight">
-                Foundation Models
+            <div className="border-b border-lime-accent/20 pb-6 mb-6">
+              <h3 className="text-xl sm:text-2xl font-normal mb-3 leading-tight">
+                <span className="animate-gradient-shift">
+                  Foundation Models
+                </span>
               </h3>
-              <p className="text-white text-base leading-relaxed">
+              <p className="text-white/90 text-base leading-relaxed">
                 Scale partners or integrates with all of the leading AI models,
                 from open-source to closed-source, including OpenAI, Google,
                 Meta, Cohere, and more.
@@ -75,10 +79,10 @@ export default function AISolutionsSection() {
 
             {/* Enterprise Data */}
             <div className="pb-6">
-              <h3 className="text-xl sm:text-2xl font-normal text-white mb-3 leading-tight">
-                Enterprise Data
+              <h3 className="text-xl sm:text-2xl font-normal mb-3 leading-tight">
+                <span className="animate-gradient-shift">Enterprise Data</span>
               </h3>
-              <p className="text-white text-base leading-relaxed">
+              <p className="text-white/90 text-base leading-relaxed">
                 Scale's Data Engine enables you to integrate your enterprise
                 data into the fold of these models, providing the base for
                 long-term strategic differentiation.
