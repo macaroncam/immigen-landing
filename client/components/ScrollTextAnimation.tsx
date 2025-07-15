@@ -78,7 +78,7 @@ export default function ScrollTextAnimation() {
               <span className="text-white">ImmiGen.AI</span>
             )}
 
-            {morphState.phase === "phase1" && (
+            {morphState.phase === "morphing" && (
               <span
                 className="relative inline-block"
                 style={{ minWidth: "max-content" }}
