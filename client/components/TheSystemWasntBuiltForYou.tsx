@@ -143,11 +143,19 @@ export default function TheSystemWasntBuiltForYou() {
           {/* Right Side - 3D Visualization */}
           <div className="flex justify-center lg:justify-end">
             <div className="w-full max-w-2xl">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Fdc9bec237a7c4c8db3eebedfa5bf8146%2Fb2991e6080e84298ae60359551a28a4e?format=webp&width=800"
-                alt="3D AI Data Visualization"
-                className="w-full h-auto"
-              />
+              <div
+                className={`transition-all duration-500 ${
+                  hoveredSection === "overpriced"
+                    ? "opacity-100 scale-100"
+                    : "opacity-0 scale-95"
+                }`}
+              >
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fdc9bec237a7c4c8db3eebedfa5bf8146%2Fb2991e6080e84298ae60359551a28a4e?format=webp&width=800"
+                  alt="3D AI Data Visualization"
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
           </div>
         </div>
