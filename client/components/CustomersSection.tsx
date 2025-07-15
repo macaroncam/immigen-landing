@@ -17,15 +17,15 @@ export default function CustomersSection() {
           </p>
         </div>
 
-        {/* Customer Boxes - Ultra Clean */}
+        {/* Customer Boxes - Chat Bubble Style */}
         <div className="relative">
           {/* Self-petitioners Box - Top Left */}
           <div className="absolute top-0 left-0 w-[400px] lg:w-[460px] transform -rotate-2">
-            <div className="bg-gradient-to-b from-gray-700/80 to-gray-800/90 rounded-3xl p-7">
+            <div className="bg-gray-800/95 rounded-3xl p-6">
               <h3 className="font-sans text-lg font-medium text-white mb-3">
                 Self-petitioners
               </h3>
-              <p className="font-sans text-white/70 leading-relaxed text-sm">
+              <p className="font-sans text-white/80 leading-relaxed text-sm">
                 For researchers, founders, creatives, and builders applying for
                 EB1A, O-1, or H-1B on their own.
               </p>
@@ -34,11 +34,11 @@ export default function CustomersSection() {
 
           {/* Global teams Box - Bottom Right */}
           <div className="absolute top-[180px] lg:top-[160px] right-0 w-[400px] lg:w-[460px] transform rotate-2">
-            <div className="bg-gradient-to-b from-gray-700/80 to-gray-800/90 rounded-3xl p-7">
+            <div className="bg-gray-800/95 rounded-3xl p-6">
               <h3 className="font-sans text-lg font-medium text-white mb-3">
                 Global teams
               </h3>
-              <p className="font-sans text-white/70 leading-relaxed text-sm">
+              <p className="font-sans text-white/80 leading-relaxed text-sm">
                 For startups, labs, and enterprises hiring across
                 borders—without legal bottlenecks.
               </p>
@@ -46,7 +46,7 @@ export default function CustomersSection() {
           </div>
 
           {/* Spacer for proper height */}
-          <div className="h-[380px]"></div>
+          <div className="h-[360px]"></div>
         </div>
       </div>
     </div>
