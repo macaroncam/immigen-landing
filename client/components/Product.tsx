@@ -60,6 +60,12 @@ export default function Product() {
       <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-green-500/3 to-lime-500/5"></div>
       <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
 
+      {/* Top edge gradient for continuity */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-green-900/10 to-transparent"></div>
+
+      {/* Bottom edge gradient for continuity */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-green-900/10 to-transparent"></div>
+
       {/* Text Content */}
       <div className="relative z-10 px-4 sm:px-6 lg:px-20 text-left w-full min-w-0">
         <div className="font-sans leading-relaxed tracking-tighter overflow-visible w-full">
