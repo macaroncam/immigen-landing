@@ -4,6 +4,11 @@ import { useScrollAnimation } from "../hooks/useScrollAnimation";
 export default function TheSystemWasntBuiltForYou() {
   const [hoveredSection, setHoveredSection] = useState<string | null>(null);
 
+  // Animation hooks for different sections
+  const headerAnimation = useScrollAnimation({ delay: 100 });
+  const contentAnimation = useScrollAnimation({ delay: 300 });
+  const imageAnimation = useScrollAnimation({ delay: 500 });
+
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-32">
       {/* Background Image */}
