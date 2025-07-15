@@ -122,6 +122,9 @@ export default function Index() {
         </div>
       </div>
 
+      {/* Customers Section */}
+      <CustomersSection />
+
       {/* Pricing Section */}
       <PricingSection />
     </PageWrapper>
