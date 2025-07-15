@@ -122,7 +122,7 @@ export default function TheSystemWasntBuiltForYou() {
               onMouseEnter={() => setHoveredSection("ai")}
               onMouseLeave={() => setHoveredSection(null)}
             >
-              <h3 className="text-2xl sm:text-3xl font-normal mb-4 leading-tight">
+              <h3 className="text-2xl sm:text-3xl font-sans font-bold mb-4 leading-tight">
                 <span
                   className={`transition-all duration-500 ${
                     hoveredSection === "ai"
@@ -134,7 +134,7 @@ export default function TheSystemWasntBuiltForYou() {
                 </span>
               </h3>
               <p
-                className={`text-lg leading-relaxed transition-all duration-500 ${
+                className={`text-lg font-sans font-medium leading-relaxed transition-all duration-500 ${
                   hoveredSection === "ai" ? "text-white" : "text-white/50"
                 }`}
               >
