@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export default function TheSystemWasntBuiltForYou() {
+  const [hoveredSection, setHoveredSection] = useState<string | null>(null);
+
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-32">
       {/* Background Image */}
