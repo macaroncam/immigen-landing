@@ -33,14 +33,26 @@ export default function Navbar() {
             Product
           </a>
           <a
-            href="#"
+            href="#pricing"
             className="text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("pricing")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Pricing
           </a>
           <a
-            href="#"
+            href="#customers"
             className="text-nav-text font-sans font-bold text-sm hover:text-white transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("customers")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Customers
           </a>
