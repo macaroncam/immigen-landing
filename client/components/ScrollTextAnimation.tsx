@@ -85,7 +85,7 @@ export default function ScrollTextAnimation() {
                 className="relative inline-block animate-gradient-shift"
                 style={{ minWidth: "max-content" }}
               >
-                <span className="invisible">Trust in our Gen.AI</span>
+                <span className="invisible">our Gen.AI</span>
                 <span className="absolute top-0 left-0">Trust in </span>
                 <span
                   className="absolute top-0 left-0 transition-all duration-700 ease-out"
