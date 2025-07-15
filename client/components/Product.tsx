@@ -118,6 +118,38 @@ export default function Product() {
       <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-green-500/3 to-lime-500/5"></div>
       <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
 
+      {/* AI Lady Hologram - Revealed from right as text exits left */}
+      <div
+        className="absolute inset-0 flex items-center justify-center z-5"
+        style={{
+          transform: `translateX(${100 - exitProgress * 100}%)`,
+          transition: "transform 0.8s ease-out",
+          opacity: exitProgress > 0.1 ? exitProgress : 0,
+        }}
+      >
+        <div className="relative w-full max-w-xl h-full flex items-center justify-center">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2Fdc9bec237a7c4c8db3eebedfa5bf8146%2Fdc671564e8b94567b8ee2a05967f4e81?format=webp&width=800"
+            alt="AI Immigration Agent"
+            className="w-auto h-4/5 max-h-screen object-contain"
+            style={{
+              filter: `brightness(${0.9 + exitProgress * 0.3}) saturate(${1.2 + exitProgress * 0.3})`,
+              transform: `scale(${0.85 + exitProgress * 0.15})`,
+              transition: "filter 0.8s ease-out, transform 0.8s ease-out",
+            }}
+          />
+
+          {/* Lime green glow effect */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: `radial-gradient(ellipse at center, rgba(201, 243, 29, ${exitProgress * 0.2}) 0%, transparent 70%)`,
+              mixBlendMode: "screen",
+            }}
+          />
+        </div>
+      </div>
+
       {/* Text Content */}
       <div className="relative z-10 px-4 sm:px-6 lg:px-20 text-left w-full min-w-0">
         <div className="font-sans leading-relaxed tracking-tighter overflow-visible w-full">
