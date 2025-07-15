@@ -29,15 +29,20 @@ export default function ScrollTextAnimation() {
 
   // Text morphing logic - slower transition
   const getMorphingState = () => {
-    if (scrollProgress < 0.4) {
-      return { phase: "start" };
-    } else if (scrollProgress > 0.6) {
-      return { phase: "end" };
-    } else {
+    if (scrollProgress < 0.3) {
+      return { phase: "start" }; // "Trust in ImmiGen.AI"
+    } else if (scrollProgress < 0.5) {
       return {
-        phase: "morphing",
-        progress: Math.sin((((scrollProgress - 0.4) / 0.2) * Math.PI) / 2), // Eased progress
+        phase: "phase1",
+        progress: (scrollProgress - 0.3) / 0.2, // "Immi" disappears, "Gen.AI" stays
       };
+    } else if (scrollProgress < 0.7) {
+      return {
+        phase: "phase2",
+        progress: (scrollProgress - 0.5) / 0.2, // " built for Immigration" appears, "Gen.AI" highlights
+      };
+    } else {
+      return { phase: "end" }; // "Trust in Gen.AI built for Immigration"
     }
   };
 
