@@ -113,8 +113,13 @@ export default function ScrollTextAnimation() {
             )}
 
             {morphState.phase === "end" && (
-              <span className="animate-gradient-shift">
-                Gen.AI built for Immigration
+              <span
+                className="relative inline-block"
+                style={{ minWidth: "max-content" }}
+              >
+                <span className="animate-gradient-shift">
+                  Gen.AI built for Immigration
+                </span>
               </span>
             )}
           </h2>
