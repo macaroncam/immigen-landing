@@ -80,40 +80,62 @@ export default function ScrollTextAnimation() {
           >
             <span className="text-white">Trust in </span>
             {morphState.phase === "start" && (
-              <span className="text-white">Immigen</span>
+              <span className="text-white">ImmiGen.AI</span>
             )}
 
-            {morphState.phase === "morphing" && (
+            {morphState.phase === "phase1" && (
               <span
                 className="relative inline-block"
                 style={{ minWidth: "max-content" }}
               >
-                <span
-                  className="text-white transition-all duration-700 ease-out invisible"
-                  style={{
-                    opacity: 1 - morphState.progress,
-                    transform: `translateY(${morphState.progress * 5}px) scale(${1 - morphState.progress * 0.05})`,
-                  }}
-                >
+                <span className="text-white invisible">
                   Gen.AI built for Immigration
                 </span>
                 <span
-                  className="text-white absolute top-0 left-0 transition-all duration-700 ease-out"
+                  className="text-white absolute top-0 left-0 transition-all duration-500 ease-out"
                   style={{
                     opacity: 1 - morphState.progress,
-                    transform: `translateY(${morphState.progress * 5}px) scale(${1 - morphState.progress * 0.05})`,
+                    transform: `translateY(${morphState.progress * 8}px)`,
                   }}
                 >
-                  Immigen
+                  Immi
                 </span>
                 <span
-                  className="animate-gradient-shift absolute top-0 left-0 transition-all duration-700 ease-out"
+                  className="text-white absolute top-0 left-0"
+                  style={{ left: "3.2em" }}
+                >
+                  Gen.AI
+                </span>
+              </span>
+            )}
+
+            {morphState.phase === "phase2" && (
+              <span
+                className="relative inline-block"
+                style={{ minWidth: "max-content" }}
+              >
+                <span className="text-white invisible">
+                  Gen.AI built for Immigration
+                </span>
+                <span
+                  className={`absolute top-0 left-0 transition-all duration-500 ease-out ${
+                    morphState.progress > 0.5
+                      ? "animate-gradient-shift"
+                      : "text-white"
+                  }`}
+                  style={{ left: "3.2em" }}
+                >
+                  Gen.AI
+                </span>
+                <span
+                  className="text-white absolute top-0 left-0 transition-all duration-500 ease-out"
                   style={{
                     opacity: morphState.progress,
-                    transform: `translateY(${(1 - morphState.progress) * -5}px) scale(${0.95 + morphState.progress * 0.05})`,
+                    transform: `translateY(${(1 - morphState.progress) * -8}px)`,
+                    left: "8.5em",
                   }}
                 >
-                  Gen.AI built for Immigration
+                  built for Immigration
                 </span>
               </span>
             )}
