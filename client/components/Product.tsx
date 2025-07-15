@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from "react";
-import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 export default function Product() {
   const [scrollProgress, setScrollProgress] = useState(0);
