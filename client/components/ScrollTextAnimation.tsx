@@ -82,32 +82,32 @@ export default function ScrollTextAnimation() {
 
             {morphState.phase === "morphing" && (
               <span
-                className="relative inline-block"
+                className="relative inline-block animate-gradient-shift"
                 style={{ minWidth: "max-content" }}
               >
-                <span className="text-white invisible">our Gen.AI</span>
+                <span className="invisible">Trust in our Gen.AI</span>
+                <span className="absolute top-0 left-0">Trust in </span>
                 <span
-                  className="text-white absolute top-0 left-0 transition-all duration-700 ease-out"
+                  className="absolute top-0 left-0 transition-all duration-700 ease-out"
                   style={{
                     opacity: 1 - morphState.progress,
                     transform: `translateY(${morphState.progress * 8}px)`,
+                    left: "5.5em",
                   }}
                 >
                   Immi
                 </span>
                 <span
-                  className="text-white absolute top-0 left-0 transition-all duration-700 ease-out"
+                  className="absolute top-0 left-0 transition-all duration-700 ease-out"
                   style={{
                     opacity: morphState.progress,
                     transform: `translateY(${(1 - morphState.progress) * -8}px)`,
+                    left: "5.5em",
                   }}
                 >
                   our
                 </span>
-                <span
-                  className="animate-gradient-shift absolute top-0 left-0"
-                  style={{ left: "2.5em" }}
-                >
+                <span className="absolute top-0 left-0" style={{ left: "8em" }}>
                   Gen.AI
                 </span>
               </span>
