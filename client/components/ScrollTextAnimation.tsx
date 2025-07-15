@@ -74,9 +74,10 @@ export default function ScrollTextAnimation() {
               letterSpacing: "0.02em",
             }}
           >
-            <span className="text-white">Trust in </span>
             {morphState.phase === "start" && (
-              <span className="text-white">ImmiGen.AI</span>
+              <span className="animate-gradient-shift">
+                Trust in ImmiGen.AI
+              </span>
             )}
 
             {morphState.phase === "morphing" && (
