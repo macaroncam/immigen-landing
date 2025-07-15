@@ -22,7 +22,7 @@ export default function CustomersSection() {
       <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 pt-20 pb-16">
         {/* Header */}
         <div
           ref={headerAnimation.ref}
