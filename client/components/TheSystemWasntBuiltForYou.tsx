@@ -27,7 +27,11 @@ export default function TheSystemWasntBuiltForYou() {
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-20">
         {/* Header Section */}
-        <div className="flex flex-col items-center text-center mb-16 lg:mb-24">
+        <div
+          ref={headerAnimation.ref}
+          className="flex flex-col items-center text-center mb-16 lg:mb-24"
+          style={headerAnimation.animationStyle}
+        >
           {/* AI for the Enterprise Badge */}
           <div className="inline-flex items-center px-5 py-2 rounded-full bg-lime-accent/10 backdrop-blur-sm mb-5 border border-lime-accent/20">
             <span className="text-xs font-sans font-medium text-lime-accent uppercase tracking-[3px]">
