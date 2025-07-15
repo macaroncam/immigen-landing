@@ -64,8 +64,8 @@ export default function ScrollTextAnimation() {
 
       {/* Text Content */}
       <div className="relative z-10 px-2 sm:px-4 text-left w-full">
-        <div className="font-sans font-bold leading-relaxed tracking-tighter overflow-visible">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl pb-4">
+        <div className="font-sans font-bold leading-relaxed tracking-tighter overflow-visible w-full">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl pb-4 whitespace-nowrap overflow-hidden w-full">
             <span className="text-white">Trust in </span>
             {morphState.phase === "start" && (
               <span className="text-white">Immigen</span>
