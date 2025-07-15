@@ -196,16 +196,16 @@ export default function ScrollTextAnimation() {
                     return (
                       <p
                         key={index}
-                        className={`mb-8 last:mb-0 relative ${
+                        className={`mb-12 last:mb-0 relative ${
                           index === 1
-                            ? "text-xl sm:text-2xl md:text-3xl lg:text-4xl"
-                            : "text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+                            ? "text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+                            : "text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
                         }`}
                         style={{
                           fontSize:
                             index === 1
-                              ? "clamp(1.25rem, 4vw, 2.5rem)"
-                              : "clamp(1.5rem, 5vw, 3rem)",
+                              ? "clamp(2rem, 6vw, 4rem)"
+                              : "clamp(2.5rem, 8vw, 5rem)",
                         }}
                       >
                         {paragraph.split("").map((char, charIndex) => {
