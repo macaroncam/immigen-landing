@@ -63,44 +63,43 @@ export default function ScrollTextAnimation() {
       <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
 
       {/* Text Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-20">
-        {isMorphing ? (
-          <div className="relative">
-            {/* Start text fading out */}
-            <h2
-              className="font-sans text-4xl md:text-6xl lg:text-8xl font-bold text-white tracking-tight leading-none absolute inset-0 transition-opacity duration-300"
-              style={{
-                opacity: 1 - (scrollProgress - 0.3) / 0.4,
-                transform: `translateY(${(scrollProgress - 0.3) * 50}px)`,
-              }}
-            >
-              {(displayText as any).startText}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 text-left">
+        <div className="font-sans font-bold leading-relaxed tracking-tighter overflow-visible">
+          {morphState.phase === "start" && (
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white pb-4">
+              Trust in Immigen
             </h2>
+          )}
 
-            {/* End text fading in */}
-            <h2
-              className="font-sans text-4xl md:text-6xl lg:text-8xl font-bold animate-gradient-shift tracking-tight leading-none transition-opacity duration-300"
-              style={{
-                opacity: (scrollProgress - 0.3) / 0.4,
-                transform: `translateY(${(1 - (scrollProgress - 0.3) / 0.4) * -50}px)`,
-              }}
-            >
-              {(displayText as any).endText}
+          {morphState.phase === "morphing" && (
+            <div className="relative">
+              <h2
+                className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white pb-4 absolute inset-0 transition-opacity duration-200"
+                style={{
+                  opacity: 1 - morphState.progress,
+                  transform: `translateY(${morphState.progress * 20}px)`,
+                }}
+              >
+                Trust in Immigen
+              </h2>
+              <h2
+                className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl animate-gradient-shift pb-4 transition-opacity duration-200"
+                style={{
+                  opacity: morphState.progress,
+                  transform: `translateY(${(1 - morphState.progress) * -20}px)`,
+                }}
+              >
+                AI built for Immigration
+              </h2>
+            </div>
+          )}
+
+          {morphState.phase === "end" && (
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl animate-gradient-shift pb-4">
+              AI built for Immigration
             </h2>
-          </div>
-        ) : (
-          <h2
-            className={`font-sans text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight leading-none transition-all duration-500 ${
-              scrollProgress > 0.7 ? "animate-gradient-shift" : "text-white"
-            }`}
-            style={{
-              transform: `scale(${1 + scrollProgress * 0.1})`,
-              opacity: 0.8 + scrollProgress * 0.2,
-            }}
-          >
-            {displayText as string}
-          </h2>
-        )}
+          )}
+        </div>
 
         {/* Progress indicator */}
         <div className="mt-12 flex items-center justify-center">
