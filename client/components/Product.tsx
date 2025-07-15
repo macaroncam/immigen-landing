@@ -96,7 +96,7 @@ export default function Product() {
   const morphState = getMorphingState();
 
   // Calculate exit animation for the trust section
-  const exitProgress = Math.max(0, Math.min(1, (scrollProgress - 1) * 2));
+  const exitProgress = Math.max(0, Math.min(1, (scrollProgress - 1.5) * 3));
 
   return (
     <div
