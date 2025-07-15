@@ -116,10 +116,10 @@ export default function Product() {
               const fullText =
                 "Immigen isn't a ChatGPT wrapper.\n\nIt's built on a custom Logical-Semantic Integration Model (LSIM) designed to replicate expert-level petition strategy.\n\nThe result? No hallucinations. No generic advice. But filings you can trust.";
 
-              // Delay start and slow down the animation significantly
+              // Delay start but make animation faster
               const revealProgress = Math.max(
                 0,
-                Math.min(1, (scrollProgress - 0.4) * 0.6),
+                Math.min(1, (scrollProgress - 0.2) * 1.0),
               );
               const charactersToReveal = Math.floor(
                 fullText.length * revealProgress,
