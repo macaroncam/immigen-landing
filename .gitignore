@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .config/
+
+# Google service account credentials
+/google-service-account.json

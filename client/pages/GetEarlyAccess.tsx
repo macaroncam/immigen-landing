@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import FloatingElements from "../components/FloatingElements";
-import PageWrapper from "../components/PageWrapper";
+import Navbar from "../components/landing/Navbar";
+import FloatingElements from "../components/landing/FloatingElements";
+import PageWrapper from "../components/landing/PageWrapper";
+import Button from "../components/landing/ui/Button";
+import { COMPANY_NAME, TAGLINE, DEFAULT_BG_IMAGE } from "../constants/landing";
 
 export default function GetEarlyAccess() {
   const [showFloatingElements, setShowFloatingElements] = useState(false);
@@ -16,6 +18,7 @@ export default function GetEarlyAccess() {
     citizenship: "",
     cv: null as File | null,
   });
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     // Reset FloatingElements state on route change
@@ -39,10 +42,52 @@ export default function GetEarlyAccess() {
     setFormData((prev) => ({ ...prev, cv: file }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleRemoveFile = () => {
+    setFormData((prev) => ({ ...prev, cv: null }));
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    const form = new FormData();
+    form.append("firstName", formData.firstName);
+    form.append("lastName", formData.lastName);
+    form.append("companyName", formData.companyName);
+    form.append("jobTitle", formData.jobTitle);
+    form.append("email", formData.email);
+    form.append("citizenship", formData.citizenship);
+    if (formData.cv) {
+      form.append("cv", formData.cv);
+    }
+
+    try {
+      const res = await fetch("/api/early-access", {
+        method: "POST",
+        body: form,
+      });
+      if (res.ok) {
+        alert("Thank you! Your submission has been received.");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          companyName: "",
+          jobTitle: "",
+          email: "",
+          citizenship: "",
+          cv: null,
+        });
+        if (fileInputRef.current) {
+          fileInputRef.current.value = "";
+        }
+      } else {
+        const data = await res.json();
+        alert(data.error || "There was an error submitting your form. Please try again.");
+      }
+    } catch (err) {
+      alert("There was an error submitting your form. Please try again.");
+    }
   };
 
   return (
@@ -51,7 +96,7 @@ export default function GetEarlyAccess() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/starry-background.gif"
+            src={DEFAULT_BG_IMAGE}
             alt="Starry space background"
             className="w-full h-full object-cover"
           />
@@ -85,7 +130,7 @@ export default function GetEarlyAccess() {
                     {/* Form Header */}
                     <div className="text-center mb-8">
                       <h1 className="font-sans text-3xl lg:text-4xl font-bold text-white mb-4">
-                        Let's get you approved.
+                        {TAGLINE}
                       </h1>
                       <p className="font-sans font-medium text-lg text-white/80 leading-relaxed max-w-md mx-auto mb-20">
                         Join self-starters & global firms in pioneering the
@@ -196,6 +241,7 @@ export default function GetEarlyAccess() {
                             type="file"
                             accept=".pdf"
                             onChange={handleFileChange}
+                            ref={fileInputRef}
                             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                           />
                           <div className="border border-lime-accent/30 rounded-lg p-8 text-center hover:border-lime-accent/50 transition-colors">
@@ -222,8 +268,9 @@ export default function GetEarlyAccess() {
                               PDF files only, max 10MB
                             </div>
                             {formData.cv && (
-                              <div className="mt-2 text-sm text-lime-accent font-sans">
+                              <div className="mt-2 text-sm text-lime-accent font-sans flex items-center gap-2">
                                 Selected: {formData.cv.name}
+                                <Button type="button" onClick={handleRemoveFile} className="ml-2 px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition-colors text-xs">Select another</Button>
                               </div>
                             )}
                           </div>
@@ -237,25 +284,7 @@ export default function GetEarlyAccess() {
                       </div>
 
                       {/* Submit Button */}
-                      <button
-                        type="submit"
-                        className="flex items-center gap-2 bg-lime-accent text-black font-sans font-bold text-base px-8 py-4 rounded-xl hover:opacity-90 transition-opacity"
-                      >
-                        Submit
-                        <svg
-                          width="19"
-                          height="16"
-                          viewBox="0 0 19 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-4 h-4"
-                        >
-                          <path
-                            d="M18.7071 8.70711C19.0976 8.31658 19.0976 7.68342 18.7071 7.29289L12.3431 0.928932C11.9526 0.538408 11.3195 0.538408 10.9289 0.928932C10.5384 1.31946 10.5384 1.95262 10.9289 2.34315L16.5858 8L10.9289 13.6569C10.5384 14.0474 10.5384 14.6805 10.9289 15.0711C11.3195 15.4616 11.9526 15.4616 12.3431 15.0711L18.7071 8.70711ZM0 8V9H18V8V7H0V8Z"
-                            fill="black"
-                          />
-                        </svg>
-                      </button>
+                      <Button type="submit" disabled={!formData.cv}>Submit</Button>
                     </form>
                   </div>
                 </div>
@@ -299,7 +328,7 @@ export default function GetEarlyAccess() {
                         Test your case. Visualize your immigration journey.
                       </p>
                       <p className="font-sans text-base text-white/70 leading-relaxed max-w-sm mx-auto">
-                        Submit your form to see a live preview of your petition
+                        Register for early access to see a live preview of your petition
                         optimized by our AI system
                       </p>
                     </div>

@@ -1,31 +1,19 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
-import FloatingElements from "../components/FloatingElements";
-import Product from "../components/Product";
-import TheSystemWasntBuiltForYou from "../components/TheSystemWasntBuiltForYou";
-import PricingSection from "../components/PricingSection";
-import CustomersSection from "../components/CustomersSection";
-import PageWrapper from "../components/PageWrapper";
-import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import Navbar from "../components/landing/Navbar";
+import FloatingElements from "../components/landing/FloatingElements";
+// import Product from "../components/Product";
+// import TheSystemWasntBuiltForYou from "../components/TheSystemWasntBuiltForYou";
+// import PricingSection from "../components/PricingSection";
+// import CustomersSection from "../components/CustomersSection";
+import PageWrapper from "../components/landing/PageWrapper";
+import { useScrollAnimation } from "../components/landing/hooks/useScrollAnimation";
+import { COMPANY_NAME, TAGLINE, DEFAULT_BG_IMAGE } from "../constants/landing";
 
 export default function Index() {
-  const [showFloatingElements, setShowFloatingElements] = useState(false);
   const location = useLocation();
 
-  // No animations for hero section - should appear immediately
-
-  useEffect(() => {
-    // Reset FloatingElements state on route change
-    setShowFloatingElements(false);
-
-    // Delay FloatingElements rendering to prevent initial lag
-    const timer = setTimeout(() => {
-      setShowFloatingElements(true);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, [location.pathname]);
+  // No need for showFloatingElements state or effect
 
   return (
     <PageWrapper>
@@ -33,7 +21,7 @@ export default function Index() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/starry-background.gif"
+            src={DEFAULT_BG_IMAGE}
             alt="Starry space background"
             className="w-full h-full object-cover"
           />
@@ -45,9 +33,7 @@ export default function Index() {
         <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/3 via-transparent to-green-600/4"></div>
 
         {/* Floating Background Elements */}
-        {showFloatingElements && (
-          <FloatingElements key={`floating-${location.pathname}`} />
-        )}
+        <FloatingElements key={`floating-${location.pathname}`} />
 
         {/* Navigation */}
         <Navbar />
@@ -127,69 +113,7 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Flowing Section Divider */}
-      <div className="relative h-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/starry-background.gif"
-            alt="Starry space background"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-900/10 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-lime-accent/30 to-transparent"></div>
-      </div>
-
-      {/* The System Wasn't Built for You Section */}
-      <TheSystemWasntBuiltForYou />
-
-      {/* Flowing Section Divider */}
-      <div className="relative h-24 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/starry-background.gif"
-            alt="Starry space background"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-green-900/5 to-green-900/5"></div>
-        <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-lime-accent/20 to-transparent"></div>
-      </div>
-
-      {/* Product Section */}
-      <Product />
-
-      {/* Flowing Section Divider */}
-      <div className="relative h-24 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/starry-background.gif"
-            alt="Starry space background"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-green-900/5 to-green-900/5"></div>
-        <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-lime-accent/20 to-transparent"></div>
-      </div>
-
-      {/* Customers Section */}
-      <CustomersSection />
-
-      {/* Flowing Section Divider */}
-      <div className="relative h-24 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/starry-background.gif"
-            alt="Starry space background"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-green-900/5 to-green-900/5"></div>
-        <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-lime-accent/20 to-transparent"></div>
-      </div>
-
-      {/* Pricing Section */}
-      <PricingSection />
+      {/* All section dividers below are removed for a cleaner look while sections are hidden */}
     </PageWrapper>
   );
 }
